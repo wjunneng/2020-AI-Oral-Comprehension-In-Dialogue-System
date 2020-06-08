@@ -22,7 +22,7 @@ class Util(object):
         self.model_type = model_type
         self.input_dir = os.path.join(project_dir, 'data', 'input')
         self.output_dir = os.path.join(project_dir, 'data', 'output')
-        self.yanxishe_dir = os.path.join(self.output_dir, 'yanxishe')
+        self.yanxishe_dir = os.path.join(project_dir, 'data', 'yanxishe')
 
         if not os.path.exists(self.yanxishe_dir):
             os.makedirs(self.yanxishe_dir)
@@ -118,6 +118,7 @@ class Util(object):
         'session_id', 'query', 'intent', 'slot_annotation'
         """
         train_data = pd.read_csv(train_csv_path, encoding='utf-8')
+        test_data = pd.read_csv(test_csv_path, encoding='utf-8')
 
         """
         'music.play', 'music.pause', 'music.prev', 'music.next'
@@ -189,7 +190,53 @@ class Util(object):
             self.write_data(df=dev_df, label_file=dev_label_file, seq_in_file=dev_seq_in_file,
                             seq_out_file=dev_seq_out_file)
 
+        with open(os.path.join(test_dir, 'sample_pred_in.txt'), encoding='utf-8', mode='w') as file:
+            for index in range(test_data.shape[0]):
+                query = test_data.iloc[index, 1]
+                split_tokens = self.tokenization(text=query)
+
+                file.write(' '.join(split_tokens) + '\n')
+
+    def generate_result(self):
+        test_dir = os.path.join(self.yanxishe_dir, 'test')
+        sample_pred_out_txt_path = os.path.join(test_dir, 'sample_pred_out.txt')
+
+        test_data = pd.read_csv(filepath_or_buffer=os.path.join(self.input_dir, 'test.csv'), encoding='utf-8')
+        intent_list = []
+        slot_annotation_list = []
+
+        with open(sample_pred_out_txt_path, encoding='utf-8', mode='r') as file:
+            for index, line in enumerate(file.readlines()):
+                line = line.strip().strip('\n')
+                line_list = line.split('\t')
+
+                intent = line_list[0]
+                slot_annotation = line_list[1]
+
+                intent_list.append(intent)
+                if intent == 'OTHERS':
+                    slot_annotation_list.append(test_data.iloc[index, 1])
+                else:
+                    token = slot_annotation[slot_annotation.find('<') + 1: slot_annotation.find('>')]
+                    if token != '':
+                        token = '</' + token + '>'
+                        count = slot_annotation.count(token) - 1
+                        if count != 0:
+                            slot_annotation = slot_annotation.replace(token, '', count)
+
+                    slot_annotation = slot_annotation.replace(' ', '')
+                    slot_annotation = slot_annotation.replace('##', '')
+
+                    slot_annotation_list.append(slot_annotation)
+
+        test_data['intent'] = intent_list
+        test_data['slot_annotation'] = slot_annotation_list
+
+        test_data.to_csv('../../data/result.csv', encoding='utf-8', header=None, index=None)
+
 
 if __name__ == '__main__':
     util = Util()
-    util.generate_yanxishe_input_data()
+    # util.generate_yanxishe_input_data()
+
+    util.generate_result()

@@ -20,7 +20,7 @@ MODEL_CLASSES = {
 }
 
 MODEL_PATH_MAP = {
-    'bert': 'bert-base-uncased',
+    'bert': '../../data/pre_train_model/chinese_wwm_pytorch',
     'distilbert': 'distilbert-base-uncased',
     # 'albert': 'albert-xxlarge-v1'
     'albert': 'albert-base-v1'

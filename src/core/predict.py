@@ -7,7 +7,7 @@ import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader, SequentialSampler
 
-from utils import init_logger, load_tokenizer, get_intent_labels, get_slot_labels, MODEL_CLASSES
+from src.core.utils import init_logger, load_tokenizer, get_intent_labels, get_slot_labels, MODEL_CLASSES
 
 logger = logging.getLogger(__name__)
 
@@ -205,8 +205,16 @@ def predict(pred_config):
                 if pred == 'O':
                     line = line + word + " "
                 else:
-                    line = line + "[{}:{}] ".format(word, pred)
-            f.write("<{}> -> {}\n".format(intent_label_lst[intent_pred], line.strip()))
+                    if pred.startswith('B-'):
+                        pred = pred.replace('B-', '<')
+                        pred += '>'
+                        line = line + "{} {} ".format(pred, word)
+                    else:
+                        pred = pred.replace('I-', '</')
+                        pred += '>'
+                        line = line + "{} {} ".format(word, pred)
+
+            f.write("{}\t{}\n".format(intent_label_lst[intent_pred], line.strip()))
 
     logger.info("Prediction Done!")
 
@@ -215,9 +223,11 @@ if __name__ == "__main__":
     init_logger()
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--input_file", default="sample_pred_in.txt", type=str, help="Input file for prediction")
-    parser.add_argument("--output_file", default="sample_pred_out.txt", type=str, help="Output file for prediction")
-    parser.add_argument("--model_dir", default="./atis_model", type=str, help="Path to save, load model")
+    parser.add_argument("--input_file", default="../../data/yanxishe/test/sample_pred_in.txt", type=str,
+                        help="Input file for prediction")
+    parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
+                        help="Output file for prediction")
+    parser.add_argument("--model_dir", default="../../src/core/snips_model", type=str, help="Path to save, load model")
 
     parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
     parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
