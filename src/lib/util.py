@@ -197,6 +197,23 @@ class Util(object):
 
                 file.write(' '.join(split_tokens) + '\n')
 
+    def select_token_from_slot_dictionary(self, text, token):
+        slot_dictionaries_dir = os.path.join(self.input_dir, 'slot-dictionaries')
+
+        for slot in ['age', 'custom_destination', 'emotion', 'instrument', 'language', 'scene', 'singer', 'song',
+                     'style', 'theme', 'toplist']:
+            slot_path = os.path.join(slot_dictionaries_dir, slot + '.txt')
+            slot_token_list = []
+            with open(file=slot_path, encoding='utf-8', mode='r') as file:
+                for line in file.readlines():
+                    line = line.strip().strip('\n')
+                    slot_token_list.append(line)
+
+            if text in slot_token_list:
+                return slot
+
+        return token
+
     def generate_result(self):
         test_dir = os.path.join(self.yanxishe_dir, 'test')
         sample_pred_out_txt_path = os.path.join(test_dir, 'sample_pred_out.txt')
@@ -217,15 +234,33 @@ class Util(object):
                 if intent == 'OTHERS':
                     slot_annotation_list.append(test_data.iloc[index, 1])
                 else:
-                    token = slot_annotation[slot_annotation.find('<') + 1: slot_annotation.find('>')]
-                    if token != '':
-                        token = '</' + token + '>'
-                        count = slot_annotation.count(token) - 1
-                        if count != 0:
-                            slot_annotation = slot_annotation.replace(token, '', count)
+                    start = slot_annotation.find('<')
+                    end = slot_annotation.find('>')
+                    if start != -1 and end != -1:
+                        token = slot_annotation[start + 1: end]
 
-                    slot_annotation = slot_annotation.replace(' ', '')
-                    slot_annotation = slot_annotation.replace('##', '')
+                        end_token = '</' + token + '>'
+                        count = slot_annotation.count(end_token) - 1
+                        if count != 0:
+                            slot_annotation = slot_annotation.replace(end_token, '', count)
+
+                        slot_annotation = slot_annotation.replace(' ', '')
+                        slot_annotation = slot_annotation.replace('##', '')
+
+                        if slot_annotation.find(end_token) == -1:
+                            slot_annotation += end_token
+
+                        token = token.replace(' ', '')
+                        text = slot_annotation[
+                               slot_annotation.find(token) + len(token) + 1:slot_annotation.rfind(token) - 2]
+
+                        if text != '':
+                            new_token = self.select_token_from_slot_dictionary(token=token, text=text)
+
+                            slot_annotation = slot_annotation.replace(token, new_token)
+                    else:
+                        slot_annotation = slot_annotation.replace(' ', '')
+                        slot_annotation = slot_annotation.replace('##', '')
 
                     slot_annotation_list.append(slot_annotation)
 
@@ -240,3 +275,5 @@ if __name__ == '__main__':
     # util.generate_yanxishe_input_data()
 
     util.generate_result()
+
+    # print(util.select_token_from_slot_dictionary(text='家'))
