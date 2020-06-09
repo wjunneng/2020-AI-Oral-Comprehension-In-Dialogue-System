@@ -93,11 +93,13 @@ class JointProcessor(object):
             # 1. input_text
             words = text.split()  # Some are spaced twice
             # 2. intent
-            intent_label = self.intent_labels.index(intent) if intent in self.intent_labels else self.intent_labels.index("UNK")
+            intent_label = self.intent_labels.index(
+                intent) if intent in self.intent_labels else self.intent_labels.index("UNK")
             # 3. slot
             slot_labels = []
             for s in slot.split():
-                slot_labels.append(self.slot_labels.index(s) if s in self.slot_labels else self.slot_labels.index("UNK"))
+                slot_labels.append(
+                    self.slot_labels.index(s) if s in self.slot_labels else self.slot_labels.index("UNK"))
 
             assert len(words) == len(slot_labels)
             examples.append(InputExample(guid=guid, words=words, intent_label=intent_label, slot_labels=slot_labels))
@@ -181,9 +183,12 @@ def convert_examples_to_features(examples, max_seq_len, tokenizer,
         slot_labels_ids = slot_labels_ids + ([pad_token_label_id] * padding_length)
 
         assert len(input_ids) == max_seq_len, "Error with input length {} vs {}".format(len(input_ids), max_seq_len)
-        assert len(attention_mask) == max_seq_len, "Error with attention mask length {} vs {}".format(len(attention_mask), max_seq_len)
-        assert len(token_type_ids) == max_seq_len, "Error with token type length {} vs {}".format(len(token_type_ids), max_seq_len)
-        assert len(slot_labels_ids) == max_seq_len, "Error with slot labels length {} vs {}".format(len(slot_labels_ids), max_seq_len)
+        assert len(attention_mask) == max_seq_len, "Error with attention mask length {} vs {}".format(
+            len(attention_mask), max_seq_len)
+        assert len(token_type_ids) == max_seq_len, "Error with token type length {} vs {}".format(len(token_type_ids),
+                                                                                                  max_seq_len)
+        assert len(slot_labels_ids) == max_seq_len, "Error with slot labels length {} vs {}".format(
+            len(slot_labels_ids), max_seq_len)
 
         intent_label_id = int(example.intent_label)
 
@@ -212,15 +217,14 @@ def load_and_cache_examples(args, tokenizer, mode):
     processor = processors[args.task](args)
 
     # Load data features from cache or dataset file
-    cached_features_file = os.path.join(
-        args.data_dir,
-        'cached_{}_{}_{}_{}'.format(
-            mode,
-            args.task,
-            list(filter(None, args.model_name_or_path.split("/"))).pop(),
-            args.max_seq_len
-        )
-    )
+    cached_features_file = os.path.join(args.data_dir, 'cached_{}_{}_{}_{}'.format(mode,
+                                                                                   args.task,
+                                                                                   list(filter(None,
+                                                                                               args.model_name_or_path.split(
+                                                                                                   "/"))).pop(),
+                                                                                   args.max_seq_len
+                                                                                   )
+                                        )
 
     if os.path.exists(cached_features_file):
         logger.info("Loading features from cached file %s", cached_features_file)

@@ -42,7 +42,8 @@ class Trainer(object):
 
         if self.args.max_steps > 0:
             t_total = self.args.max_steps
-            self.args.num_train_epochs = self.args.max_steps // (len(train_dataloader) // self.args.gradient_accumulation_steps) + 1
+            self.args.num_train_epochs = self.args.max_steps // (
+                    len(train_dataloader) // self.args.gradient_accumulation_steps) + 1
         else:
             t_total = len(train_dataloader) // self.args.gradient_accumulation_steps * self.args.num_train_epochs
 
@@ -51,10 +52,12 @@ class Trainer(object):
         optimizer_grouped_parameters = [
             {'params': [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
              'weight_decay': self.args.weight_decay},
-            {'params': [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
+            {'params': [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)],
+             'weight_decay': 0.0}
         ]
         optimizer = AdamW(optimizer_grouped_parameters, lr=self.args.learning_rate, eps=self.args.adam_epsilon)
-        scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.args.warmup_steps, num_training_steps=t_total)
+        scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.args.warmup_steps,
+                                                    num_training_steps=t_total)
 
         # Train!
         logger.info("***** Running training *****")
@@ -78,9 +81,7 @@ class Trainer(object):
                 self.model.train()
                 batch = tuple(t.to(self.device) for t in batch)  # GPU or CPU
 
-                inputs = {'input_ids': batch[0],
-                          'attention_mask': batch[1],
-                          'intent_label_ids': batch[3],
+                inputs = {'input_ids': batch[0], 'attention_mask': batch[1], 'intent_label_ids': batch[3],
                           'slot_labels_ids': batch[4]}
                 if self.args.model_type != 'distilbert':
                     inputs['token_type_ids'] = batch[2]
@@ -144,9 +145,7 @@ class Trainer(object):
         for batch in tqdm(eval_dataloader, desc="Evaluating"):
             batch = tuple(t.to(self.device) for t in batch)
             with torch.no_grad():
-                inputs = {'input_ids': batch[0],
-                          'attention_mask': batch[1],
-                          'intent_label_ids': batch[3],
+                inputs = {'input_ids': batch[0], 'attention_mask': batch[1], 'intent_label_ids': batch[3],
                           'slot_labels_ids': batch[4]}
                 if self.args.model_type != 'distilbert':
                     inputs['token_type_ids'] = batch[2]
@@ -180,12 +179,11 @@ class Trainer(object):
                 else:
                     slot_preds = np.append(slot_preds, slot_logits.detach().cpu().numpy(), axis=0)
 
-                out_slot_labels_ids = np.append(out_slot_labels_ids, inputs["slot_labels_ids"].detach().cpu().numpy(), axis=0)
+                out_slot_labels_ids = np.append(out_slot_labels_ids, inputs["slot_labels_ids"].detach().cpu().numpy(),
+                                                axis=0)
 
         eval_loss = eval_loss / nb_eval_steps
-        results = {
-            "loss": eval_loss
-        }
+        results = {"loss": eval_loss}
 
         # Intent result
         intent_preds = np.argmax(intent_preds, axis=1)

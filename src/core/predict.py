@@ -185,7 +185,7 @@ def predict(pred_config):
     intent_preds = np.argmax(intent_preds, axis=1)
 
     if args.use_crf:
-        slot_preds = np.array(model.crf.decode(slot_logits))
+        pass
     else:
         slot_preds = np.argmax(slot_preds, axis=2)
 
@@ -227,7 +227,8 @@ if __name__ == "__main__":
                         help="Input file for prediction")
     parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
                         help="Output file for prediction")
-    parser.add_argument("--model_dir", default="../../src/core/snips_model", type=str, help="Path to save, load model")
+    parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str, help="Path to save, load model")
+    # parser.add_argument("--model_dir", default="../../src/core/snips_model", type=str, help="Path to save, load model")
 
     parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
     parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
