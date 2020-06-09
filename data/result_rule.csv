@@ -147,7 +147,7 @@
 32,请播放欢快的歌曲,music.play,请播放<emotion>欢快</emotion>的歌曲
 32,请播放灌篮高手的主题曲,music.play,请播放灌篮高手的主题曲
 32,放一个祝酒歌,music.play,放一个<song>祝酒歌</song>
-33,057100007911,phone_call.make_a_phone_call,<phone_num>057100007911</phone_num>
+33,057100007911,OTHERS,057100007911
 33,导航去天安门,navigation.navigation,导航去<destination>天安门</destination>
 33,播放一首刘德华的冰雨,music.play,播放一首<singer>刘德华</singer>的冰雨
 33,帮我看一下电子狗,OTHERS,帮我看一下电子狗
@@ -1032,7 +1032,7 @@
 237,取消,navigation.cancel_navigation,取消
 237,音乐,music.play,音乐
 238,向晶,OTHERS,向晶
-238,8675,phone_call.make_a_phone_call,<phone_num>8675</phone_num>
+238,8675,OTHERS,8675
 238,8686753110要不要加区号,OTHERS,8686753110要不要加区号
 238,然后又打开要停车了,OTHERS,然后又打开要停车了
 238,阿果,music.play,<singer>阿果</singer>
@@ -1568,7 +1568,7 @@
 351,导航保利星海花园,navigation.navigation,导航<destination>保利星海花园</destination>
 352,意大利风情小镇,navigation.navigation,<destination>意大利风情小镇</destination>
 352,意大利风情小镇广业西路15号,navigation.navigation,<destination>意大利风情小镇广业西路15号</destination>
-352,13400003178,phone_call.make_a_phone_call,<phone_num>13400003178</phone_num>
+352,13400003178,OTHERS,13400003178
 353,查询天气,OTHERS,查询天气
 353,高科技,OTHERS,高科技
 353,叮当你好,OTHERS,叮当你好
@@ -2867,7 +2867,7 @@
 627,谢谢你,OTHERS,谢谢你
 627,蔡甸区,navigation.navigation,<destination>蔡甸区</destination>
 627,请播放歌曲你家在哪里,music.play,请播放歌曲<song>你家在哪里</song>
-627,662,phone_call.make_a_phone_call,<phone_num>662</phone_num>
+627,662,OTHERS,662
 628,到简阳,navigation.navigation,到<destination>简阳</destination>
 628,可以,OTHERS,可以
 628,一,OTHERS,一
@@ -2916,7 +2916,7 @@
 637,适合中国宝宝体质的奶粉,OTHERS,适合中国宝宝体质的奶粉
 637,飞鹤奶粉更适合中国宝宝体质,OTHERS,飞鹤奶粉更适合中国宝宝体质
 637,张准,OTHERS,张准
-637,60000005888,phone_call.make_a_phone_call,<phone_num>60000005888</phone_num>
+637,60000005888,OTHERS,60000005888
 637,我要去临潼区,navigation.navigation,我要去<destination>临潼区</destination>
 637,我要去火车站,navigation.navigation,我要去<destination>火车站</destination>
 638,给我来一首说散就散,music.play,给我来一首<song>说散就散</song>
@@ -3042,7 +3042,7 @@
 663,放歌,music.play,放歌
 663,请放,OTHERS,请放
 663,请放歌,music.play,请放歌
-664,13600003849,phone_call.make_a_phone_call,<phone_num>13600003849</phone_num>
+664,13600003849,OTHERS,13600003849
 664,出租车教你联系,OTHERS,出租车教你联系
 664,来一首得意的笑,music.play,来一首<song>得意的笑</song>
 664,津源,OTHERS,津源
@@ -3296,7 +3296,7 @@
 718,叮当你好,OTHERS,叮当你好
 718,唱任妙音的歌,music.play,唱<singer>任妙音</singer>的歌
 719,打电话,phone_call.make_a_phone_call,打电话
-719,2717622,OTHERS,2717622
+719,2717622,phone_call.make_a_phone_call,<phone_num>2717622</phone_num>
 719,定边县少年宫,navigation.navigation,<destination>定边县少年宫</destination>
 720,快点哦,OTHERS,快点哦
 720,到燕南园,navigation.navigation,到<destination>燕南园</destination>
@@ -3454,7 +3454,7 @@
 754,播放月半小夜曲,music.play,播放<song>月半小夜曲</song>
 754,播放陈乐基,music.play,播放<singer>陈乐基</singer>
 755,马洁,OTHERS,马洁
-755,33396000,phone_call.make_a_phone_call,<phone_num>33396000</phone_num>
+755,33396000,OTHERS,33396000
 755,祝您中秋就来一封休假吧,OTHERS,祝您中秋就来一封休假吧
 755,电话,OTHERS,电话
 755,我要去侨香3路,navigation.navigation,我要去<destination>侨香3路</destination>

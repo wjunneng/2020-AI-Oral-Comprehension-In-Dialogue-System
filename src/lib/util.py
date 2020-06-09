@@ -8,6 +8,15 @@ project_dir = str(pathlib.Path(os.path.abspath(__file__)).parent.parent.parent)
 sys.path.append(project_dir)
 os.chdir(sys.path[0])
 
+import pandas as pd
+
+# 显示所有列
+pd.set_option('display.max_columns', None)
+# 显示所有行
+pd.set_option('display.max_rows', None)
+# # 列数
+# pd.set_option("display.max_columns", 1000)
+
 import random
 import numpy as np
 import pandas as pd
@@ -120,6 +129,19 @@ class Util(object):
         """
         train_data = pd.read_csv(train_csv_path, encoding='utf-8')
         test_data = pd.read_csv(test_csv_path, encoding='utf-8')
+
+        # digit_list = []
+        # for index in range(train_data.shape[0]):
+        #     if str(train_data.iloc[index, 1]).isdigit():
+        #         digit_list.append(train_data.iloc[index, 0])
+        #
+        # digit_df = pd.DataFrame()
+        # for session_id, id_data in train_data.groupby(by=['session_id']):
+        #     if session_id in digit_list:
+        #         digit_df = pd.concat([digit_df, id_data], axis=0, ignore_index=True)
+        #
+        # digit_df.to_csv('digit.csv', index=None)
+        # print(digit_df)
 
         """
         'music.play', 'music.pause', 'music.prev', 'music.next'
@@ -244,6 +266,9 @@ class Util(object):
                             result = predict_sample(lines=[self.tokenization(test_data.iloc[index, 1])])
                             if result is not None:
                                 slot_annotation = result
+                            else:
+                                # TODO: 播 放 歌 手 </song> 带 </song> 你 </song> 去 </song> 旅 </song> 游 </song>
+                                slot_annotation = slot_annotation.replace('<' + token + '>', '')
 
                         end_token = '</' + token + '>'
                         count = slot_annotation.count(end_token) - 1
@@ -275,10 +300,67 @@ class Util(object):
 
         test_data.to_csv('../../data/result.csv', encoding='utf-8', header=None, index=None)
 
+    def rule(self):
+        result_path = '../../data/result.csv'
+        result = pd.read_csv(filepath_or_buffer=result_path, encoding='utf-8', header=None)
+        result.columns = ['session_id', 'query', 'intent', 'slot_annotation']
+
+        # TODO：经检验无误，但是精度不增反下降
+        result = self.rule_4(result=result)
+
+        result.to_csv('../../data/result_rule.csv', encoding='utf-8', header=None, index=None)
+
+    def rule_4(self, result: pd.DataFrame):
+        """
+        无上文影响的情况下，除了 11 位手机号码之外的纯数字 query，标注为 OTHERS。上文为 phone_call 时，3 位以上纯数字标注为 phone_call. make_a_phone_call。
+        :return:
+        """
+        digit_list = []
+        for index in range(result.shape[0]):
+            if str(result.iloc[index, 1]).isdigit():
+                result.iloc[index, 2] = 'OTHERS'
+                result.iloc[index, 3] = result.iloc[index, 1]
+                digit_list.append(int(result.iloc[index, 0]))
+
+        before_id = None
+        is_others = True
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if session_id in digit_list:
+                if before_id is None or before_id != session_id:
+                    is_others = True
+                    before_id = session_id
+                    if str(query).isdigit():
+                        result.iloc[index, 2] = 'OTHERS'
+                        result.iloc[index, 3] = query
+
+                if session_id == before_id:
+                    if str(query).isdigit() is False and 'phone_call.make_a_phone_call' == intent:
+                        is_others = False
+
+                    if str(query).isdigit() and is_others is False and len(query) > 3:
+                        result.iloc[index, 2] = 'phone_call.make_a_phone_call'
+                        result.iloc[index, 3] = '<phone_num>' + str(slot_annotation) + '</phone_num>'
+
+        digit_df = pd.DataFrame()
+        for session_id, id_data in result.groupby(by=['session_id']):
+            if session_id in digit_list:
+                digit_df = pd.concat([digit_df, id_data], axis=0, ignore_index=True)
+
+        return result
+
 
 if __name__ == '__main__':
     util = Util()
     # 生成标准的输入数据
-    # util.generate_yanxishe_input_data()
+    util.generate_yanxishe_input_data()
+
     # 生成结果数据
-    util.generate_result()
+    # util.generate_result()
+
+    # 经过规则
+    # util.rule()
