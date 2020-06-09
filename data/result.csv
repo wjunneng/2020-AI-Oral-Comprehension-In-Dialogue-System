@@ -607,7 +607,7 @@
 146,好汉歌,music.play,<song>好汉歌</song>
 146,郑智化的星星点灯,music.play,<singer>郑智化</singer>的星星点灯
 146,凤凰传奇,music.play,<singer>凤凰传奇</singer>
-147,我要听听看,music.play,我要听听看</song><//song>
+147,我要听听看,music.play,我要听<song>听看</song>
 147,导航到北常保cng加气站,navigation.navigation,导航到<destination>北常保cng加气站</destination>
 147,13517352801,OTHERS,13517352801
 147,呼叫13500002801,phone_call.make_a_phone_call,呼叫<phone_num>13500002801</phone_num>
@@ -640,7 +640,7 @@
 154,播放等待,music.play,播放<song>等待</song>
 155,播放黄片,OTHERS,播放黄片
 155,播放瞳听,music.play,播放<song>瞳听</song>
-155,来万芳听,music.play,来万芳</singer>听<//singer>
+155,来万芳听,music.play,来<singer>万芳</singer>听
 155,播放黄婷,music.play,播放<singer>黄婷</singer>
 156,需要,OTHERS,需要
 156,去哈尔滨建国街118号,navigation.navigation,去<destination>哈尔滨建国街118号</destination>
@@ -843,7 +843,7 @@
 198,丰乐尚都,navigation.navigation,<destination>丰乐尚都</destination>
 199,你好啊,OTHERS,你好啊
 199,你好啊,OTHERS,你好啊
-199,哦说小镇幼儿园,navigation.navigation,哦说小</destination>镇</destination>幼</destination>儿</destination>园</destination><//destination>
+199,哦说小镇幼儿园,navigation.navigation,哦说<destination>小镇</destination>幼</destination>儿</destination>园</destination>
 199,切歌,music.next,切歌
 199,要多方去小状元幼儿园,navigation.navigation,要多方去<destination>小状元幼儿园</destination>
 200,打电话给的歌好吗,phone_call.make_a_phone_call,打电话给的歌好吗
@@ -1206,7 +1206,7 @@
 277,花果园花果山,navigation.navigation,<destination>花果园花果山</destination>
 277,呼叫61066,phone_call.make_a_phone_call,呼叫<phone_num>61066</phone_num>
 278,白夜,OTHERS,白夜
-278,李萍,phone_call.make_a_phone_call,李萍</contact_name><//contact_name>
+278,李萍,phone_call.make_a_phone_call,<contact_name>李萍</contact_name>
 278,关滨,OTHERS,关滨
 278,猫,OTHERS,猫
 278,可乐,OTHERS,可乐
@@ -1930,7 +1930,7 @@
 429,我要去铁西家乐福,navigation.navigation,我要去<destination>铁西家乐福</destination>
 430,音乐战歌,music.play,音乐<song>战歌</song>
 430,英语长句,OTHERS,英语长句
-430,因为战歌,music.play,因为战歌</song><//song>
+430,因为战歌,music.play,<song>因为战歌</song>
 430,音乐赞歌,music.play,音乐赞歌
 431,打电话给人家就跟那个主人把这个,phone_call.make_a_phone_call,打电话给人家就跟那个主人把这个
 431,北崖,OTHERS,北崖
@@ -1974,7 +1974,7 @@
 439,王韵婵的没有你陪伴我真的好孤单,music.play,<singer>王韵婵</singer>的没有你陪伴我真的好孤单
 439,没有你陪伴真的好孤单,music.play,<song>没有你陪伴真的好孤单</song>
 439,你在干嘛呢,OTHERS,你在干嘛呢
-439,把这个来乌兰的那首没有你陪伴我真的好孤单,music.play,把这个来乌兰</singer>的那首<song>没有</song>你</song>陪</song>伴</song>我真</song>的</song>好</song>孤</song>单</song><//singer>
+439,把这个来乌兰的那首没有你陪伴我真的好孤单,music.play,把这个来乌兰</singer>的那首<song>没有</song>你</song>陪</song>伴</song>我真</song>的</song>好</song>孤</song>单</song>
 440,打开收音机,OTHERS,打开收音机
 440,拨打的电话正在通话中,OTHERS,拨打的电话正在通话中
 440,连接蓝牙,OTHERS,连接蓝牙
@@ -2169,7 +2169,7 @@
 477,导航结束,navigation.cancel_navigation,导航结束
 477,结束导航,navigation.cancel_navigation,结束导航
 478,来首音乐,music.play,来首音乐
-478,来一首停格,music.play,来一首停格</song><//song>
+478,来一首停格,music.play,来一首停格</song>
 478,我想听张学友的歌,music.play,我想听<singer>张学友</singer>的歌
 479,我要听任贤齐的爱你的最后一天,music.play,我要听<singer>任贤齐</singer>的爱你的最后一天
 479,我要听任贤齐的爱你的最后一天,music.play,我要听<singer>任贤齐</singer>的爱你的最后一天
@@ -2788,7 +2788,7 @@
 609,请播放歌曲,music.play,请播放歌曲
 609,请播放dj,music.play,请播放<theme>dj</theme>
 609,请播放凤凰传奇专辑,music.play,请播放<singer>凤凰传奇</singer>专辑
-610,大罗布8路不,navigation.navigation,大罗</destination>布</destination>8</destination>路不<//destination>
+610,大罗布8路不,navigation.navigation,<destination>大罗</destination>布</destination>8</destination>路不
 610,把萝卜拔萝卜,music.play,把<song>萝卜拔萝卜</song>
 610,放一首拔萝卜,music.play,放一首<song>拔萝卜</song>
 610,放一首把酒掺满,music.play,放一首<song>把酒掺满</song>
@@ -2867,7 +2867,7 @@
 627,谢谢你,OTHERS,谢谢你
 627,蔡甸区,navigation.navigation,<destination>蔡甸区</destination>
 627,请播放歌曲你家在哪里,music.play,请播放歌曲<song>你家在哪里</song>
-627,662,phone_call.make_a_phone_call,662</phone_num><//phone_num>
+627,662,phone_call.make_a_phone_call,<phone_num>662</phone_num>
 628,到简阳,navigation.navigation,到<destination>简阳</destination>
 628,可以,OTHERS,可以
 628,一,OTHERS,一
@@ -2940,7 +2940,7 @@
 642,东丽医院,navigation.navigation,<destination>东丽医院</destination>
 642,小男孩,music.play,<song>小男孩</song>
 642,叮当你好,OTHERS,叮当你好
-642,搜索小男孩,music.play,搜索小男</song>孩</song><//song>
+642,搜索小男孩,music.play,搜索<song>小男</song>孩</song>
 642,芦北口,navigation.navigation,<destination>芦北口</destination>
 643,一晃就老了,music.play,<song>一晃就老了</song>
 643,打电话,phone_call.make_a_phone_call,打电话
@@ -3135,7 +3135,7 @@
 681,打电话路上走着刮风吗,OTHERS,打电话路上走着刮风吗
 681,大王,OTHERS,大王
 682,音乐,music.play,音乐
-682,那个广东雨神的广州爱情故事,music.play,那个广东</singer>雨</singer>神</singer>的广州爱情故事<//singer>
+682,那个广东雨神的广州爱情故事,music.play,那个<singer>广东</singer>雨</singer>神</singer>的广州爱情故事
 682,音乐,music.play,音乐
 683,那我打个电话,phone_call.make_a_phone_call,那我打个电话
 683,我看你啊,OTHERS,我看你啊
@@ -3330,7 +3330,7 @@
 725,云风,OTHERS,云风
 725,去云纺,navigation.navigation,去<destination>云纺</destination>
 726,请把地图打开我们到阜阳,OTHERS,请把地图打开我们到阜阳
-726,搜索阜阳,navigation.navigation,搜索阜阳</destination><//destination>
+726,搜索阜阳,navigation.navigation,搜索<destination>阜阳</destination>
 726,搜到阜阳路线,navigation.navigation,搜到<destination>阜阳</destination>路线
 726,是的,OTHERS,是的
 726,喂,OTHERS,喂
@@ -3471,7 +3471,7 @@
 757,am,OTHERS,am
 757,可以,OTHERS,可以
 758,听谭咏麟的歌曲,music.play,听<singer>谭咏麟</singer>的歌曲
-758,青海咏琳的歌曲,music.play,青海咏</singer>琳</singer>的歌曲<//singer>
+758,青海咏琳的歌曲,music.play,青海咏</singer>琳</singer>的歌曲
 758,谭咏麟的歌曲,music.play,<singer>谭咏麟</singer>的歌曲
 759,打电话了,phone_call.make_a_phone_call,打电话了
 759,万年村,navigation.navigation,<destination>万年村</destination>
@@ -3641,7 +3641,7 @@
 797,我要看熊出没,OTHERS,我要看熊出没
 797,我想看熊出没,music.play,我想看<song>熊出没</song>
 797,是的,OTHERS,是的
-797,我想看熊出没吃看见日记,music.play,我想看熊出</song>没</song>吃看见日</song>记<//song>
+797,我想看熊出没吃看见日记,music.play,我想看<song>熊出</song>没</song>吃看见日</song>记
 797,我就想看熊出没之泰篇日记,OTHERS,我就想看熊出没之泰篇日记
 797,千万别弄了,OTHERS,千万别弄了
 797,我想听爱死了昨天,music.play,我想听<song>爱死了昨天</song>
@@ -3902,7 +3902,7 @@
 853,大山,OTHERS,大山
 853,马兰,OTHERS,马兰
 853,爸爸妈妈,music.play,<song>爸爸妈妈</song>
-854,播放歌手带你去旅游,music.play,播放歌手</song>带</song>你</song>去</song>旅</song>游</song><//song>
+854,播放歌手带你去旅游,music.play,播放歌手</song>带</song>你</song>去</song>旅</song>游</song>
 854,播放带你去旅行,music.play,播放<song>带你去旅行</song>
 854,追光仔,OTHERS,追光仔
 854,放金光振,music.play,放<singer>金光振</singer>
@@ -3992,7 +3992,7 @@
 873,景宁,navigation.navigation,<destination>景宁</destination>
 874,搜索颠倒人生mv,OTHERS,搜索颠倒人生mv
 874,风的季节,music.play,<song>风的季节</song>
-874,打开音乐风的季节,music.play,打开音乐风的</song>季</song>节</song><//song>
+874,打开音乐风的季节,music.play,打开音乐<song>风的</song>季</song>节</song>
 875,我要听九十九,music.play,我要听<song>九十九</song>
 875,949,OTHERS,949
 875,切歌,music.next,切歌
@@ -4118,7 +4118,7 @@
 902,回家,navigation.navigation,回<custom_destination>家</custom_destination>
 902,我要回家,navigation.navigation,我要回<custom_destination>家</custom_destination>
 903,请打电话,phone_call.make_a_phone_call,请打电话
-903,中江,navigation.navigation,中江</destination><//destination>
+903,中江,navigation.navigation,<destination>中江</destination>
 903,中江李园村,navigation.navigation,<destination>中江李园村</destination>
 904,我要到红塔九江,navigation.navigation,我要到<destination>红塔九江</destination>
 904,我要到鸿塔酒家,navigation.navigation,我要到<destination>鸿塔酒家</destination>

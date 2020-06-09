@@ -2,7 +2,7 @@ import os
 import logging
 import argparse
 from tqdm import tqdm, trange
-
+from copy import deepcopy
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader, SequentialSampler
@@ -125,7 +125,108 @@ def convert_input_file_to_tensor_dataset(lines,
     return dataset
 
 
-def predict(pred_config):
+def predict_sample(lines: list):
+    try:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str,
+                            help="Path to save, load model")
+
+        parser.add_argument("--batch_size", default=1, type=int, help="Batch size for prediction")
+        parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+
+        pred_config = parser.parse_args()
+
+        # load model and args
+        args = get_args(pred_config)
+        device = get_device(pred_config)
+        model = load_model(pred_config, args, device)
+        logger.info(args)
+
+        intent_label_lst = get_intent_labels(args)
+        slot_label_lst = get_slot_labels(args)
+
+        # Convert input file to TensorDataset
+        pad_token_label_id = args.ignore_index
+        tokenizer = load_tokenizer(args)
+        dataset = convert_input_file_to_tensor_dataset(lines, pred_config, args, tokenizer, pad_token_label_id)
+
+        # Predict
+        sampler = SequentialSampler(dataset)
+        data_loader = DataLoader(dataset, sampler=sampler, batch_size=pred_config.batch_size)
+
+        all_slot_label_mask = None
+        intent_preds = None
+        slot_preds = None
+
+        for batch in data_loader:
+            batch = tuple(t.to(device) for t in batch)
+            with torch.no_grad():
+                inputs = {"input_ids": batch[0], "attention_mask": batch[1], "intent_label_ids": None,
+                          "slot_labels_ids": None}
+                if args.model_type != "distilbert":
+                    inputs["token_type_ids"] = batch[2]
+                outputs = model(**inputs)
+                _, (intent_logits, slot_logits) = outputs[:2]
+
+                # Intent Prediction
+                if intent_preds is None:
+                    intent_preds = intent_logits.detach().cpu().numpy()
+                else:
+                    intent_preds = np.append(intent_preds, intent_logits.detach().cpu().numpy(), axis=0)
+
+                # Slot prediction
+                if slot_preds is None:
+                    slot_preds = slot_logits.detach().cpu().numpy()
+                    all_slot_label_mask = batch[3].detach().cpu().numpy()
+                else:
+                    slot_preds = np.append(slot_preds, slot_logits.detach().cpu().numpy(), axis=0)
+                    all_slot_label_mask = np.append(all_slot_label_mask, batch[3].detach().cpu().numpy(), axis=0)
+
+        intent_preds = np.argmax(intent_preds, axis=1)
+
+        # 第一大的数
+        slot_max_preds = np.array(np.argmax(slot_preds, axis=2)[0])
+
+        slot_label_map = {i: label for i, label in enumerate(slot_label_lst)}
+        slot_preds_list = [[] for _ in range(slot_max_preds.shape[0])]
+
+        end_token_index = None
+        for j in range(slot_max_preds.shape[0]):
+            if all_slot_label_mask[0, j] != pad_token_label_id:
+                if slot_max_preds[j] not in [1, 2, 3]:
+                    end_token_index = slot_max_preds[j]
+                slot_preds_list[0].append(slot_label_map[slot_max_preds[j]])
+
+        start_token_index = end_token_index - 1
+
+        slot_second_max_index = np.argmax(slot_preds[:, :, start_token_index], axis=1)[0]
+        slot_preds_list[0][slot_second_max_index - 1] = slot_label_map[start_token_index]
+
+        # Write to output file
+        for words, slot_preds, intent_pred in zip(lines, slot_preds_list, intent_preds):
+            line = ""
+            for word, pred in zip(words, slot_preds):
+                if pred == 'O':
+                    line = line + word + " "
+                else:
+                    if pred.startswith('B-'):
+                        pred = pred.replace('B-', '<')
+                        pred += '>'
+                        line = line + "{} {} ".format(pred, word)
+                    else:
+                        pred = pred.replace('I-', '</')
+                        pred += '>'
+                        line = line + "{} {} ".format(word, pred)
+
+            return line.strip()
+
+        logger.info("Prediction Done!")
+
+    except:
+        return None
+
+
+def predict_batch(pred_config):
     # load model and args
     args = get_args(pred_config)
     device = get_device(pred_config)
@@ -152,9 +253,7 @@ def predict(pred_config):
     for batch in tqdm(data_loader, desc="Predicting"):
         batch = tuple(t.to(device) for t in batch)
         with torch.no_grad():
-            inputs = {"input_ids": batch[0],
-                      "attention_mask": batch[1],
-                      "intent_label_ids": None,
+            inputs = {"input_ids": batch[0], "attention_mask": batch[1], "intent_label_ids": None,
                       "slot_labels_ids": None}
             if args.model_type != "distilbert":
                 inputs["token_type_ids"] = batch[2]
@@ -220,18 +319,20 @@ def predict(pred_config):
 
 
 if __name__ == "__main__":
-    init_logger()
-    parser = argparse.ArgumentParser()
+    # init_logger()
+    # parser = argparse.ArgumentParser()
+    #
+    # parser.add_argument("--input_file", default="../../data/yanxishe/test/sample_pred_in.txt", type=str,
+    #                     help="Input file for prediction")
+    # parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
+    #                     help="Output file for prediction")
+    # parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str, help="Path to save, load model")
+    #
+    # parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
+    # parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+    #
+    # pred_config = parser.parse_args()
+    # predict_batch(pred_config)
 
-    parser.add_argument("--input_file", default="../../data/yanxishe/test/sample_pred_in.txt", type=str,
-                        help="Input file for prediction")
-    parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
-                        help="Output file for prediction")
-    parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str, help="Path to save, load model")
-    # parser.add_argument("--model_dir", default="../../src/core/snips_model", type=str, help="Path to save, load model")
-
-    parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
-    parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
-
-    pred_config = parser.parse_args()
-    predict(pred_config)
+    # print(predict_sample(lines=[['来', '一', '首', '停', '格']]))
+    print(predict_sample(lines=[['青', '海', '咏', '琳', '的', '歌', '曲']]))

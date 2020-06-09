@@ -12,6 +12,7 @@ import random
 import numpy as np
 import pandas as pd
 from transformers import tokenization_bert
+from src.core.predict import predict_sample
 
 random.seed(42)
 np.random.seed(42)
@@ -239,6 +240,11 @@ class Util(object):
                     if start != -1 and end != -1:
                         token = slot_annotation[start + 1: end]
 
+                        if '/' in token:
+                            result = predict_sample(lines=[self.tokenization(test_data.iloc[index, 1])])
+                            if result is not None:
+                                slot_annotation = result
+
                         end_token = '</' + token + '>'
                         count = slot_annotation.count(end_token) - 1
                         if count != 0:
@@ -247,7 +253,7 @@ class Util(object):
                         slot_annotation = slot_annotation.replace(' ', '')
                         slot_annotation = slot_annotation.replace('##', '')
 
-                        if slot_annotation.find(end_token) == -1:
+                        if slot_annotation.find(end_token) == -1 and '//' not in end_token:
                             slot_annotation += end_token
 
                         token = token.replace(' ', '')
@@ -272,8 +278,7 @@ class Util(object):
 
 if __name__ == '__main__':
     util = Util()
+    # 生成标准的输入数据
     # util.generate_yanxishe_input_data()
-
+    # 生成结果数据
     util.generate_result()
-
-    # print(util.select_token_from_slot_dictionary(text='家'))
