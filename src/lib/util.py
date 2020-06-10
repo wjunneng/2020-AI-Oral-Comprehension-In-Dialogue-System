@@ -466,12 +466,12 @@ class Rule(object):
         music_pause = False
         phone_call_cancel = False
         other = True
-        print(cancel_session_id_list)
         for index in range(result.shape[0]):
             session_id = int(result.iloc[index, 0])
             query = result.iloc[index, 1].strip()
             intent = result.iloc[index, 2].strip()
             slot_annotation = result.iloc[index, 3].strip()
+
 
             if session_id in cancel_session_id_list:
                 if 'navigation' in intent and query not in cancel_data:
@@ -491,15 +491,28 @@ class Rule(object):
                     navigation_cancel_navigation = False
 
                 if before_id is None or before_id != session_id:
-                    navigation_cancel_navigation = False
-                    music_pause = False
-                    phone_call_cancel = False
-                    other = True
+                    if navigation_cancel_navigation:
+                        other = False
+                        music_pause = False
+                        phone_call_cancel = False
+                    elif music_pause:
+                        other = False
+                        phone_call_cancel = False
+                        navigation_cancel_navigation = False
+                    elif phone_call_cancel:
+                        other = False
+                        music_pause = False
+                        navigation_cancel_navigation = False
+                    else:
+                        music_pause = False
+                        phone_call_cancel = False
+                        navigation_cancel_navigation = False
 
                     before_id = session_id
 
                     if query in cancel_data:
                         result.iloc[index, 2] = 'OTHERS'
+                        continue
 
                 if before_id == session_id and query in cancel_data:
                     if navigation_cancel_navigation:
