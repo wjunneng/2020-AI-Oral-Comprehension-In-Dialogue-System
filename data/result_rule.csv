@@ -16,7 +16,7 @@
 4,我刚打电话,OTHERS,我刚打电话
 4,我,OTHERS,我
 4,取消导航,navigation.cancel_navigation,取消导航
-5,取消,navigation.cancel_navigation,取消
+5,取消,OTHERS,取消
 5,播放乱世,music.play,播放<song>乱世</song>
 5,奉化市,navigation.navigation,<destination>奉化市</destination>
 6,你想要多练练手呐,OTHERS,你想要多练练手呐
@@ -72,7 +72,7 @@
 16,播歌,music.play,播歌
 16,告白一下吧,OTHERS,告白一下吧
 16,不再取笑吧,OTHERS,不再取笑吧
-16,取消吧,navigation.cancel_navigation,取消吧
+16,取消吧,music.pause,取消吧
 17,叮当,OTHERS,叮当
 17,请问一下陈婷是不是我儿子,OTHERS,请问一下陈婷是不是我儿子
 17,成龙,music.play,<singer>成龙</singer>
@@ -81,7 +81,7 @@
 17,我要去瑞安,navigation.navigation,我要去<destination>瑞安</destination>
 18,高松,music.play,<singer>高松</singer>
 18,只得悄悄溜走,OTHERS,只得悄悄溜走
-18,取消,navigation.cancel_navigation,取消
+18,取消,OTHERS,取消
 18,播放音乐,music.play,播放音乐
 18,继续,OTHERS,继续
 18,十送红军,music.play,<song>十送红军</song>
@@ -168,7 +168,7 @@
 37,我要回家,navigation.navigation,我要回<custom_destination>家</custom_destination>
 38,导航结束,navigation.cancel_navigation,导航结束
 38,二,OTHERS,二
-38,取消,navigation.cancel_navigation,取消
+38,取消,OTHERS,取消
 39,铜山高铁站,navigation.navigation,<destination>铜山高铁站</destination>
 39,播放音乐,music.play,播放音乐
 39,拨打电话,phone_call.make_a_phone_call,拨打电话
@@ -243,7 +243,7 @@
 57,导航结束,navigation.cancel_navigation,导航结束
 57,谢谢,OTHERS,谢谢
 57,导航结束,navigation.cancel_navigation,导航结束
-58,取消,navigation.cancel_navigation,取消
+58,取消,OTHERS,取消
 58,科华北路153号,navigation.navigation,<destination>科华北路153号</destination>
 58,科华北路153号,navigation.navigation,<destination>科华北路153号</destination>
 59,打电话给王aj,phone_call.make_a_phone_call,打电话给<contact_name>王aj</contact_name>
@@ -278,7 +278,7 @@
 66,我要听赞元街,music.play,我要听<song>赞元街</song>
 66,好不好,OTHERS,好不好
 66,the truth,OTHERS,the truth
-66,退出,navigation.cancel_navigation,退出
+66,退出,music.pause,退出
 67,放邓紫棋的歌,music.play,放<singer>邓紫棋</singer>的歌
 67,放邓紫棋的歌,music.play,放<singer>邓紫棋</singer>的歌
 67,打了三万多呀,OTHERS,打了三万多呀
@@ -294,7 +294,7 @@
 70,去皇冠大酒店,navigation.navigation,去<destination>皇冠大酒店</destination>
 70,南昌的天气,OTHERS,南昌的天气
 70,有待,OTHERS,有待
-70,取消,navigation.cancel_navigation,取消
+70,取消,OTHERS,取消
 70,我要去皇冠大酒店,navigation.navigation,我要去<destination>皇冠大酒店</destination>
 71,给我来一首刘德华的忘情水,music.play,给我来一首<singer>刘德华</singer>的忘情水
 71,给我来一首社会摇,music.play,给我来一首<song>社会摇</song>
@@ -320,7 +320,7 @@
 75,给我来一首怀念青春,music.play,给我来一首<song>怀念青春</song>
 75,找个dj的歌,music.play,找个<theme>dj的歌</theme>
 76,伊莎,OTHERS,伊莎
-76,取消,navigation.cancel_navigation,取消
+76,取消,OTHERS,取消
 76,取消导航,navigation.cancel_navigation,取消导航
 76,取消导航,navigation.cancel_navigation,取消导航
 77,拨号6270,phone_call.make_a_phone_call,拨号<phone_num>6270</phone_num>
@@ -375,7 +375,7 @@
 89,今晚八零后脱口秀,OTHERS,今晚八零后脱口秀
 89,电话给669,phone_call.make_a_phone_call,电话给<phone_num>669</phone_num>
 89,打电话给663,phone_call.make_a_phone_call,打电话给<phone_num>663</phone_num>
-90,取消吧,navigation.cancel_navigation,取消吧
+90,取消吧,OTHERS,取消吧
 90,导航,navigation.open,导航
 90,南京市,navigation.navigation,<destination>南京市</destination>
 91,拨打电话给姐夫,phone_call.make_a_phone_call,拨打电话给<contact_name>姐夫</contact_name>
@@ -451,7 +451,7 @@
 109,请来首诱惑首,music.play,请来首<song>诱惑首</song>
 109,乾元桥,navigation.navigation,<destination>乾元桥</destination>
 110,am,OTHERS,am
-110,关闭,music.pause,关闭
+110,关闭,OTHERS,关闭
 110,我要听歌,music.play,我要听歌
 110,成都,music.play,<song>成都</song>
 110,成都,music.play,<song>成都</song>
@@ -486,7 +486,7 @@
 118,伤了心的女人怎么了,OTHERS,伤了心的女人怎么了
 118,醉相思,music.play,<song>醉相思</song>
 119,叮当你好,OTHERS,叮当你好
-119,退出,navigation.cancel_navigation,退出
+119,退出,OTHERS,退出
 119,救赎,music.play,<song>救赎</song>
 119,请播放梁梁,music.play,请播放<song>梁梁</song>
 119,请播放歌曲凉凉,music.play,请播放歌曲<song>凉凉</song>
@@ -553,7 +553,7 @@
 132,哎,OTHERS,哎
 132,来一首成都,music.play,来一首<song>成都</song>
 133,林北,OTHERS,林北
-133,取消,navigation.cancel_navigation,取消
+133,取消,OTHERS,取消
 133,湖南大碗菜,navigation.navigation,<destination>湖南大碗菜</destination>
 134,播放不再犹豫,music.play,播放<song>不再犹豫</song>
 134,海阔天空,music.play,<song>海阔天空</song>
@@ -658,7 +658,7 @@
 159,播放刀郎歌曲,music.play,播放<singer>刀郎</singer>歌曲
 159,播放汪峰歌曲,music.play,播放<singer>汪峰</singer>歌曲
 160,去监利,navigation.navigation,去<destination>监利</destination>
-160,关闭,music.pause,关闭
+160,关闭,OTHERS,关闭
 160,给我拨通电话,phone_call.make_a_phone_call,给我拨通电话
 160,给我打开视频,OTHERS,给我打开视频
 160,无盐,OTHERS,无盐
@@ -674,7 +674,7 @@
 161,力拔歌曲,music.play,<singer>力拔</singer>歌曲
 161,李白歌曲,music.play,<song>李白</song>歌曲
 162,许仙,OTHERS,许仙
-162,取消,navigation.cancel_navigation,取消
+162,取消,OTHERS,取消
 162,孙楠,music.play,<singer>孙楠</singer>
 162,呃我要到新华每天,navigation.navigation,呃我要到<destination>新华</destination>每天
 162,你是不是个傻子吗,OTHERS,你是不是个傻子吗
@@ -725,7 +725,7 @@
 171,10101,OTHERS,10101
 171,导航,navigation.open,导航
 171,河北省涿州市码头镇派出所,navigation.navigation,<destination>河北省涿州市码头镇派出所</destination>
-172,取消,navigation.cancel_navigation,取消
+172,取消,OTHERS,取消
 172,打开导航带我去万隆城,navigation.navigation,打开导航带我去<destination>万隆城</destination>
 172,导航,navigation.open,导航
 173,我要听爱情,music.play,我要听<theme>爱情</theme>
@@ -892,11 +892,11 @@
 209,把导航到西双版纳磨憨口岸,navigation.navigation,把导航到<destination>西双版纳磨憨口岸</destination>
 209,导航到西双版纳磨憨口岸,navigation.navigation,导航到<destination>西双版纳磨憨口岸</destination>
 210,梓峰,navigation.navigation,<destination>梓峰</destination>
-210,退出,navigation.cancel_navigation,退出
+210,退出,OTHERS,退出
 210,559打电话,phone_call.make_a_phone_call,<phone_num>559</phone_num>打电话
-210,退出,navigation.cancel_navigation,退出
+210,退出,phone_call.cancel,退出
 210,连接蓝牙,OTHERS,连接蓝牙
-210,退出,navigation.cancel_navigation,退出
+210,退出,phone_call.cancel,退出
 210,给559打电话,phone_call.make_a_phone_call,给<phone_num>559</phone_num>打电话
 211,二水岸佳苑b区,navigation.navigation,<destination>二水岸佳苑b区</destination>
 211,江西方程式西二门机乘客仅在8点44分前到达约定地点,OTHERS,江西方程式西二门机乘客仅在8点44分前到达约定地点
@@ -929,7 +929,7 @@
 218,你导航连山区政府,navigation.navigation,你导航<destination>连山区政府</destination>
 218,我要打电话,phone_call.make_a_phone_call,我要打电话
 218,取消导航,navigation.cancel_navigation,取消导航
-218,关闭,music.pause,关闭
+218,关闭,navigation.cancel_navigation,关闭
 219,去回民清真寺,navigation.navigation,去<destination>回民清真寺</destination>
 219,去九大碗饭店,navigation.navigation,去<destination>九大碗饭店</destination>
 219,打电话,phone_call.make_a_phone_call,打电话
@@ -954,7 +954,7 @@
 223,打个电话给10000,phone_call.make_a_phone_call,打个电话给<phone_num>10000</phone_num>
 223,某某某,OTHERS,某某某
 224,我想听潮湿的心,music.play,我想听<song>潮湿的心</song>
-224,取消,navigation.cancel_navigation,取消
+224,取消,OTHERS,取消
 224,没有了,OTHERS,没有了
 224,去咸阳火车站,navigation.navigation,去<destination>咸阳火车站</destination>
 225,来一首星星点灯,music.play,来一首<song>星星点灯</song>
@@ -1015,7 +1015,7 @@
 234,大悲咒,music.play,<song>大悲咒</song>
 234,大悲咒跟我一起也是大悲咒,OTHERS,大悲咒跟我一起也是大悲咒
 234,张娜,OTHERS,张娜
-234,取消,navigation.cancel_navigation,取消
+234,取消,music.pause,取消
 234,请帮我导航到解放西魅力四射酒吧,navigation.navigation,请帮我导航到<destination>解放西魅力四射酒吧</destination>
 234,帮我导航到五江天街,navigation.navigation,帮我导航到<destination>五江天街</destination>
 235,拨打全友堂电话,phone_call.make_a_phone_call,拨打<contact_name>全友堂</contact_name>电话
@@ -1078,7 +1078,7 @@
 244,13900001235,phone_call.make_a_phone_call,<phone_num>13900001235</phone_num>
 245,导航去金平,navigation.navigation,导航去<destination>金平</destination>
 245,导航去金坪镇,navigation.navigation,导航去<destination>金坪镇</destination>
-245,拜拜,OTHERS,拜拜
+245,拜拜,navigation.cancel_navigation,拜拜
 245,打电话给的的平台电话,phone_call.make_a_phone_call,打电话给的的<contact_name>平台</contact_name>电话
 246,你好我是仰泳,OTHERS,你好我是仰泳
 246,哎呦嘿你好我是杨莹为今年我五岁了这是我的作品公主小人儿,OTHERS,哎呦嘿你好我是杨莹为今年我五岁了这是我的作品公主小人儿
@@ -1137,7 +1137,7 @@
 261,我要听蒙语之类的歌曲,music.play,我要听<language>蒙语</language>之类的歌曲
 261,我要听北京欢迎你,music.play,我要听<song>北京欢迎你</song>
 261,我要听站起来,music.play,我要听<song>站起来</song>
-262,取消,navigation.cancel_navigation,取消
+262,取消,OTHERS,取消
 262,我要去西藏,navigation.navigation,我要去<destination>西藏</destination>
 262,我要去新疆,navigation.navigation,我要去<destination>新疆</destination>
 263,打电话给2000099,phone_call.make_a_phone_call,打电话给<phone_num>2000099</phone_num>
@@ -1171,7 +1171,7 @@
 270,放洋葱,music.play,放<song>洋葱</song>
 270,衡量车不限速,OTHERS,衡量车不限速
 270,瞧瞧,OTHERS,瞧瞧
-270,取消,navigation.cancel_navigation,取消
+270,取消,music.pause,取消
 271,武威市湖北省枣阳,navigation.navigation,<destination>武威市湖北省枣阳</destination>
 271,叮当你好,OTHERS,叮当你好
 271,湖北省枣阳市,navigation.navigation,<destination>湖北省枣阳市</destination>
@@ -1211,7 +1211,7 @@
 278,猫,OTHERS,猫
 278,可乐,OTHERS,可乐
 278,滚,OTHERS,滚
-278,取消,navigation.cancel_navigation,取消
+278,取消,phone_call.cancel,取消
 278,放些歌听,music.play,放些歌听
 278,成都,music.play,<song>成都</song>
 278,来一首成都,music.play,来一首<song>成都</song>
@@ -1264,7 +1264,7 @@
 289,给521打电话,phone_call.make_a_phone_call,给<phone_num>521打电话</phone_num>
 289,放说散就散,music.play,放<song>说散就散</song>
 290,高添,OTHERS,高添
-290,取消,navigation.cancel_navigation,取消
+290,取消,OTHERS,取消
 290,我在门口,OTHERS,我在门口
 290,花家农场,navigation.navigation,<destination>花家农场</destination>
 290,八家农场,navigation.navigation,<destination>八家农场</destination>
@@ -1315,7 +1315,7 @@
 301,我擦嘞,OTHERS,我擦嘞
 301,那你听不了了,OTHERS,那你听不了了
 301,妈妈的吻,music.play,<song>妈妈的吻</song>
-301,取消,navigation.cancel_navigation,取消
+301,取消,music.pause,取消
 301,胡蝶,phone_call.make_a_phone_call,<contact_name>胡蝶</contact_name>
 301,joey,OTHERS,joey
 301,盛京银行,navigation.navigation,<destination>盛京银行</destination>
@@ -1341,7 +1341,7 @@
 307,不想喝的了,OTHERS,不想喝的了
 307,成南,OTHERS,成南
 307,群星的情感,music.play,<singer>群星</singer>的情感
-307,取消,navigation.cancel_navigation,取消
+307,取消,music.pause,取消
 308,给15600000915打电话,phone_call.make_a_phone_call,给<phone_num>15600000915</phone_num>打电话
 308,结束导航,navigation.cancel_navigation,结束导航
 308,结束导航,navigation.cancel_navigation,结束导航
@@ -1361,7 +1361,7 @@
 311,回家,navigation.navigation,回<custom_destination>家</custom_destination>
 312,导航到深圳,navigation.navigation,导航到<destination>深圳</destination>
 312,胡长江,OTHERS,胡长江
-312,取消,navigation.cancel_navigation,取消
+312,取消,OTHERS,取消
 312,呼叫家里,phone_call.make_a_phone_call,呼叫<contact_name>家里</contact_name>
 313,放一首烟花树下的约定,music.play,放一首<song>烟花树下的约定</song>
 313,放一首樱花树下的约定,music.play,放一首<song>樱花树下的约定</song>
@@ -1379,7 +1379,7 @@
 316,张靓玫的27找个许佳慧的走后的思恋,music.play,<singer>张靓玫</singer>的27找个许佳慧的走后的思恋
 317,你好叮当,OTHERS,你好叮当
 317,声音,OTHERS,声音
-317,暂停播放,music.pause,暂停播放
+317,暂停播放,OTHERS,暂停播放
 317,返回菜单,OTHERS,返回菜单
 317,播放,music.play,播放
 317,收音机,OTHERS,收音机
@@ -1408,7 +1408,7 @@
 321,啥补啥打电话,phone_call.make_a_phone_call,啥补啥打电话
 321,阿陈,OTHERS,阿陈
 321,纪元,OTHERS,纪元
-322,放弃,navigation.cancel_navigation,放弃
+322,放弃,OTHERS,放弃
 322,郭强,OTHERS,郭强
 322,青藏高原歌曲,music.play,<song>青藏高原</song>歌曲
 323,播放车载音乐,music.play,播放<theme>车载音乐</theme>
@@ -1432,7 +1432,7 @@
 328,名士豪庭一号公建,navigation.navigation,<destination>名士豪庭一号公建</destination>
 328,去名士豪庭1号公建,navigation.navigation,去<destination>名士豪庭1号公建</destination>
 329,车丽坊车立方官渡区村里坊,navigation.navigation,<destination>车丽坊车立方官渡区村里坊</destination>
-329,不需要了,navigation.cancel_navigation,不需要了
+329,不需要了,OTHERS,不需要了
 329,楼兰,navigation.navigation,<destination>楼兰</destination>
 330,我播放一首路太远,music.play,我播放一首<song>路太远</song>
 330,导航到海拉尔火车站,navigation.navigation,导航到<destination>海拉尔火车站</destination>
@@ -1557,7 +1557,7 @@
 350,子曼,navigation.navigation,<destination>子曼</destination>
 350,网络好了吗,OTHERS,网络好了吗
 350,笑红尘歌曲,music.play,<song>笑红尘</song>歌曲
-350,取消吧,navigation.cancel_navigation,取消吧
+350,取消吧,music.pause,取消吧
 350,讲个故事,OTHERS,讲个故事
 350,大王,OTHERS,大王
 350,b,OTHERS,b
@@ -1596,7 +1596,7 @@
 358,播放,music.play,播放
 358,播放再见只是陌生人,music.play,播放<song>再见只是陌生人</song>
 359,邓小林,OTHERS,邓小林
-359,取消,navigation.cancel_navigation,取消
+359,取消,OTHERS,取消
 359,咸阳市房屋管理局,navigation.navigation,<destination>咸阳市房屋管理局</destination>
 359,咸阳市房产交易中心,navigation.navigation,<destination>咸阳市房产交易中心</destination>
 360,导航,navigation.open,导航
@@ -1625,7 +1625,7 @@
 365,常发豪郡花园,navigation.navigation,<destination>常发豪郡花园</destination>
 366,泽轩,phone_call.make_a_phone_call,<contact_name>泽轩</contact_name>
 366,放一首,music.play,放一首
-366,取消,navigation.cancel_navigation,取消
+366,取消,music.pause,取消
 367,想听就当我们没爱过,music.play,想听<song>就当我们没爱过</song>
 367,我想听就当我们没爱过,music.play,我想听<song>就当我们没爱过</song>
 367,我想听就当我没爱过,music.play,我想听<song>就当我没爱过</song>
@@ -1644,7 +1644,7 @@
 370,放林俊杰,music.play,放<singer>林俊杰</singer>
 370,下一首歌,music.next,下一首歌
 370,结束导航,navigation.cancel_navigation,结束导航
-371,取消,navigation.cancel_navigation,取消
+371,取消,OTHERS,取消
 371,我要去自贡市兰夫公园,navigation.navigation,我要去<destination>自贡市兰夫公园</destination>
 371,我要去自贡市南湖公园,navigation.navigation,我要去<destination>自贡市南湖公园</destination>
 372,导航,navigation.open,导航
@@ -1711,7 +1711,7 @@
 385,457369,OTHERS,457369
 385,导航到翠城馨园,navigation.navigation,导航到<destination>翠城馨园</destination>
 385,去公司,navigation.navigation,去<custom_destination>公司</custom_destination>
-386,取消,navigation.cancel_navigation,取消
+386,取消,OTHERS,取消
 386,你好傻,OTHERS,你好傻
 386,没关系,OTHERS,没关系
 386,哈哈哈,OTHERS,哈哈哈
@@ -1754,11 +1754,11 @@
 393,正阳县城,navigation.navigation,<destination>正阳县城</destination>
 393,521打电话,phone_call.make_a_phone_call,<phone_num>521打电话</phone_num>
 393,给521打电话,phone_call.make_a_phone_call,给<phone_num>521打电话</phone_num>
-394,取消,navigation.cancel_navigation,取消
+394,取消,OTHERS,取消
 394,我要去中华药城,navigation.navigation,我要去<destination>中华药城</destination>
 394,我想听夜夜夜夜,music.play,我想听<song>夜夜夜夜</song>
 395,挂电话再再以后,phone_call.make_a_phone_call,挂电话再再以后
-395,取消,navigation.cancel_navigation,取消
+395,取消,OTHERS,取消
 395,广乐,OTHERS,广乐
 395,导航,navigation.open,导航
 395,到成都慧聚知识产权代理有限公司,navigation.navigation,到<destination>成都慧聚知识产权代理有限公司</destination>
@@ -1797,7 +1797,7 @@
 403,到乌兰浩特,navigation.navigation,到<destination>乌兰浩特</destination>
 403,打电话,phone_call.make_a_phone_call,打电话
 404,草,OTHERS,草
-404,取消,navigation.cancel_navigation,取消
+404,取消,OTHERS,取消
 404,拨打18700005363,phone_call.make_a_phone_call,拨打<phone_num>18700005363</phone_num>
 404,到南村镇,navigation.navigation,到<destination>南村镇</destination>
 405,我想去永安镇汇丰社区,navigation.navigation,我想去<destination>永安镇汇丰社区</destination>
@@ -1919,7 +1919,7 @@
 427,有名,OTHERS,有名
 428,住手,OTHERS,住手
 428,尤里安,OTHERS,尤里安
-428,取消,navigation.cancel_navigation,取消
+428,取消,OTHERS,取消
 428,叮当你好,OTHERS,叮当你好
 428,帮我导航到新市推广所,navigation.navigation,帮我导航到<destination>新市推广所</destination>
 428,帮我导航到新市推广所,navigation.navigation,帮我导航到<destination>新市推广所</destination>
@@ -2031,7 +2031,7 @@
 449,打电话给13300009503,phone_call.make_a_phone_call,打电话给<phone_num>13300009503</phone_num>
 449,下载通讯录,OTHERS,下载通讯录
 449,导航到众彩物流,navigation.navigation,导航到<destination>众彩物流</destination>
-450,取消,navigation.cancel_navigation,取消
+450,取消,OTHERS,取消
 450,来首刘德华的歌,music.play,来首<singer>刘德华</singer>的歌
 451,打电话太阳我要打电话,phone_call.make_a_phone_call,打电话<contact_name>太阳</contact_name>我要打电话
 451,没听懂你的意思，你吃屎,OTHERS,没听懂你的意思，你吃屎
@@ -2062,7 +2062,7 @@
 456,播放小屁孩,music.play,播放<song>小屁孩</song>
 456,小屁孩,OTHERS,小屁孩
 456,覃玫,OTHERS,覃玫
-456,取消,navigation.cancel_navigation,取消
+456,取消,music.pause,取消
 456,一,OTHERS,一
 456,许仙,OTHERS,许仙
 457,播放歌曲一晃都老了,music.play,播放歌曲<song>一晃都老了</song>
@@ -2082,7 +2082,7 @@
 459,3870000013,phone_call.make_a_phone_call,<phone_num>3870000013</phone_num>
 459,只识别的那个不是你这个55岁所以他就没找到,OTHERS,只识别的那个不是你这个55岁所以他就没找到
 459,叮当你好,OTHERS,叮当你好
-460,取消,navigation.cancel_navigation,取消
+460,取消,OTHERS,取消
 460,加油站,navigation.navigation,<destination>加油站</destination>
 460,人社局,navigation.navigation,<destination>人社局</destination>
 461,给我闭嘴,OTHERS,给我闭嘴
@@ -2106,7 +2106,7 @@
 463,打电话给黄红,phone_call.make_a_phone_call,打电话给<contact_name>黄红</contact_name>
 464,阿牛,OTHERS,阿牛
 464,我戳你的逼疯你个逼,OTHERS,我戳你的逼疯你个逼
-464,取消,navigation.cancel_navigation,取消
+464,取消,OTHERS,取消
 464,光大银行,navigation.navigation,<destination>光大银行</destination>
 464,光大银行,navigation.navigation,<destination>光大银行</destination>
 465,打张德群的电话,phone_call.make_a_phone_call,打<contact_name>张德群</contact_name>的电话
@@ -2185,12 +2185,12 @@
 482,我想听轻轻的我将离开你,music.play,我想听<song>轻轻的我将离开你</song>
 482,涛声依旧,music.play,<song>涛声依旧</song>
 482,你好啊,OTHERS,你好啊
-482,取消,navigation.cancel_navigation,取消
+482,取消,music.pause,取消
 483,我想听成都,music.play,我想听<song>成都</song>
 483,我想听平安奇妙物语,music.play,我想听<song>平安奇妙物语</song>
 483,我想听奇妙物语,music.play,我想听<song>奇妙物语</song>
 484,取消导航,navigation.cancel_navigation,取消导航
-484,取消,navigation.cancel_navigation,取消
+484,取消,OTHERS,取消
 484,是的,OTHERS,是的
 484,嗯,OTHERS,嗯
 484,am,OTHERS,am
@@ -2345,7 +2345,7 @@
 516,打开行车记录仪,OTHERS,打开行车记录仪
 516,阿丁,OTHERS,阿丁
 516,打电话给妈,phone_call.make_a_phone_call,打电话给<contact_name>妈</contact_name>
-516,取消,navigation.cancel_navigation,取消
+516,取消,phone_call.cancel,取消
 517,再见,OTHERS,再见
 517,到时代大厦,navigation.navigation,到<destination>时代大厦</destination>
 517,到时代国际,navigation.navigation,到<destination>时代国际</destination>
@@ -2383,7 +2383,7 @@
 520,来一首雨花石,music.play,来一首<song>雨花石</song>
 520,来一首雨花石来一首雨花石,music.play,来一首<song>雨花石</song>来一首雨花石
 520,来一首雨花石一首雨花石,music.play,来一首<song>雨花石</song>一首雨花石
-520,取消,navigation.cancel_navigation,取消
+520,取消,music.pause,取消
 520,收音,OTHERS,收音
 520,来一首冷酷到底,music.play,来一首<song>冷酷到底</song>
 520,呵呵呵,OTHERS,呵呵呵
@@ -2425,7 +2425,7 @@
 529,拨打五六的电话,phone_call.make_a_phone_call,拨打<phone_num>五六</phone_num>的电话
 529,拨打562电话,phone_call.make_a_phone_call,拨打<phone_num>562</phone_num>电话
 530,讲个笑话,OTHERS,讲个笑话
-530,取消,navigation.cancel_navigation,取消
+530,取消,OTHERS,取消
 530,播放在人间,music.play,播放<song>在人间</song>
 530,鹤泰路9号,navigation.navigation,<destination>鹤泰路9号</destination>
 531,你好小妹,OTHERS,你好小妹
@@ -2457,8 +2457,8 @@
 536,取消,navigation.cancel_navigation,取消
 536,静子,OTHERS,静子
 537,也要给人家打电话,phone_call.make_a_phone_call,也要给人家打电话
-537,取消,navigation.cancel_navigation,取消
-537,关闭,music.pause,关闭
+537,取消,OTHERS,取消
+537,关闭,OTHERS,关闭
 537,结束导航,navigation.cancel_navigation,结束导航
 538,拨打电话,phone_call.make_a_phone_call,拨打电话
 538,大王,OTHERS,大王
@@ -2468,7 +2468,7 @@
 539,放一首体验,music.play,放一首<song>体验</song>
 539,放一首体面,music.play,放一首<song>体面</song>
 539,放首社会摇,music.play,放首<song>社会摇</song>
-540,取消,navigation.cancel_navigation,取消
+540,取消,OTHERS,取消
 540,我去副场,navigation.navigation,我去<destination>副场</destination>
 540,我去河北省衡水市阜城县,navigation.navigation,我去<destination>河北省衡水市阜城县</destination>
 541,笑死我啊,OTHERS,笑死我啊
@@ -2515,7 +2515,7 @@
 550,播放腾格尔的歌曲,music.play,播放<singer>腾格尔</singer>的歌曲
 550,播放刘德华的歌曲,music.play,播放<singer>刘德华</singer>的歌曲
 551,心瑞,OTHERS,心瑞
-551,取消,navigation.cancel_navigation,取消
+551,取消,OTHERS,取消
 551,没有网络,OTHERS,没有网络
 551,紫七,OTHERS,紫七
 551,音乐播放,music.play,音乐播放
@@ -2575,7 +2575,7 @@
 563,取消,navigation.cancel_navigation,取消
 564,丁浩,OTHERS,丁浩
 564,打电话给你妈,phone_call.make_a_phone_call,打电话给<contact_name>你妈</contact_name>
-564,退出,navigation.cancel_navigation,退出
+564,退出,phone_call.cancel,退出
 564,播放dj版的音乐,music.play,播放<theme>dj版的音乐</theme>
 564,dj,music.play,<theme>dj</theme>
 564,有什么铃声,OTHERS,有什么铃声
@@ -2608,13 +2608,13 @@
 568,给我播放一首赵丽颖和吴亦凡唱的想你,music.play,给我播放一首<singer>赵丽颖</singer>和吴亦凡唱的想你
 568,请给我播放一首赵丽颖和吴亦凡和唱的降你不是像你记住,music.play,请给我播放一首<singer>赵丽颖</singer>和吴亦凡和唱的降你不是像你记住
 568,老大我们没说话取消,OTHERS,老大我们没说话取消
-568,取消,navigation.cancel_navigation,取消
+568,取消,music.pause,取消
 569,音乐,music.play,音乐
-569,取消,navigation.cancel_navigation,取消
+569,取消,OTHERS,取消
 569,关闭音乐,music.pause,关闭音乐
 570,导航水濂山森林公园,navigation.navigation,导航<destination>水濂山森林公园</destination>
 570,雨轩,OTHERS,雨轩
-570,取消,navigation.cancel_navigation,取消
+570,取消,OTHERS,取消
 571,长歌,OTHERS,长歌
 571,放歌,music.play,放歌
 571,放手机上蓝牙的歌曲,music.play,放手机上蓝牙的歌曲
@@ -2653,7 +2653,7 @@
 579,唱,music.play,唱
 579,唱单身真是在一起,music.play,唱<song>单身真是在一起</song>
 580,省道201东一,navigation.navigation,<destination>省道201东一</destination>
-580,取消,navigation.cancel_navigation,取消
+580,取消,OTHERS,取消
 580,十里新城,navigation.navigation,<destination>十里新城</destination>
 581,请播放音乐,music.play,请播放音乐
 581,帮我播放云菲菲的歌,music.play,帮我播放<singer>云菲菲</singer>的歌
@@ -2687,7 +2687,7 @@
 586,怎么不播放,OTHERS,怎么不播放
 586,好的,OTHERS,好的
 586,我想听大壮的我们不一样,music.play,我想听<singer>大壮</singer>的我们不一样
-587,取消,navigation.cancel_navigation,取消
+587,取消,OTHERS,取消
 587,取消导航,navigation.cancel_navigation,取消导航
 587,寮步松湖传奇,navigation.navigation,<destination>寮步松湖</destination>传奇
 588,导航,navigation.open,导航
@@ -2762,8 +2762,8 @@
 602,退出导航,navigation.cancel_navigation,退出导航
 602,导航到新郑汽车站,navigation.navigation,导航到<destination>新郑汽车站</destination>
 603,导航到鞍山,navigation.navigation,导航到<destination>鞍山</destination>
-603,取消,navigation.cancel_navigation,取消
-603,取消,navigation.cancel_navigation,取消
+603,取消,OTHERS,取消
+603,取消,OTHERS,取消
 604,绩溪县,navigation.navigation,<destination>绩溪县</destination>
 604,给我讲十个笑话,OTHERS,给我讲十个笑话
 604,换一个,music.next,换一个
@@ -2804,8 +2804,8 @@
 612,无锡新区新丰大,navigation.navigation,<destination>无锡新区新丰大</destination>
 612,取消,navigation.cancel_navigation,取消
 612,新婚大,OTHERS,新婚大
-613,取消,navigation.cancel_navigation,取消
-613,取消,navigation.cancel_navigation,取消
+613,取消,OTHERS,取消
+613,取消,OTHERS,取消
 613,东明商厦,navigation.navigation,<destination>东明商厦</destination>
 614,请拨打忠青,phone_call.make_a_phone_call,请拨打<contact_name>忠青</contact_name>
 614,私聊吧,OTHERS,私聊吧
@@ -2822,7 +2822,7 @@
 616,发现之后它会提示你那我不是睡醒,OTHERS,发现之后它会提示你那我不是睡醒
 616,音乐,music.play,音乐
 616,别让我一个人醉,music.play,<song>别让我一个人醉</song>
-616,结束,OTHERS,结束
+616,结束,music.pause,结束
 616,结束音乐,music.pause,结束音乐
 617,导航华清,navigation.navigation,导航<destination>华清</destination>
 617,华清高速路口,navigation.navigation,<destination>华清高速路口</destination>
@@ -3024,8 +3024,8 @@
 658,打电话操心,OTHERS,打电话操心
 658,前方路口驶出环岛进入金桂大道,OTHERS,前方路口驶出环岛进入金桂大道
 658,打电话,phone_call.make_a_phone_call,打电话
-659,取消,navigation.cancel_navigation,取消
-659,取消,navigation.cancel_navigation,取消
+659,取消,OTHERS,取消
+659,取消,OTHERS,取消
 659,我要回家,navigation.navigation,我要回<custom_destination>家</custom_destination>
 659,沙崴,OTHERS,沙崴
 660,我要听拥抱你的,music.play,我要听<song>拥抱你的</song>
@@ -3054,7 +3054,7 @@
 666,打电话,phone_call.make_a_phone_call,打电话
 666,听收音机992,OTHERS,听收音机992
 667,播放一首抱一下就好,music.play,播放一首<song>抱一下就好</song>
-667,取消,navigation.cancel_navigation,取消
+667,取消,OTHERS,取消
 667,邗江搜索邗江,OTHERS,邗江搜索邗江
 667,帮我搜索还将莆田市涵江区,navigation.navigation,帮我搜索还将<destination>莆田市涵江区</destination>
 668,你出一个离开,music.play,你出一个<song>离开</song>
@@ -3063,7 +3063,7 @@
 668,我想去大田,navigation.navigation,我想去<destination>大田</destination>
 668,我要去大田下沙马村,navigation.navigation,我要去<destination>大田下沙马村</destination>
 668,要增大音量,OTHERS,要增大音量
-669,退出,navigation.cancel_navigation,退出
+669,退出,OTHERS,退出
 669,结束导航,navigation.cancel_navigation,结束导航
 669,music,music.play,music
 669,音乐,music.play,音乐
@@ -3075,8 +3075,8 @@
 670,播放现代爱情故事,music.play,播放<song>现代爱情故事</song>
 671,导航广州欧雅特比亚迪服务店,navigation.navigation,导航<destination>广州欧雅特比亚迪服务店</destination>
 671,我想听一下,music.play,我想听一下
-671,取消,navigation.cancel_navigation,取消
-672,取消,navigation.cancel_navigation,取消
+671,取消,music.pause,取消
+672,取消,OTHERS,取消
 672,谈固南大街永辉超市,navigation.navigation,<destination>谈固南大街永辉超市</destination>
 672,欧洲花园,navigation.navigation,<destination>欧洲花园</destination>
 673,我想听我想静静,music.play,我想听<song>我想静静</song>
@@ -3087,7 +3087,7 @@
 674,袁娅维的说散就散,music.play,袁娅维的<song>说散就散</song>
 675,取消导航,navigation.cancel_navigation,取消导航
 675,给我来一首周杰伦的双截棍,music.play,给我来一首<singer>周杰伦</singer>的双截棍
-675,取消,navigation.cancel_navigation,取消
+675,取消,music.pause,取消
 676,拨打电话363311,phone_call.make_a_phone_call,拨打电话<phone_num>363311</phone_num>
 676,拨打电话63000011,phone_call.make_a_phone_call,拨打电话<phone_num>63000011</phone_num>
 676,拨打电话761,phone_call.make_a_phone_call,拨打电话<phone_num>761</phone_num>
@@ -3175,7 +3175,7 @@
 692,放尿的量啊你要是你可以自己带个给改一改你好啥啥都可以争斗返回主页,OTHERS,放尿的量啊你要是你可以自己带个给改一改你好啥啥都可以争斗返回主页
 692,没事,OTHERS,没事
 692,来一首房间吧,music.play,来一首<song>房间</song>吧
-692,取消,navigation.cancel_navigation,取消
+692,取消,music.pause,取消
 693,你给我放一首时间都去哪了,music.play,你给我放一首<song>时间都去哪了</song>
 693,播放张静波的歌曲,music.play,播放<singer>张静波</singer>的歌曲
 693,帮我放点劲爆的歌曲,music.play,帮我放点<emotion>劲爆</emotion>的歌曲
@@ -3206,7 +3206,7 @@
 698,熄火,OTHERS,熄火
 698,去禄劝,navigation.navigation,去<destination>禄劝</destination>
 698,把导航关闭导航,navigation.cancel_navigation,把导航关闭导航
-699,取消,navigation.cancel_navigation,取消
+699,取消,OTHERS,取消
 699,大连警备司令部,navigation.navigation,<destination>大连警备司令部</destination>
 699,什么教堂丰收路教堂,navigation.navigation,什么教堂<destination>丰收路教堂</destination>
 700,你好啊,OTHERS,你好啊
@@ -3238,7 +3238,7 @@
 706,播放左麟右李演唱会,music.play,播放<singer>左麟右李</singer>演唱会
 706,播放许冠杰的斤两十足,music.play,播放<singer>许冠杰</singer>的斤两十足
 706,播放庄心妍的歌曲,music.play,播放<singer>庄心妍</singer>的歌曲
-707,取消,navigation.cancel_navigation,取消
+707,取消,OTHERS,取消
 707,导航,navigation.open,导航
 707,日升家具,navigation.navigation,<destination>日升家具</destination>
 708,去东方誉采酒店,navigation.navigation,去<destination>东方誉采酒店</destination>
@@ -3349,7 +3349,7 @@
 729,打开酷我音乐,OTHERS,打开酷我音乐
 730,导航乐山职业技术学院,navigation.navigation,导航<destination>乐山职业技术学院</destination>
 730,艾楠,OTHERS,艾楠
-730,取消,navigation.cancel_navigation,取消
+730,取消,OTHERS,取消
 730,播放下一首,music.next,播放下一首
 730,播放第一首,music.play,播放第一首
 730,返回主界面,OTHERS,返回主界面
@@ -3381,7 +3381,7 @@
 737,来一首降央卓玛的,music.play,来一首<singer>降央卓玛</singer>的
 737,来一首秧秧降央卓玛的西海情歌,music.play,来一首<song>秧秧降</song>央卓玛的西海情歌
 737,来一首降央卓玛的西海情歌,music.play,来一首<singer>降央卓玛</singer>的西海情歌
-738,取消,navigation.cancel_navigation,取消
+738,取消,OTHERS,取消
 738,usb,OTHERS,usb
 738,大哈,OTHERS,大哈
 738,庙村,navigation.navigation,<destination>庙村</destination>
@@ -3413,12 +3413,12 @@
 744,呼叫6444,phone_call.make_a_phone_call,呼叫<phone_num>6444</phone_num>
 744,绒花,OTHERS,绒花
 744,播放绒花,music.play,播放<song>绒花</song>
-745,取消,navigation.cancel_navigation,取消
+745,取消,OTHERS,取消
 745,取消导航,navigation.cancel_navigation,取消导航
 745,不要,OTHERS,不要
 746,放下一曲,music.next,放下一曲
 746,没有取消,OTHERS,没有取消
-746,取消,navigation.cancel_navigation,取消
+746,取消,OTHERS,取消
 746,导航信达商务大厦,navigation.navigation,导航<destination>信达商务大厦</destination>
 747,打电话给老婆,phone_call.make_a_phone_call,打电话给<contact_name>老婆</contact_name>
 747,我要去徐州,navigation.navigation,我要去<destination>徐州</destination>
@@ -3476,7 +3476,7 @@
 759,打电话了,phone_call.make_a_phone_call,打电话了
 759,万年村,navigation.navigation,<destination>万年村</destination>
 759,万年花城,navigation.navigation,<destination>万年花城</destination>
-760,取消,navigation.cancel_navigation,取消
+760,取消,OTHERS,取消
 760,music,music.play,music
 760,导航和天下,navigation.navigation,导航<destination>和天下</destination>
 761,打开导航,navigation.open,打开导航
@@ -3608,7 +3608,7 @@
 788,播放my city乐才的几度梦回大唐,music.play,播放<singer>mycity乐才</singer>的几度梦回大唐
 789,李好,OTHERS,李好
 789,不行啊,OTHERS,不行啊
-789,取消,navigation.cancel_navigation,取消
+789,取消,OTHERS,取消
 789,去林溪森园小区,navigation.navigation,去<destination>林溪森园小区</destination>
 789,据林希森园小区，傻*,navigation.navigation,据<destination>林希</destination>森</destination>园</destination>小</destination>区</destination>，傻*
 789,去林溪森源小区,navigation.navigation,去<destination>林溪森源小区</destination>
@@ -3686,16 +3686,16 @@
 804,收音,OTHERS,收音
 804,请设置泸州市,navigation.navigation,请设置<destination>泸州市</destination>
 804,南甸站,navigation.navigation,<destination>南甸站</destination>
-804,返回,OTHERS,返回
+804,返回,navigation.cancel_navigation,返回
 804,打电话,phone_call.make_a_phone_call,打电话
 804,打开蓝牙,OTHERS,打开蓝牙
 805,哦白嫩其中的人哦中铁十一局二公司,navigation.navigation,哦白嫩其中的人哦<destination>中铁十一局二公司</destination>
 805,白浪区东街二公司,navigation.navigation,<destination>白浪区东街二公司</destination>
 805,东方明珠,navigation.navigation,<destination>东方明珠</destination>
 805,给我放凤凰传奇的专辑,music.play,给我放<singer>凤凰传奇</singer>的专辑
-805,取消,navigation.cancel_navigation,取消
+805,取消,music.pause,取消
 806,张煜枫,OTHERS,张煜枫
-806,取消,navigation.cancel_navigation,取消
+806,取消,OTHERS,取消
 806,点一首哦,music.play,点一首哦
 806,导航到维也纳国际酒店,navigation.navigation,导航到<destination>维也纳国际酒店</destination>
 807,放一个视频,OTHERS,放一个视频
@@ -3706,7 +3706,7 @@
 807,来一首于文文的体面,music.play,来一首<singer>于文文</singer>的体面
 808,煌煌黄州,navigation.navigation,<destination>煌煌黄州</destination>
 808,黄昭的k,music.play,<singer>黄昭</singer>的k
-808,取消,navigation.cancel_navigation,取消
+808,取消,music.pause,取消
 808,速八酒店,navigation.navigation,<destination>速八酒店</destination>
 809,打电话给王风华,phone_call.make_a_phone_call,打电话给<contact_name>王风华</contact_name>
 809,打电话给王洪滑,phone_call.make_a_phone_call,打电话给<contact_name>王洪滑</contact_name>
@@ -3746,8 +3746,8 @@
 817,我要听钟镇涛的歌,music.play,我要听<singer>钟镇涛</singer>的歌
 817,我要听郑智化的歌,music.play,我要听<singer>郑智化</singer>的歌
 818,我要回家,navigation.navigation,我要回<custom_destination>家</custom_destination>
-818,取消,navigation.cancel_navigation,取消
-818,取消,navigation.cancel_navigation,取消
+818,取消,OTHERS,取消
+818,取消,OTHERS,取消
 819,打电话,phone_call.make_a_phone_call,打电话
 819,筱北,OTHERS,筱北
 819,斯玄,OTHERS,斯玄
@@ -3812,7 +3812,7 @@
 833,华南沃尔玛,navigation.navigation,<destination>华南沃尔玛</destination>
 833,迎春饭店,navigation.navigation,<destination>迎春饭店</destination>
 833,打个电话,phone_call.make_a_phone_call,打个电话
-834,取消,navigation.cancel_navigation,取消
+834,取消,OTHERS,取消
 834,导航结束,navigation.cancel_navigation,导航结束
 834,播放一首张明敏的歌,music.play,播放一首<singer>张明敏</singer>的歌
 835,打电话,phone_call.make_a_phone_call,打电话
@@ -3828,7 +3828,7 @@
 837,打开电话簿,OTHERS,打开电话簿
 837,新月,OTHERS,新月
 837,音乐,music.play,音乐
-838,取消,navigation.cancel_navigation,取消
+838,取消,OTHERS,取消
 838,船营一小,navigation.navigation,<destination>船营一小</destination>
 838,传鹰,OTHERS,传鹰
 838,还有一小,OTHERS,还有一小
@@ -3845,7 +3845,7 @@
 840,把的给钱,OTHERS,把的给钱
 840,我要看电视,OTHERS,我要看电视
 840,丹阳小区,navigation.navigation,<destination>丹阳小区</destination>
-841,取消,navigation.cancel_navigation,取消
+841,取消,OTHERS,取消
 841,导航到电大,navigation.navigation,导航到<destination>电大</destination>
 841,导航到湘潭电大,navigation.navigation,导航到<destination>湘潭电大</destination>
 842,98843052188863052,OTHERS,98843052188863052
@@ -3855,7 +3855,7 @@
 843,什么时候回来,OTHERS,什么时候回来
 843,帮我看一下,OTHERS,帮我看一下
 843,给我开车,OTHERS,给我开车
-843,取消,navigation.cancel_navigation,取消
+843,取消,OTHERS,取消
 843,今天的天气怎么样,OTHERS,今天的天气怎么样
 843,蓬莱市的天气怎么样,OTHERS,蓬莱市的天气怎么样
 843,阿布,music.play,<singer>阿布</singer>
@@ -3894,7 +3894,7 @@
 851,拨电话13300001545,phone_call.make_a_phone_call,拨电话<phone_num>13300001545</phone_num>
 851,叮当你好,OTHERS,叮当你好
 851,打电话给13300001545,phone_call.make_a_phone_call,打电话给<phone_num>13300001545</phone_num>
-852,取消,navigation.cancel_navigation,取消
+852,取消,OTHERS,取消
 852,去金艺盛网域科技有限公司,navigation.navigation,去<destination>金艺盛网域科技有限公司</destination>
 852,金玉盛网域科技有限公司,navigation.navigation,<destination>金玉盛网域科技有限公司</destination>
 853,打电话都在这里,OTHERS,打电话都在这里
@@ -3987,7 +3987,7 @@
 872,六只装了肚子之中,OTHERS,六只装了肚子之中
 872,大楼这种选秀,OTHERS,大楼这种选秀
 872,大陆这种选秀,OTHERS,大陆这种选秀
-873,取消,navigation.cancel_navigation,取消
+873,取消,OTHERS,取消
 873,叮当,OTHERS,叮当
 873,景宁,navigation.navigation,<destination>景宁</destination>
 874,搜索颠倒人生mv,OTHERS,搜索颠倒人生mv
@@ -3998,7 +3998,7 @@
 875,切歌,music.next,切歌
 875,青县交通局,navigation.navigation,<destination>青县交通局</destination>
 876,叮当你好,OTHERS,叮当你好
-876,不需要了,navigation.cancel_navigation,不需要了
+876,不需要了,OTHERS,不需要了
 876,导航到火车站,navigation.navigation,导航到<destination>火车站</destination>
 876,导航到大观国贸,navigation.navigation,导航到<destination>大观国贸</destination>
 876,的导航,navigation.start_navigation,的导航
@@ -4061,7 +4061,7 @@
 889,在水一方,navigation.navigation,<destination>在水一方</destination>
 890,阳泉北站开始导航,navigation.navigation,<destination>阳泉北站</destination>开始导航
 890,谢谢你暂时没有,OTHERS,谢谢你暂时没有
-890,关闭,music.pause,关闭
+890,关闭,OTHERS,关闭
 890,拨打6378,phone_call.make_a_phone_call,拨打<phone_num>6378</phone_num>
 890,拨打568,phone_call.make_a_phone_call,拨打<phone_num>568</phone_num>
 891,我要去中山大学附属第一医院,navigation.navigation,我要去<destination>中山大学附属第一医院</destination>
@@ -4102,7 +4102,7 @@
 898,播放陈奕迅的歌,music.play,播放<singer>陈奕迅</singer>的歌
 898,现在走最快,OTHERS,现在走最快
 898,冯义,OTHERS,冯义
-898,取消,navigation.cancel_navigation,取消
+898,取消,music.pause,取消
 899,去贵阳,navigation.navigation,去<destination>贵阳</destination>
 899,到贵阳清镇东,navigation.navigation,到<destination>贵阳清镇东</destination>
 899,打电话来,phone_call.make_a_phone_call,打电话来
@@ -4138,12 +4138,12 @@
 908,播放樱花树下的约定,music.play,播放<song>樱花树下的约定</song>
 908,新月,OTHERS,新月
 908,你像哪个师范学院公司老总负责肥谁都没见直接我们六个人打架,OTHERS,你像哪个师范学院公司老总负责肥谁都没见直接我们六个人打架
-909,取消,navigation.cancel_navigation,取消
+909,取消,OTHERS,取消
 909,到山庄,navigation.navigation,到<destination>山庄</destination>
 909,到仙人庄,navigation.navigation,到<destination>仙人庄</destination>
 910,山东,navigation.navigation,<destination>山东</destination>
 910,播放音乐,music.play,播放音乐
-910,取消,navigation.cancel_navigation,取消
+910,取消,music.pause,取消
 911,歌曲最爱的家乡,music.play,歌曲<song>最爱的家乡</song>
 911,女儿情歌曲,music.play,<song>女儿情</song>歌曲
 911,歌曲女儿红女儿情,music.play,歌曲<song>女儿红女儿情</song>
@@ -4197,7 +4197,7 @@
 917,早点醒来,OTHERS,早点醒来
 918,伽楠,OTHERS,伽楠
 918,温歌,OTHERS,温歌
-918,取消,navigation.cancel_navigation,取消
+918,取消,OTHERS,取消
 918,欢快,OTHERS,欢快
 918,长垣大地亚飞,OTHERS,长垣大地亚飞
 919,我要听,music.play,我要听
@@ -4262,13 +4262,13 @@
 931,阳光总在风雨后,music.play,<song>阳光总在风雨后</song>
 931,听陈明,music.play,听<singer>陈明</singer>
 932,好姐妹帮我播放,music.play,<song>好姐妹</song>帮我播放
-932,关闭,music.pause,关闭
+932,关闭,OTHERS,关闭
 932,播放歌曲好姐妹,music.play,播放歌曲<song>好姐妹</song>
 932,播放歌曲好姐妹,music.play,播放歌曲<song>好姐妹</song>
 932,播放歌曲好姐妹,music.play,播放歌曲<song>好姐妹</song>
 933,天气预报,OTHERS,天气预报
 933,优酷网,OTHERS,优酷网
-933,取消,navigation.cancel_navigation,取消
+933,取消,OTHERS,取消
 933,我要去杞县,navigation.navigation,我要去<destination>杞县</destination>
 933,打电话吧应该没没多大问题,phone_call.make_a_phone_call,打电话吧应该没没多大问题
 934,点歌,music.play,点歌
@@ -4282,10 +4282,10 @@
 934,西平,navigation.navigation,<destination>西平</destination>
 934,搜索二胖,OTHERS,搜索二胖
 935,不要打电话的,OTHERS,不要打电话的
-935,取消,navigation.cancel_navigation,取消
+935,取消,OTHERS,取消
 935,关闭音乐,music.pause,关闭音乐
 935,导航结束,navigation.cancel_navigation,导航结束
-936,取消,navigation.cancel_navigation,取消
+936,取消,OTHERS,取消
 936,叮当你好请给我导一下长江隧道,navigation.navigation,叮当你好请给我导一下<destination>长江隧道</destination>
 936,导航武汉长江隧道,navigation.navigation,导航<destination>武汉长江隧道</destination>
 937,导航到陵县一中,navigation.navigation,导航到<destination>陵县一中</destination>
@@ -4323,13 +4323,13 @@
 945,我想听老歌,music.play,我想听<theme>老歌</theme>
 945,我想听dj歌曲,music.play,我想听<theme>dj歌曲</theme>
 946,老妹的话就是而且现在的真漂亮估计没人教育啊,OTHERS,老妹的话就是而且现在的真漂亮估计没人教育啊
-946,取消,navigation.cancel_navigation,取消
+946,取消,OTHERS,取消
 946,我想听张宇的给你们,music.play,我想听<singer>张宇</singer>的给你们
 946,我要去碧海玉都,navigation.navigation,我要去<destination>碧海玉都</destination>
 947,我要听太想念,music.play,我要听<song>太想念</song>
 947,我要听散就散,music.play,我要听<song>散就散</song>
 947,我要听太想念,music.play,我要听<song>太想念</song>
-948,取消,navigation.cancel_navigation,取消
+948,取消,OTHERS,取消
 948,导航结束,navigation.cancel_navigation,导航结束
 948,200米后向右前方行驶请走右侧第二车道进入右转专用道,OTHERS,200米后向右前方行驶请走右侧第二车道进入右转专用道
 948,导航结束,navigation.cancel_navigation,导航结束

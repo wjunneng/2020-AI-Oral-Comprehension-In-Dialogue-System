@@ -178,13 +178,14 @@ class Util(object):
             if start != -1:
                 slot_label_set.add(item[start + 1: item.find('>')])
 
-        with open(slot_label_path, encoding='utf-8', mode='w') as file:
-            for item in ['PAD', 'UNK', 'O']:
-                file.write(item + '\n')
+        if not os.path.exists(slot_label_path):
+            with open(slot_label_path, encoding='utf-8', mode='w') as file:
+                for item in ['PAD', 'UNK', 'O']:
+                    file.write(item + '\n')
 
-            for item in slot_label_set:
-                file.write('B-' + item + '\n')
-                file.write('I-' + item + '\n')
+                for item in slot_label_set:
+                    file.write('B-' + item + '\n')
+                    file.write('I-' + item + '\n')
 
         train_rate = 0.8
         session_id_array = np.asarray(train_data['session_id'].unique())
@@ -381,6 +382,8 @@ class Rule(object):
 
         result = Rule.rule_1(result=result)
 
+        result = Rule.rule_2(result=result)
+
         result = Rule.rule_4(result=result)
 
         result = Rule.rule_8(result=result)
@@ -409,10 +412,104 @@ class Rule(object):
                     slot_dir=os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries'), text=text,
                     intent=intent,
                     token=token)
-                # print(session_id, query, new_token, token)
 
                 if new_token != token:
                     result.iloc[index, 3] = slot_annotation.replace(token, new_token)
+
+        return result
+
+    @staticmethod
+    def rule_2(result: pd.DataFrame):
+        """
+        2、标注依赖于上文（不能使用下文），不是仅看当前 query。例如：“取消”，当最近的上文是 navigation 时，标注为
+        navigation.cancel_navigation；当最近的上文是 music 时，标注为 music.pause；当最近的上文是 phone_call 时，
+        标注为 phone_call.cancel；当位于 session 初始，没有明确领域信息时，标注为 OTHERS。
+        :param result:
+        :return:
+        """
+        # 'session_id', 'query', 'intent', 'slot_annotation'
+        cancel_txt_path = os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries', 'cancel.txt')
+        if not os.path.exists(cancel_txt_path):
+            train_data = pd.read_csv(os.path.join(input_dir, 'train.csv'))
+
+            navigation_cancel_navigation = train_data[train_data['intent'] == 'navigation.cancel_navigation']
+            music_pause = train_data[train_data['intent'] == 'music.pause']
+            phone_call_cancel = train_data[train_data['intent'] == 'phone_call.cancel']
+            left_data = pd.concat([navigation_cancel_navigation, music_pause, phone_call_cancel], axis=0)
+
+            with open(cancel_txt_path, mode='w') as file:
+                for item in list(set(left_data['query'])):
+                    write = True
+                    for token in ['音乐', '开车', '导航', '歌', '曲', '电话', '地图', '行程', '通话']:
+                        if token in item:
+                            write = False
+                    if write:
+                        file.write(item + '\n')
+
+        cancel_data = []
+        with open(cancel_txt_path, mode='r') as file:
+            for line in file.readlines():
+                line = line.strip().strip('\n')
+                cancel_data.append(line)
+
+        cancel_session_id_list = []
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+
+            if query in cancel_data:
+                cancel_session_id_list.append(session_id)
+
+        before_id = None
+
+        navigation_cancel_navigation = False
+        music_pause = False
+        phone_call_cancel = False
+        other = True
+        print(cancel_session_id_list)
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if session_id in cancel_session_id_list:
+                if 'navigation' in intent and query not in cancel_data:
+                    other = False
+                    music_pause = False
+                    phone_call_cancel = False
+                    navigation_cancel_navigation = True
+                elif 'music' in intent and query not in cancel_data:
+                    other = False
+                    music_pause = True
+                    phone_call_cancel = False
+                    navigation_cancel_navigation = False
+                elif 'phone_call' in intent and query not in cancel_data:
+                    other = False
+                    music_pause = False
+                    phone_call_cancel = True
+                    navigation_cancel_navigation = False
+
+                if before_id is None or before_id != session_id:
+                    navigation_cancel_navigation = False
+                    music_pause = False
+                    phone_call_cancel = False
+                    other = True
+
+                    before_id = session_id
+
+                    if query in cancel_data:
+                        result.iloc[index, 2] = 'OTHERS'
+
+                if before_id == session_id and query in cancel_data:
+                    if navigation_cancel_navigation:
+                        result.iloc[index, 2] = 'navigation.cancel_navigation'
+                    elif music_pause:
+                        result.iloc[index, 2] = 'music.pause'
+                    elif phone_call_cancel:
+                        result.iloc[index, 2] = 'phone_call.cancel'
+                    elif other:
+                        result.iloc[index, 2] = 'OTHERS'
 
         return result
 
