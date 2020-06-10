@@ -472,8 +472,13 @@ class Rule(object):
             intent = result.iloc[index, 2].strip()
             slot_annotation = result.iloc[index, 3].strip()
 
-
             if session_id in cancel_session_id_list:
+                if before_id != session_id:
+                    navigation_cancel_navigation = False
+                    music_pause = False
+                    phone_call_cancel = False
+                    other = True
+
                 if 'navigation' in intent and query not in cancel_data:
                     other = False
                     music_pause = False
