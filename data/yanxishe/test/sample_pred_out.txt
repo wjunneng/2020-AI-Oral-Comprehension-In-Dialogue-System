@@ -127,10 +127,10 @@ OTHERS	我 以 为 你 睡 觉 了
 music.play	播 放 歌 曲 <song> 我 们 </song> 都 </song> 一 </song> 样 </song>
 navigation.open	打 开 导 航
 navigation.navigation	去 <destination> 济 宁 </destination> 车 </destination> 管 </destination> 所 </destination>
-music.play	来 一 个 刘 德 华 的 电 影
+OTHERS	来 一 个 刘 德 华 的 电 影
 music.play	给 我 来 一 个 <singer> 刘 德 </singer> 华 </singer> 的 歌 曲
 OTHERS	打 电 话 那 个 事 情 上 去 没 有 会 计 从 业 证 啥 的 半 价
-music.play	<song> 叉 烧 </song> 包 </song> 砸 </song>
+music.play	叉 烧 包 砸
 phone_call.make_a_phone_call	给 <contact_name> 他 吧 </contact_name> 打 电 话
 music.play	来 首 歌
 OTHERS	吐
@@ -153,7 +153,7 @@ music.play	播 放 一 首 <singer> 刘 德 </singer> 华 </singer> 的 冰 雨
 OTHERS	帮 我 看 一 下 电 子 狗
 navigation.navigation	<destination> 温 泉 </destination> 花 </destination> 园 </destination>
 navigation.navigation	<destination> 江 大 </destination> 润 </destination> 发 </destination>
-navigation.navigation	<destination> 袍 江 </destination> 大 </destination> 润 </destination> 发 好 我 知 道 了
+navigation.navigation	<destination> 袍 江 </destination> 大 </destination> 润 </destination> 发 </destination> 好 我 知 道 了
 OTHERS	好 的
 phone_call.make_a_phone_call	打 电 话 给
 phone_call.make_a_phone_call	拨 打 <phone_num> 55 ##68 </phone_num> ##84 </phone_num>
@@ -181,13 +181,13 @@ music.play	我 要 听 <song> 小 苹 </song> 果 </song>
 music.play	放 <song> 小 苹 </song> 果 </song>
 music.play	来 一 首 <song> 小 苹 </song> 果 </song>
 music.play	我 要 听
-music.play	我 要 听 <singer> 唐 朝 </singer> 的
+music.play	我 要 听 <song> 唐 朝 </singer> 的
 music.play	我 要 听 <song> 梦 回 </song> 唐 </song> 朝 </song>
 OTHERS	讲 个 笑 话
 OTHERS	不 好 笑
 music.play	唱 歌
 music.play	歌 曲 <song> 差 一 </song> 步 </song> dj
-OTHERS	接 着 放
+music.play	接 着 放
 music.play	唱 一 首 <song> 友 情 </song> 岁 </song> 月 </song>
 navigation.navigation	到 <destination> 邵 伯 </destination> 镇 </destination>
 navigation.navigation	<destination> 小 纪 </destination> 镇 </destination>
@@ -235,7 +235,7 @@ music.play	来 一 首 <song> 闯 码 </song> 头 </song>
 music.play	来 一 首 <song> 挪 威 </song> 的 </song> 森 </song> 林 </song>
 music.play	来 一 首 <song> 挪 威 </song> 森 </song> 林 </song>
 music.play	播 放 <song> 最 重 </song> 要 </song> 的 </song> 决 </song> 定 </song>
-music.play	播 放 <song> 最 重 </song> 要 </song> 的 </song> 决 </song> 定 </song> 傻 逼
+music.play	播 放 <song> 最 重 </song> 要 </song> 的 </song> 决 </song> 定 </song> 傻 </song> 逼 </song>
 music.play	播 放 <singer> 范 玮 </singer> 琪 </singer> 的 最 重 要 的 决 定
 OTHERS	广 乐
 OTHERS	没 有 啥 要 帮 帮 的
@@ -259,7 +259,7 @@ navigation.navigation	<destination> 沙 溪 </destination> 博 </destination> �
 navigation.navigation	导 航 到 <destination> 青 坡 </destination> 市 </destination> 场 </destination>
 music.play	播 放 <song> 至 少 </song> 还 </song> 有 </song> 你 </song>
 music.play	我 想 听 一 首 歌
-music.play	来 一 首 <song> k 歌 </theme> 之 </song> 王 </song>
+music.play	来 一 首 <theme> k 歌 </theme> 之 </song> 王 </song>
 music.play	给 我 来 首 <song> 吹 喇 </song> 叭 </song>
 OTHERS	小 泽 玛 利 亚
 OTHERS	慢 点 儿
@@ -278,7 +278,7 @@ music.play	我 要 听 <song> 带 你 </song> 去 </song> money </song> 土 </so
 music.play	我 要 听 <song> 赞 元 </song> 街 </song>
 OTHERS	好 不 好
 OTHERS	the t ##ru ##th
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 music.play	放 <singer> 邓 紫 </singer> 棋 </singer> 的 歌
 music.play	放 <singer> 邓 紫 </singer> 棋 </singer> 的 歌
 OTHERS	打 了 三 万 多 呀
@@ -312,8 +312,8 @@ music.play	放 一 首 <singer> 王 杰 </singer> 的 安 妮
 navigation.navigation	<destination> 梧 州 </destination>
 phone_call.make_a_phone_call	打 电 话
 OTHERS	找 和
-music.play	组 合
-music.play	组 合
+OTHERS	组 合
+OTHERS	组 合
 navigation.navigation	导 航 <destination> 万 达 </destination> 广 </destination> 场 </destination>
 navigation.navigation	导 航 <destination> 阳 曲 </destination> 县 </destination>
 music.play	来 首 音 乐
@@ -325,7 +325,7 @@ navigation.cancel_navigation	取 消 导 航
 navigation.cancel_navigation	取 消 导 航
 phone_call.make_a_phone_call	拨 号 <phone_num> 62 ##70 </phone_num>
 phone_call.make_a_phone_call	打 电 话 <phone_num> 62 ##70 </phone_num>
-OTHERS	号 码 62 ##70 </phone_num>
+OTHERS	号 码 62 ##70
 navigation.cancel_navigation	导 航 结 束
 navigation.navigation	到 <destination> 昆 明 </destination> 市 </destination>
 phone_call.make_a_phone_call	打 <phone_num> 15000 ##00 </phone_num> ##28 </phone_num> ##15 </phone_num>
@@ -358,8 +358,8 @@ OTHERS	拜 拜
 navigation.navigation	到 <destination> 永 康 </destination> 东 </destination> 站 </destination>
 navigation.navigation	到 <destination> 永 康 </destination> 天 </destination> 一 </destination> 搪 </destination> 瓷 </destination> 制 </destination> 品 </destination> 有 </destination> 限 </destination> 公 </destination> 司 </destination>
 music.play	播 放 <song> 带 我 </song> 去 </song> 旅 </song> 行 </song>
-music.play	<singer> 校 长 </singer> 唱 的 <song> 带 你 </song> 带 </song> 我 </song> 去 </song>
-music.play	<singer> 校 长 </singer> 唱 的 <song> 带 我 </song> 去 </song> 旅 </song> 行 </song> 带 你 去 旅 行
+music.play	校 长 唱 的 <song> 带 你 </song> 带 </song> 我 </song> 去 </song>
+music.play	校 长 唱 的 <song> 带 我 </song> 去 </song> 旅 </song> 行 </song> 带 你 去 旅 行
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 56 ##5 </phone_num>
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 56 ##5 </phone_num>
 music.play	我 想 听
@@ -386,7 +386,7 @@ OTHERS	张 叁
 music.play	<singer> 韩 磊 </singer>
 OTHERS	林 大 王 杰
 navigation.open	打 开 导 航
-navigation.navigation	<destination> 新 一 </destination> 小 </destination>
+navigation.navigation	<destination> 新 一 </destination> 小
 navigation.open	导 航
 navigation.cancel_navigation	取 消
 navigation.cancel_navigation	导 航 取 消
@@ -395,18 +395,18 @@ music.play	给 我 播 放 <singer> 毛 晖 </singer> 的 歌
 music.play	播 放 <song> 消 愁 </song>
 music.play	播 放 <song> 说 散 </song> 就 </song> 散 </song>
 music.play	听 <singer> 高 胜 </singer> 美 </singer> 的 歌 曲
-OTHERS	我 要 上 驻 马 店 地 图 发 过 来
+navigation.navigation	我 要 上 驻 马 </destination> 店 </destination> 地 图 发 过 来
 navigation.cancel_navigation	取 消
 music.play	唱 首 <age> 儿 歌 </age> 吗
 music.play	播 放 一 首 <song> 小 三 </song>
 music.play	播 放 一 首 <song> 爱 你 </song> 一 </song> 万 </song> 年 </song>
 music.play	给 我 放 <singer> 刘 德 </singer> 华 </singer> 的 歌
 music.play	放 一 曲 <theme> dj
-music.play	放 一 首 <singer> 的 士 </singer> 高 </singer>
+music.play	放 一 首 <song> 的 士 </song> 高 </song>
 OTHERS	华 君
 phone_call.make_a_phone_call	打 电 话 给
 OTHERS	敏
-OTHERS	凯 迪 拉 克 x ##t s PAD>
+OTHERS	凯 迪 拉 克 x ##t s
 navigation.navigation	<destination> 陕 西 </destination> 广 </destination> 场 </destination>
 music.play	我 想 听 音 乐
 music.play	我 想 听 音 乐
@@ -419,7 +419,7 @@ music.play	<song> 对 着 </song> 月 </song> 亮 </song> 说 </song> 爱 </song
 OTHERS	大 山
 OTHERS	把 声 音 调 到 19
 music.play	<song> 对 着 </song> 月 </song> 亮 </song> 说 </song> 爱 </song> 你 </song>
-music.play	蓝 牙 播 放 音 乐
+OTHERS	蓝 牙 播 放 音 乐
 OTHERS	哦
 navigation.navigation	<destination> 丰 乐 </destination> 尚 </destination> 都 </destination>
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 刘 伟 </contact_name>
@@ -428,7 +428,7 @@ phone_call.make_a_phone_call	打 电 话 那 个
 OTHERS	姜 欧
 music.play	<singer> 阿 果 </singer>
 navigation.navigation	我 要 去 <destination> 红 星 </destination> 路 </destination>
-music.play	放 一 首 <style> 钢 琴 </style> 的 名 起 来 听 一 下
+music.play	放 一 首 <style> 钢 琴 </instrument> 的 名 起 来 听 一 下
 music.play	放 <singer> 刘 德 </singer> 华 </singer> 的 歌 来 听
 music.play	放 <singer> 谭 咏 </singer> 麟 </singer> 的 歌
 music.play	<language> 国 语 </language> 歌 曲
@@ -486,14 +486,14 @@ OTHERS	伤 了 心 的 女 人 怎 么 了
 OTHERS	伤 了 心 的 女 人 怎 么 了
 music.play	<song> 醉 相 </song> 思 </song>
 OTHERS	叮 当 你 好
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 music.play	<song> 救 赎 </song>
 music.play	请 播 放 <song> 梁 梁 </song>
 music.play	请 播 放 歌 曲 <song> 凉 凉 </song>
 navigation.cancel_navigation	取 消 导 航
 OTHERS	打 电 话 真 正 通 话 中 她 起 来 给 我 挂 了
 OTHERS	不 详
-phone_call.make_a_phone_call	打 电 话 肿 么
+OTHERS	打 电 话 肿 么
 OTHERS	二
 music.play	我 要 听 歌
 navigation.open	我 要 导 航
@@ -504,7 +504,7 @@ phone_call.make_a_phone_call	请 帮 我 拨 打 <phone_num> 1860 ##000 </phone_
 music.play	来 一 首 电 视 连 续 剧 的 歌 曲
 music.play	播 放
 OTHERS	左 邻 右 里
-music.play	左 麟 右 李 的 歌 曲
+music.play	左 麟 </singer> 右 李 的 歌 曲
 phone_call.make_a_phone_call	打 电 话 去 买 火 柴 抓 狂 你 不 干 啥
 OTHERS	覃 玫
 navigation.navigation	去 <destination> 广 州 </destination>
@@ -520,7 +520,7 @@ navigation.cancel_navigation	结 束 导 航
 phone_call.make_a_phone_call	打 个 电 话
 OTHERS	翟 慧 娟 王 八 蛋
 navigation.navigation	<destination> 红 灯 </destination> 区 </destination>
-OTHERS	显 示 导 航
+navigation.open	显 示 导 航
 OTHERS	才 会 叫 王 八 蛋
 navigation.navigation	<destination> 昆 明 </destination> 圆 </destination> 通 </destination> 寺 </destination>
 navigation.navigation	<destination> 肿 瘤 </destination> 医 </destination> 院 </destination>
@@ -567,7 +567,7 @@ phone_call.make_a_phone_call	我 要 打 电 话
 OTHERS	对 话
 OTHERS	咋 了 的 路 怎 么 走 干 嘛 哦
 navigation.navigation	旭 东 鞋 服 说 了 一 些 感 觉 我 说 我 们 去 <destination> 东 钱 </destination> 湖 </destination>
-OTHERS	好 了 退 出
+music.pause	好 了 退 出
 OTHERS	无 良
 OTHERS	我 不 说 了 你 好 我 是 射 出 来 帮 我 打 电 话 给 谁
 OTHERS	此 前
@@ -581,7 +581,7 @@ OTHERS	电 视 连 续 剧 新 精 武 门
 navigation.navigation	到 <destination> 连 升 </destination> 大 </destination> 厦 </destination> 215 </destination> 号 </destination>
 navigation.navigation	到 <destination> 连 升 </destination> 大 </destination> 厦 </destination> 215 </destination> 号 </destination>
 phone_call.make_a_phone_call	打 电 话
-navigation.navigation	<destination> 恒 源 </destination> 祥 </destination>
+OTHERS	恒 源 祥
 navigation.navigation	<destination> 宝 [UNK] </destination> 区 </destination> 恒 </destination> 源 </destination> 祥 </destination> 商 </destination> 店 </destination>
 navigation.cancel_navigation	退 出 导 航
 navigation.navigation	<destination> 宝 [UNK] </destination> 区 </destination> 南 </destination> 关 </destination> 大 </destination> 街 </destination> 恒 </destination> 源 </destination> 祥 </destination>
@@ -589,9 +589,9 @@ OTHERS	楠 得
 navigation.open	我 要 导 航
 navigation.navigation	<destination> 四 川 </destination> 省 </destination> 南 </destination> 部 </destination> 县 </destination>
 navigation.cancel_navigation	取 消
-music.play	<singer> 刘 飞 </singer> 飞 </singer> 殇 雪
-music.play	云 菲 菲 殇 雪
-music.play	云 菲 菲 殇 雪
+OTHERS	刘 飞 飞 殇 雪
+OTHERS	云 菲 菲 殇 雪
+OTHERS	云 菲 菲 殇 雪
 navigation.navigation	去 <destination> 元 宝 </destination> 山 </destination> 区 </destination> 平 </destination> 庄 </destination> 镇 </destination> 太 </destination> 平 </destination> 地 </destination> 村 </destination>
 phone_call.make_a_phone_call	呼 叫 <phone_num> 680 ##000 </phone_num> ##26 </phone_num>
 phone_call.make_a_phone_call	呼 叫 <phone_num> 68 ##62 </phone_num> ##6 </phone_num>
@@ -607,12 +607,12 @@ phone_call.make_a_phone_call	打 电 话
 music.play	<song> 好 汉 </song> 歌 </song>
 music.play	<singer> 郑 智 </singer> 化 </singer> 的 星 星 点 灯
 music.play	<singer> 凤 凰 </singer> 传 </singer> 奇 </singer>
-music.play	我 要 听 听 看 </song>
+music.play	我 要 听 听 看
 navigation.navigation	导 航 到 <destination> 北 常 </destination> 保 </destination> cn </destination> ##g </destination> 加 </destination> 气 </destination> 站 </destination>
 OTHERS	135 ##17 ##35 ##28 ##01
 phone_call.make_a_phone_call	呼 叫 <phone_num> 1350 ##000 </phone_num> ##28 </phone_num> ##01 </phone_num>
 navigation.navigation	<destination> 金 豪 </destination> 眉 </destination> 山 </destination>
-phone_call.make_a_phone_call	打 电 话 <theme> 纯 音 </theme> 乐 </theme>
+phone_call.make_a_phone_call	打 电 话 纯 音 乐
 music.play	可 以 放 点 <emotion> 快 歌 </emotion> 吗
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 爱 妻 </contact_name>
 navigation.navigation	搜 索 <destination> 历 城 </destination> 区 </destination> 检 </destination> 察 </destination> 院 </destination>
@@ -640,7 +640,7 @@ music.play	播 放 <song> 男 人 </song> 花 </song>
 music.play	播 放 <song> 等 待 </song>
 OTHERS	播 放 黄 片
 music.play	播 放 <song> 瞳 听 </song>
-music.play	来 万 芳 </singer> 听
+music.play	来 万 芳 听
 music.play	播 放 <singer> 黄 婷 </singer>
 OTHERS	需 要
 navigation.navigation	去 <destination> 哈 尔 </destination> 滨 </destination> 建 </destination> 国 </destination> 街 </destination> 118 </destination> 号 </destination>
@@ -665,7 +665,7 @@ OTHERS	无 盐
 music.play	给 我 放 歌
 music.play	<song> 广 东 </song> 爱 </song> 情 </song> 故 </song> 事 </song>
 music.play	请 播 放 <song> 广 东 </song> 爱 </song> 情 </song> 故 </song> 事 </song>
-music.play	广 州 爱 情 故 事 插 曲
+music.play	广 州 爱 </song> 情 </song> 故 </song> 事 插 曲
 music.play	你 好 请 播 放 <song> 广 东 </song> 爱 </song> 情 </song> 故 </song> 事 </song> 歌 曲
 navigation.navigation	导 航 <destination> 上 海 </destination>
 navigation.navigation	导 航 到 <destination> 钓 鱼 </destination> 岛 </destination>
@@ -679,7 +679,7 @@ music.play	<singer> 孙 楠 </singer>
 navigation.navigation	呃 我 要 到 <destination> 新 华 </destination> 每 天
 OTHERS	你 是 不 是 个 傻 子 吗
 navigation.navigation	<destination> 新 华 </destination> 美 </destination> 天 </destination> 整 </destination> 形 </destination> 医 </destination> 院 </destination>
-OTHERS	直 男
+music.play	直 男
 phone_call.make_a_phone_call	打 个 电 话 给 <contact_name> 我 吧 </contact_name>
 OTHERS	早 上 防 水 到 明 天 吧
 navigation.navigation	<destination> 无 锡 </destination> 上 </destination> 马 </destination> 墩 </destination> 二 </destination> 村 </destination>
@@ -694,7 +694,7 @@ OTHERS	马 斌
 music.play	我 要 听 <song> 酒 干 </song> 倘 </song> 卖 </song> 无 </song>
 music.play	我 要 听 <song> 酒 干 </song> 倘 </song> 卖 </song> 无 </song>
 music.play	<song> 高 原 </song> 红 </song>
-music.play	我 喜 欢 <singer> 高 圆 </singer> 圆 </singer> 和 美 丽 的 高 原 和 警 察
+music.play	我 喜 欢 <singer> 高 圆 </singer> 圆 和 美 丽 的 高 原 和 警 察
 OTHERS	年 度 您 好
 music.play	请 播 放 <song> 草 原 </song> 不 </song> 落 </song> 的 </song> 太 </song> 阳 </song>
 OTHERS	旅 行
@@ -710,13 +710,13 @@ OTHERS	一
 OTHERS	今 年 多 大
 OTHERS	会 唱 歌 吗
 music.play	唱 一 个
-music.play	<song> 我 只 </song> 在 </song> 乎 </song> 你 </song> 歌 曲
+music.play	<song> 我 只 </song> 在 </song> 乎 你 歌 曲
 music.play	歌 曲 <song> 踩 踩 </song> 踩 </song>
 music.play	<song> 我 的 </song> 快 </song> 乐 </song> 就 </song> 是 </song> 想 </song> 你 </song> 歌 曲
 music.play	请 播 放 <song> 说 散 </song> 就 </song> 散 </song>
 music.play	请 播 放 <song> 体 面 </song>
 music.play	请 播 放 <singer> 于 文 </singer> 文 </singer> 唱 的 体 面
-OTHERS	我 们
+music.play	<song> 我 们
 music.play	播 放 <song> 追 梦 </song> 人 </song>
 OTHERS	你 好 叮 当
 music.play	请 播 放 <singer> 阿 木 </singer> 的 追 梦 人
@@ -742,7 +742,7 @@ OTHERS	关 闭 收 音 机
 OTHERS	关 闭 收 音 机
 music.play	唱 一 首 <song> 轻 轻 </song> 的 </song> 二 </song> 人 </song> 台 </song>
 music.play	来 一 首 <song> 芊 芊 </song>
-music.play	来 一 首 <song> 听 听 </song> 二 </song> 人 </song> 台 </song>
+music.play	来 一 首 听 听 <song> 二 人 </song> 台 </song>
 music.play	我 想 听 <song> 花 开 </song> 的 </song> 时 </song> 候 </song> 来 </song> 看 </song> 我 </song>
 music.play	我 想 听 <song> 花 开 </song> 的 </song> 时 </song> 候 </song> 来 </song> 看 </song> 我 </song>
 music.play	我 想 听 <singer> 那 英 </singer> 的 默
@@ -768,7 +768,7 @@ music.pause	关 闭 歌 曲 有 一 个 时 间 的 对 吧 这 个 夏 季 冬 
 OTHERS	华 敏
 OTHERS	请 关 闭 3g
 OTHERS	关 闭 3g 网 络
-music.play	<song> 神 曲 </theme>
+music.play	<song> 神 曲 </song>
 navigation.navigation	导 航 回 <custom_destination> 家
 phone_call.make_a_phone_call	拨 打 <phone_num> 620 ##03 </phone_num> 电 话
 phone_call.make_a_phone_call	拨 打 <phone_num> 1350 ##000 </phone_num> ##200 </phone_num> ##3 </phone_num>
@@ -817,7 +817,7 @@ OTHERS	的 主 页
 OTHERS	回 到 主 页
 navigation.navigation	给 我 导 航 到 <destination> 松 江 </destination> 区 </destination> 水 </destination> 岸 </destination> 华 </destination> 庭 </destination>
 OTHERS	把 音 量
-OTHERS	你 好 导 航
+navigation.open	你 好 导 航
 OTHERS	音 量 增 大
 OTHERS	打 开 蓝 牙
 music.play	来 一 首 <song> 远 走 </song> 高 </song> 飞 </song>
@@ -843,7 +843,7 @@ music.play	波 拉 首 <song> 我 还 </song> 爱 </song> 你 </song> 不 错
 navigation.navigation	<destination> 丰 乐 </destination> 尚 </destination> 都 </destination>
 OTHERS	你 好 啊
 OTHERS	你 好 啊
-navigation.navigation	哦 说 小 </destination> 镇 </destination> 幼 </destination> 儿 </destination> 园 </destination>
+navigation.navigation	哦 说 <destination> 小 镇 </destination> 幼 </destination> 儿 </destination> 园 </destination>
 music.next	切 歌
 navigation.navigation	要 多 方 去 <destination> 小 状 </destination> 元 </destination> 幼 </destination> 儿 </destination> 园 </destination>
 phone_call.make_a_phone_call	打 电 话 给 的 歌 好 吗
@@ -853,7 +853,7 @@ OTHERS	你 不 她 是 怕 我 打 死 你
 music.play	来 一 首 <song> 放 过 </song> 自 </song> 己 </song> 的 歌 曲
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 15000 ##000 </phone_num> ##10 </phone_num> ##9 </phone_num>
 music.play	<singer> 阿 布 </singer>
-music.play	只 是 我 心 中 不 再 有 火 花
+OTHERS	只 是 我 心 中 不 再 有 火 花
 OTHERS	打 电 话 打 不 通
 OTHERS	魏 鹏
 navigation.open	打 开 导 航
@@ -892,18 +892,18 @@ OTHERS	提 达
 navigation.navigation	把 导 航 到 <destination> 西 双 </destination> 版 </destination> 纳 </destination> 磨 </destination> 憨 </destination> 口 </destination> 岸 </destination>
 navigation.navigation	导 航 到 <destination> 西 双 </destination> 版 </destination> 纳 </destination> 磨 </destination> 憨 </destination> 口 </destination> 岸 </destination>
 navigation.navigation	<destination> 梓 峰 </destination>
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 phone_call.make_a_phone_call	<phone_num> 55 ##9 </phone_num> 打 电 话
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 OTHERS	连 接 蓝 牙
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 phone_call.make_a_phone_call	给 <phone_num> 55 ##9 </phone_num> 打 电 话
 navigation.navigation	<destination> 二 水 </destination> 岸 </destination> 佳 </destination> 苑 </destination> b </destination> 区 </destination>
 OTHERS	江 西 方 程 式 西 二 门 机 乘 客 仅 在 8 点 44 分 前 到 达 约 定 地 点
 OTHERS	大 约 需 要 十 分 钟
 navigation.navigation	<destination> 水 岸 </destination> 佳 </destination> 苑 </destination> b </destination> 区 </destination>
 phone_call.make_a_phone_call	那 等 一 下 我 打 个 电 话
-music.play	<theme> 老 歌 </theme>
+music.play	<theme> 老 歌 </toplist>
 music.play	听 歌 <song> 红 梅 </song> 赞 </song>
 music.play	<toplist> 老 歌 </toplist> 吗 哦 慢 些 跑
 navigation.navigation	导 航 至 <destination> 漂 亮 </destination> 广 </destination> 场 </destination>
@@ -937,7 +937,7 @@ OTHERS	刘 靓
 music.play	<singer> 白 雪 </singer>
 OTHERS	王 巧
 OTHERS	六
-OTHERS	差 一 步
+music.play	<song> 差 一 </song> 步 </song>
 music.play	<song> 差 一 </song> 步 </song> 音 乐
 music.play	拥 抱 李 骊 曲 音 乐
 OTHERS	拥 抱 礼 离 去
@@ -949,7 +949,7 @@ OTHERS	今 天 的 天 气
 phone_call.make_a_phone_call	联 系 <contact_name> 客 服 </contact_name>
 navigation.cancel_navigation	结 束 导 航
 OTHERS	三 天 开 大 一 点
-music.play	打 开 usb 里 面 的 音 乐
+OTHERS	打 开 usb 里 面 的 音 乐
 navigation.navigation	导 航 到 <destination> 临 河 </destination> 街 </destination> 三 </destination> 俞 </destination> 竹 </destination> 苑 </destination>
 phone_call.make_a_phone_call	打 个 电 话 给 <phone_num> 10000
 OTHERS	某 某 某
@@ -972,14 +972,14 @@ music.play	请 播 放 音 乐
 music.play	播 放 音 乐
 music.play	唱 <singer> 蒋 大 </singer> 为 </singer> 歌 曲
 navigation.navigation	导 航 到
-OTHERS	褚 庄 村 委 会
+navigation.navigation	<destination> 褚 庄 </destination> 村 委 会
 navigation.navigation	<destination> 桑 营 </destination> 镇 </destination> 贾 </destination> 庄 </destination> 村 </destination> 委 </destination> 会 </destination>
 OTHERS	这 抢 七 村 委 会
 navigation.navigation	<destination> 上 营 </destination> 镇 </destination> 天 </destination> 气 </destination> 村 </destination> 委 </destination> 会 </destination>
 OTHERS	强 钦 村 委 会
 OTHERS	子 龙
 navigation.navigation	导 航 到 <destination> 褚 庄 </destination> 村 </destination> 委 </destination> 会 </destination>
-navigation.navigation	<destination> 王 褚 </destination> 庄 </destination> 村 委 会 褚 庄 村 委
+navigation.navigation	<destination> 王 褚 </destination> 庄 </destination> 村 </destination> 委 </destination> 会 </destination> 褚 </destination> 庄 </destination> 村 </destination> 委 </destination>
 navigation.navigation	导 航 到 <destination> 贾 庄 </destination> 卫 </destination> 生 </destination> 室 </destination>
 OTHERS	钟 秋
 navigation.cancel_navigation	取 消
@@ -1001,7 +1001,7 @@ OTHERS	新 疆 起 来 呢
 navigation.cancel_navigation	结 束 导 航
 music.play	<theme> dj 音 乐
 navigation.navigation	<destination> 西 安 </destination> 饭 </destination> 庄 </destination> 雪 </destination> 山 </destination> 纵 </destination> 横 </destination>
-OTHERS	单 车
+music.play	<song> 单 车 </song>
 phone_call.make_a_phone_call	我 打 个 电 话 我 没 完 事 呢
 OTHERS	谢 了
 OTHERS	把 经 济
@@ -1013,7 +1013,7 @@ navigation.navigation	我 要 去 <destination> 三 角 </destination> 站 </des
 music.play	<song> 大 悲 </song> 咒 </song>
 music.play	<song> 大 悲 </song> 咒 </song>
 music.play	<song> 大 悲 </song> 咒 </song>
-OTHERS	大 悲 咒 跟 我 一 起 也 是 大 悲 咒
+OTHERS	大 悲 </song> 咒 跟 我 一 起 也 是 大 悲 咒
 OTHERS	张 娜
 navigation.cancel_navigation	取 消
 navigation.navigation	请 帮 我 导 航 到 <destination> 解 放 </destination> 西 </destination> 魅 </destination> 力 </destination> 四 </destination> 射 </destination> 酒 </destination> 吧 </destination>
@@ -1032,7 +1032,7 @@ OTHERS	g ai
 navigation.cancel_navigation	取 消
 music.play	音 乐
 OTHERS	向 晶
-phone_call.make_a_phone_call	<phone_num> 867 ##5 </phone_num>
+OTHERS	867 ##5 </phone_num>
 OTHERS	86 ##86 ##75 ##31 ##10 要 不 要 加 区 号
 OTHERS	然 后 又 打 开 要 停 车 了
 music.play	<singer> 阿 果 </singer>
@@ -1206,7 +1206,7 @@ navigation.navigation	<destination> 平 坝 </destination> 区 </destination> �
 navigation.navigation	<destination> 花 果 </destination> 园 </destination> 花 </destination> 果 </destination> 山 </destination>
 phone_call.make_a_phone_call	呼 叫 <phone_num> 610 ##66 </phone_num>
 OTHERS	白 夜
-phone_call.make_a_phone_call	李 萍 </contact_name>
+phone_call.make_a_phone_call	<contact_name> 李 萍 </contact_name>
 OTHERS	关 滨
 OTHERS	猫
 OTHERS	可 乐
@@ -1234,13 +1234,13 @@ music.play	<song> 藕 断 </song> 丝 </song> 连 </song>
 music.play	请 点 播 一 下 那 个 <singer> 陈 瑞 </singer> 的 歌 曲 藕 断 丝 连
 music.play	歌 曲 云
 music.play	我 想 听
-music.play	我 想 听 <song> 云
+music.play	我 想 听 云
 music.play	请 播 放
 music.play	我 要 听 <song> 云
 OTHERS	你 就 这 么 相 信 吧 拐 走 了 以 后 那 样 子 的 地 方 不 要 去 台 湾 要 那 么 多 大 了
 music.play	<song> 远 走 </song> 高 </song> 飞 </song> 金 志 文
-OTHERS	货 源 甲 周 杰 </singer> 伦 </singer>
-music.play	货 源 甲 唱 的 <singer> 周 杰 </singer> 伦 </singer>
+OTHERS	货 源 甲 周 杰 伦
+music.play	货 源 甲 唱 的 周 杰 伦
 music.play	<singer> 周 杰 </singer> 伦 </singer> 霍 元 甲
 music.play	放 一 个
 music.play	放 一 首 <song> 天 上 </song> 的 </song> 星 </song> 星 </song> 不 </song>
@@ -1284,7 +1284,7 @@ phone_call.make_a_phone_call	给 <contact_name> 赵 天 </contact_name> 琦 </co
 navigation.navigation	回 <custom_destination> 公 司 </custom_destination>
 navigation.navigation	<destination> 安 平 </destination> 县 </destination> 鹤 </destination> 煌 </destination> 西 </destination> 道 </destination> 169 </destination> 号 </destination>
 navigation.cancel_navigation	取 消
-navigation.cancel_navigation	不 要 了
+OTHERS	不 要 了
 music.play	播 放 <singer> 陈 奕 </singer> 迅 </singer> 的 歌
 navigation.cancel_navigation	结 束 导 航
 navigation.navigation	导 航 到 <destination> 谢 岗 </destination>
@@ -1294,10 +1294,10 @@ OTHERS	连 接 蓝 牙
 OTHERS	断 开 蓝 牙
 music.play	播 放 本 机 音 乐
 music.play	点 一 首 歌 曲
-OTHERS	你 的 背 包
+OTHERS	<song> 你 的 </song> 背 </song> 包 </song>
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 老 婆 </contact_name>
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 爱 人 </contact_name>
-navigation.cancel_navigation	导 航 技 术
+OTHERS	导 航 技 术
 navigation.navigation	我 要 去 <destination> 重 庆 </destination> 市 </destination> 江 </destination> 北 </destination> 区 </destination> 卧 </destination> 龙 </destination> 路 </destination> 西 </destination>
 OTHERS	打 电 话 后 面 有 车 啊
 music.play	播 <singer> 李 琦 </singer> 的 三 轮 车
@@ -1340,7 +1340,7 @@ phone_call.make_a_phone_call	打 电 话 给 <phone_num> 63 ##38 </phone_num>
 navigation.navigation	导 航 去 <destination> 香 港 </destination>
 OTHERS	不 想 喝 的 了
 OTHERS	成 南
-music.play	群 星 的 情 感
+music.play	<song> 群 星 </song> 的 情 感
 navigation.cancel_navigation	取 消
 phone_call.make_a_phone_call	给 <phone_num> 156 ##000 </phone_num> ##009 </phone_num> ##15 </phone_num> 打 电 话
 navigation.cancel_navigation	结 束 导 航
@@ -1354,7 +1354,7 @@ music.play	开 始 音 乐
 music.play	我 要 听 <singer> 大 壮 </singer> 不 一 样
 music.play	我 要 听 专 题 <song> 爱 不 </song> 容 </song> 易 </song>
 music.play	我 要 听 <singer> 冷 漠 </singer>
-phone_call.make_a_phone_call	打 电 话 给 <contact_name> 羊 前 </contact_name> 平 </contact_name> 心 </contact_name> 好 </contact_name>
+phone_call.make_a_phone_call	打 电 话 给 <contact_name> 羊 前 </contact_name> 平 </contact_name> 心 好
 OTHERS	路 昆
 music.play	播 放 <song> 看 天 </song> 下 </song> 劳 </song> 苦 </song> 人 </song> 民 </song> 都 </song>
 music.play	播 放 <song> 看 天 </song> 下 </song> 劳 </song> 苦 </song> 人 </song> 民 </song> 都 </song> 解 </song> 放 </song>
@@ -1411,14 +1411,14 @@ OTHERS	纪 元
 navigation.cancel_navigation	放 弃
 OTHERS	郭 强
 music.play	<song> 青 藏 </song> 高 </song> 原 </song> 歌 曲
-music.play	播 放 <toplist> 车 载 </toplist> 音 乐
+music.play	播 放 <toplist> 车 载 音 乐
 music.play	播 放 <singer> 林 志 </singer> 炫 </singer> 的 歌
 music.play	播 放 <song> 悟 空 </song>
 music.play	我 想 听 <style> 民 谣 </style>
 music.play	我 想 听 <singer> 汪 峰 </singer> 的 歌
 music.play	<singer> 麦 当 </singer> 娜 </singer> 的 歌 放 一 下
 navigation.navigation	导 航 去 <destination> 西 南 </destination> 医 </destination> 院 </destination>
-music.pause	查 找 <singer> 宋 冬 野 的 电 话 取 消 其 宋 冬 野 的 歌 曲
+OTHERS	查 找 宋 冬 野 的 电 话 取 消 其 宋 冬 野 的 歌 曲
 music.play	嗯 播 放 <singer> 宋 冬 </singer> 野 </singer> 的 歌 曲
 phone_call.make_a_phone_call	呼 叫 <phone_num> 66 ##8 </phone_num>
 navigation.open	导 航
@@ -1473,7 +1473,7 @@ music.play	我 要 听 歌
 music.play	请 播 放 <emotion> 轻 松 </emotion> 的 音 乐
 music.next	请 播 放 下 一 首
 phone_call.make_a_phone_call	打 个 电 话
-phone_call.make_a_phone_call	<contact_name> 韩 盛 </contact_name> 伟
+OTHERS	韩 盛 伟
 music.play	放 首 音 乐 蓝 牙 音 乐
 OTHERS	安 装 酷 狗 音 乐
 OTHERS	安 装 酷 狗 音 乐
@@ -1505,7 +1505,7 @@ music.play	<singer> 阿 果 </singer>
 music.pause	关 闭
 music.play	播 放 <singer> 黄 雨 </singer> 辰 </singer> 的 魂 斗 罗
 music.play	播 放 <singer> 华 语 </singer> 陈 </singer> 的 魂 斗 罗
-music.play	播 放 <language> 华 语 </language> 群 </singer> 星 </singer> 的 魂 斗 罗
+music.play	播 放 <singer> 华 语 </singer> 群 </singer> 星 </singer> 的 魂 斗 罗
 music.play	播 放 大 号 魂 斗 罗
 music.play	播 放 <song> 远 走 </song> 高 </song> 飞 </song>
 music.play	来 一 首 <singer> 林 琳 </singer> 来 首 林 心 如 的 趴 啦 趴 [UNK]
@@ -1539,7 +1539,7 @@ navigation.cancel_navigation	取 消
 OTHERS	没 有 来 没 有
 navigation.open	导 航
 navigation.navigation	导 航 <destination> 合 肥 </destination> 市 </destination> 庐 </destination> 阳 </destination> 区 </destination> 庐 </destination> 江 </destination> 路 </destination> 17 </destination> 号 </destination>
-OTHERS	57 ##2 层
+navigation.navigation	57 ##2 </destination> 层
 OTHERS	我 刚 拉 的 小 镇 和 老 哥 要 去 哪 了 你 想 不 玩 了 他 晚 上 还 要 上 晚 自 习 88
 phone_call.make_a_phone_call	打 电 话
 music.play	帮 我 播 放 <song> 三 生 </song> 三 </song> 世 </song>
@@ -1591,11 +1591,11 @@ OTHERS	你 是 屁
 OTHERS	你 吃 吧
 music.play	请 帮 我 点 一 首 <singer> 谢 霆 </singer> 锋 </singer> 唱 的 成 者 为 王
 music.play	请 帮 我 点 一 首 <singer> 狮 子 </singer> 王 </singer> 唱 的 再 见 的 爱
-music.play	请 帮 我 点 一 首 <singer> 狮 子 </singer> 团 </singer> 合 唱 的 的 <song> 百 年 孤 独
+music.play	请 帮 我 点 一 首 <singer> 狮 子 </singer> 团 </singer> 合 唱 的 的 <song> 百 年 </song> 孤 </song> 独
 phone_call.make_a_phone_call	打 电 话
 music.play	播 放
 music.play	播 放 <song> 再 见 </song> 只 </song> 是 </song> 陌 </song> 生 </song> 人 </song>
-music.play	<singer> 邓 小 </singer> 林 </singer>
+OTHERS	邓 小 林
 navigation.cancel_navigation	取 消
 navigation.navigation	<destination> 咸 阳 </destination> 市 </destination> 房 </destination> 屋 </destination> 管 </destination> 理 </destination> 局 </destination>
 navigation.navigation	<destination> 咸 阳 </destination> 市 </destination> 房 </destination> 产 </destination> 交 </destination> 易 </destination> 中 </destination> 心 </destination>
@@ -1623,7 +1623,7 @@ music.play	<song> 林 中 </song> 鸟 </song> 歌 曲
 phone_call.make_a_phone_call	拨 打 <phone_num> 65 ##25 </phone_num> ##18 </phone_num>
 navigation.navigation	导 航 到
 navigation.navigation	<destination> 常 发 </destination> 豪 </destination> 郡 </destination> 花 </destination> 园 </destination>
-phone_call.make_a_phone_call	<contact_name> 泽 轩 </contact_name>
+phone_call.make_a_phone_call	<contact_name> 泽 轩
 music.play	放 一 首
 navigation.cancel_navigation	取 消
 music.play	想 听 <song> 就 当 </song> 我 </song> 们 </song> 没 </song> 爱 </song> 过 </song>
@@ -1691,7 +1691,7 @@ OTHERS	七 ①
 navigation.cancel_navigation	取 消
 phone_call.make_a_phone_call	打 电 话 来 找 那 个 位 子
 OTHERS	怎 么 形 成 的 车 有 个 叫 的 人 呢
-phone_call.make_a_phone_call	要 打 电 话 来 普 通 型 预 约 单
+OTHERS	要 打 电 话 来 普 通 型 预 约 单
 navigation.navigation	<destination> 九 池 </destination> 收 </destination> 费 </destination> 站 </destination>
 navigation.navigation	<destination> 九 池 </destination> 收 </destination> 费 </destination> 站 </destination>
 music.play	请 播 放 <song> 远 走 </song> 高 </song> 飞 </song>
@@ -1721,7 +1721,7 @@ OTHERS	你 是 男 的 还 是 女 的
 navigation.navigation	<destination> 营 口 </destination> 路 </destination> 82 </destination> ##5 </destination> 号 </destination>
 navigation.navigation	到 <destination> 双 阳 </destination> 路 </destination> 480 </destination> 号 </destination>
 navigation.navigation	到 <destination> 巧 家 </destination>
-phone_call.make_a_phone_call	我 就 赶 快 打 电 话 就 通 知 你 们
+OTHERS	我 就 赶 快 打 电 话 就 通 知 你 们
 OTHERS	帮 我 联 系 成 个 我 我 我 那 我 就 等 乘 客 电 话 是 吧
 OTHERS	哦 好 的
 phone_call.make_a_phone_call	打 电 话 过 来
@@ -1732,7 +1732,7 @@ music.play	我 想 听 <song> 最 炫 </song> 民 </song> 族 </song> 风 </song
 OTHERS	你 好
 music.pause	你 好 关 闭 音 乐
 navigation.navigation	<destination> 东 营 </destination> 房 </destination> 公 </destination> 交 </destination> 车 </destination> 站 </destination>
-music.play	一 把 <singer> 杀 猪 </singer> 刀 </singer> 的 歌 给 我
+music.play	<song> 一 把 </song> <song> 杀 猪 </song> 刀 </song> 的 歌 给 我
 music.play	给 我 播 首
 OTHERS	那 要 能 拿 回 来 了
 OTHERS	川 子
@@ -1750,7 +1750,7 @@ OTHERS	1000 万
 OTHERS	帮 我 去
 navigation.navigation	到 <destination> 广 元 </destination> 市 </destination>
 navigation.navigation	到 <destination> 广 元 </destination> 市 </destination> 利 </destination> 州 </destination> 区 </destination>
-OTHERS	益 兴
+navigation.navigation	<destination> 益 兴 </destination>
 navigation.navigation	<destination> 正 阳 </destination> 县 </destination> 城 </destination>
 phone_call.make_a_phone_call	<phone_num> 521 打 电 话
 phone_call.make_a_phone_call	给 <phone_num> 521 打 电 话
@@ -1778,7 +1778,7 @@ navigation.navigation	我 要 去 <destination> 昆 明 </destination> 世 </des
 OTHERS	不 说 了
 navigation.cancel_navigation	取 消
 OTHERS	把 你 的 名 字 写 在 烟 上 吸 进 肺 里
-music.play	歌 曲 <song> 把 你 </song> 的 </song> 名 </song> 字 </song> 写 </song> 在 </song> 烟 </song> 上 </song> 吸 </song> 进 </song> 肺 里 </song>
+music.play	歌 曲 把 你 </song> 的 </song> 名 </song> 字 </song> 写 </song> 在 </song> 烟 </song> 上 吸 进 肺 里
 music.play	歌 曲 <song> 2018 年 </song> 第 </song> 一 </song> 场 </song> 雪 </song>
 music.play	歌 曲 <song> 拥 抱 </song> 你 </song> 离 </song> 去 </song>
 music.play	第 一 首 歌
@@ -1806,11 +1806,11 @@ OTHERS	打 电 话 的 情 况 摩 托 罗 拉 过 年 打
 OTHERS	我 该 几 天 我 该 不 是 就
 OTHERS	榜 单
 navigation.navigation	<destination> 紫 帽 </destination> 山 </destination>
-navigation.navigation	<destination> 泉 州 </destination> 市 </destination> 至 帽 山
+navigation.navigation	<destination> 泉 州 </destination> 市 </destination> 至 帽 山 </destination>
 navigation.navigation	<destination> 铜 山 </destination>
-navigation.navigation	<destination> 银 泰 </destination> 对 面 的 那 个 紫 紫 帽 山
+navigation.navigation	<destination> 银 泰 </destination> 对 面 的 那 个 紫 紫 </destination> 帽 </destination> 山
 music.play	<singer> 郑 阳 </singer>
-music.play	放 <song> 我 不 </song> 是 </song> 真 </song> 正 </song> 的 </song> 快 </song> 乐 </song> 的
+music.play	放 <song> 我 不 </song> 是 </song> 真 </song> 正 </song> 的 </song> 快 </song> 乐 </song> 的 </song>
 music.play	放 <singer> 李 宇 </singer> 春 </singer> 的 对 不 起 忽 然 很 想 你
 navigation.navigation	<destination> 凤 城 </destination> 4 </destination> 路 </destination> 徐 </destination> 记 </destination> 海 </destination> 鲜 </destination>
 phone_call.make_a_phone_call	<contact_name> 李 三 </contact_name> 省 </contact_name> 的 电 话
@@ -1834,7 +1834,7 @@ music.play	<song> 雨 后 </song> 人 </song> 去 </song> 楼 </song> 空 </song
 music.play	歌 曲 <song> 哎 呀 </song>
 music.play	我 要 听 <song> 雨 后 </song> 人 </song> 去 </song> 楼 </song> 空 </song>
 OTHERS	去
-music.play	播 放 首 <emotion> 快 歌 </emotion> 吗
+music.play	播 放 首 <theme> 快 歌 </theme> 吗
 OTHERS	故 事
 music.play	我 要 听 <song> 广 东 </song> 与 </song> 爱 </song> 情 </song> 故 </song> 事 </song>
 music.play	我 要 听 <song> 广 东 </song> 爱 </song> 情 </song> 故 </song> 事 </song>
@@ -1858,7 +1858,7 @@ phone_call.make_a_phone_call	打 电 话 给 <phone_num> 1860 ##000 </phone_num>
 music.play	听 <singer> mi ##2 </singer> 的 结 巴
 OTHERS	对
 OTHERS	先 马 了 我 就 赶 紧 去 吧
-OTHERS	12 我 说 这 是 个 好 哈 尔 滨 音 乐 厅
+navigation.navigation	12 我 说 这 是 个 好 <destination> 哈 尔 </destination> 滨 </destination> 音 </destination> 乐 </destination> 厅 </destination>
 OTHERS	昨 天 我 们 听 的 就 是 100 多
 music.play	的 音 乐
 OTHERS	跪 求
@@ -1873,7 +1873,7 @@ music.play	播 歌
 navigation.navigation	<destination> 大 泉 </destination> 沟 </destination>
 navigation.navigation	<destination> 北 湖 </destination> 公 </destination> 园 </destination>
 phone_call.make_a_phone_call	拨 打 电 话
-navigation.navigation	<destination> 交 通 </destination> 大 </destination> 道 </destination> 走 红 国 贸
+navigation.navigation	<destination> 交 通 </destination> 大 </destination> 道 </destination> 走 红 国 </destination> 贸 </destination>
 phone_call.make_a_phone_call	拨 打 电 话
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 55 ##1 </phone_num>
 music.play	我 想 听 <song> 你 会 </song> 爱 </song> 我 </song> 到 </song> 什 </song> 么 </song> 时 </song> 候 </song> 陶 钰 玉
@@ -1884,7 +1884,7 @@ OTHERS	深 泽 消 费 者 协 会
 OTHERS	消 费 者 协 会
 navigation.navigation	<destination> 太 原 </destination> 市 </destination> 消 </destination> 费 </destination> 者 </destination> 协 </destination> 会 </destination>
 OTHERS	咱 们 俩 订
-navigation.navigation	<destination> 阜 新 </destination> 市 </destination> 文 </destination> 化 </destination> 宫 </destination> 阜 </destination> 新 </destination> 市 </destination> 工 </destination> 人 </destination> 文 </destination> 化 </destination> 宫 </destination>
+navigation.navigation	<destination> 阜 新 </destination> 市 </destination> 文 </destination> 化 </destination> 宫 </destination> <destination> 阜 新 </destination> 市 </destination> 工 </destination> 人 </destination> 文 </destination> 化 </destination> 宫 </destination>
 OTHERS	关 掉
 OTHERS	不 要
 music.play	听 <song> 最 炫 </song> 民 </song> 族 </song> 风 </song>
@@ -1905,7 +1905,7 @@ phone_call.make_a_phone_call	打 电 话 给 <contact_name> 周
 navigation.navigation	导 航 <destination> 地 面 </destination> 车 </destination> 到 走 地 面 车 到
 music.play	播 放 歌 曲 <song> 成 都 </song>
 music.play	给 我 放 首 歌 听
-OTHERS	给 我 放 电 视 塔
+music.play	给 我 放 <song> 电 视 </song> 塔 </song>
 OTHERS	啥 玩 意 儿
 OTHERS	不 要
 music.play	我 想 听 <song> 梦 醒 </song> 时 </song> 分 </song> 的 歌
@@ -1928,7 +1928,7 @@ music.play	来 一 首 <age> 儿 歌 </age> 种 太 阳
 phone_call.make_a_phone_call	<contact_name> 丸 红 </contact_name> 的 电 话
 phone_call.make_a_phone_call	叮 当 来 个 <contact_name> 八 方 </contact_name> 的 电 话
 navigation.navigation	我 要 去 <destination> 铁 西 </destination> 家 </destination> 乐 </destination> 福 </destination>
-music.play	音 乐 <song> 战 歌 </song>
+music.play	音 乐 战 歌
 OTHERS	英 语 长 句
 music.play	因 为 战 歌 </song>
 music.play	音 乐 赞 歌
@@ -1949,7 +1949,7 @@ OTHERS	大 雨
 OTHERS	大 雨
 music.play	播 放 <song> 大 鱼 </song>
 OTHERS	哦
-OTHERS	你 把 电 话 给 我 打 通 了 我 我 我 打 电 话
+phone_call.make_a_phone_call	你 把 电 话 给 我 打 通 了 我 我 我 打 电 话
 navigation.navigation	<destination> 江 苏 </destination> 宜 </destination> 兴 </destination>
 OTHERS	将 乐
 navigation.navigation	到 <destination> 贵 州 </destination> 黄 </destination> 平 </destination>
@@ -1974,7 +1974,7 @@ phone_call.make_a_phone_call	打 电 话 给 <contact_name> 攀 岩 </contact_na
 music.play	<singer> 王 韵 </singer> 婵 </singer> 的 没 有 你 陪 伴 我 真 的 好 孤 单
 music.play	<song> 没 有 </song> 你 </song> 陪 </song> 伴 </song> 真 </song> 的 </song> 好 </song> 孤 </song> 单 </song>
 OTHERS	你 在 干 嘛 呢
-music.play	把 这 个 来 乌 兰 </singer> 的 那 首 <song> 没 有 </song> 你 </song> 陪 </song> 伴 </song> 我 真 </song> 的 </song> 好 </song> 孤 </song> 单 </song>
+music.play	把 这 个 来 乌 兰 的 那 首 <song> 没 有 </song> 你 </song> 陪 </song> 伴 </song> 我 真 </song> 的 </song> 好 </song> 孤 </song> 单 </song>
 OTHERS	打 开 收 音 机
 OTHERS	拨 打 的 电 话 正 在 通 话 中
 OTHERS	连 接 蓝 牙
@@ -2003,12 +2003,12 @@ navigation.navigation	<destination> 布 达 </destination> 拉 </destination>
 OTHERS	醉 夜
 navigation.navigation	<destination> 丽 水 </destination>
 music.play	播 放 <singer> 邓 丽 </singer> 君 </singer> 的 歌 曲 一 个 老 板 是 谁 吗 加 强 人 家
-music.play	放 一 个 <song> y ##e </song> y </song> ##e </song>
+music.play	放 一 个 <song> y ##e </song> <song> y ##e </song>
 OTHERS	一 个 y ##e y ##e
 music.play	放 <singer> 梁 静 </singer> 茹 </singer> 的 夜 夜 夜 夜
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 138 ##000 </phone_num> ##00 </phone_num> ##27 </phone_num> ##6 </phone_num>
 navigation.navigation	<destination> 北 路 </destination>
-OTHERS	放 那 个 音 乐
+music.play	放 那 个 音 乐
 OTHERS	邓 悦
 OTHERS	猪 价 下 载
 OTHERS	下 载 油 价
@@ -2043,7 +2043,7 @@ OTHERS	家 里 装 修
 navigation.navigation	<destination> 云 水 </destination> 假 </destination> 日 </destination>
 music.play	那 一 歌 手 <singer> 那 英 </singer>
 music.play	歌 手 <singer> 那 英 </singer>
-music.play	<singer> 龙 梅 </singer> 子 </singer> 歌 首 农 民
+music.play	<singer> 龙 梅 </singer> 子 </singer> 歌 首 <emotion> 农 民 </style>
 music.play	播 放 <singer> 谭 咏 </singer> 麟 </singer> 的 歌 曲
 music.play	播 放 <singer> 张 学 </singer> 友 </singer> 的 歌
 music.play	播 放 <singer> 刀 郎 </singer> 的 歌 曲
@@ -2060,7 +2060,7 @@ OTHERS	电 子
 phone_call.make_a_phone_call	我 几 乎 要 打 个 电 话
 navigation.navigation	<destination> 珠 海 </destination> 国 </destination> 际 </destination> 赛 </destination> 车 </destination> 场 </destination>
 music.play	播 放 <song> 小 屁 </song> 孩 </song>
-music.play	<song> 小 屁 </song> 孩 </song>
+OTHERS	小 屁 孩 </song>
 OTHERS	覃 玫
 navigation.cancel_navigation	取 消
 OTHERS	一
@@ -2077,7 +2077,7 @@ music.play	播 放 音 乐
 OTHERS	石 凉
 OTHERS	打 了
 OTHERS	逗 子
-phone_call.make_a_phone_call	请 打 电 话 <contact_name> 武 学 </contact_name> 没 </contact_name>
+phone_call.make_a_phone_call	请 打 电 话 <contact_name> 武 学 </contact_name> 没
 OTHERS	呵 呵 呵
 phone_call.make_a_phone_call	<phone_num> 387 ##000 </phone_num> ##001 </phone_num> ##3 </phone_num>
 OTHERS	只 识 别 的 那 个 不 是 你 这 个 55 岁 所 以 他 就 没 找 到
@@ -2130,7 +2130,7 @@ OTHERS	找 贾 涛 青 花
 OTHERS	2018
 music.play	<singer> 二 零 </singer> 七 </singer> 八 </singer> dj
 music.play	<theme> dj
-music.play	二 零 零 八 dj
+music.play	<singer> 二 零 </singer> 零 </singer> 八 </singer> dj
 music.play	<singer> 二 零 </singer> 七 </singer> 八 </singer> dj
 navigation.navigation	到 <destination> 桂 林 </destination>
 navigation.navigation	我 要 去 <destination> 贵 定 </destination>
@@ -2138,7 +2138,7 @@ navigation.cancel_navigation	退 出 导 航
 phone_call.make_a_phone_call	打 电 话
 navigation.navigation	<destination> 亚 美 </destination> 清 </destination> 和 </destination> 苑 </destination> 北 </destination> 区 </destination>
 navigation.navigation	我 要 去 <custom_destination> 公 司 </custom_destination>
-navigation.cancel_navigation	不 要 了 不 要 选 择 了 不 要 了
+music.pause	不 要 了 不 要 选 择 了 不 要 了
 OTHERS	以 及 这 个 图 片 怎 么 没 有
 music.play	<song> 虫 儿 </song> 飞 </song>
 music.play	<song> fa ##y </song>
@@ -2152,7 +2152,7 @@ navigation.navigation	<destination> 绵 阳 </destination> 七 </destination> �
 OTHERS	107
 OTHERS	陶 陶
 music.play	请 放 点 <singer> 谢 军 </singer> 的 音 乐
-music.play	<singer> 伍 华 </singer> <singer> 谢 军 </singer> 的 歌 曲
+music.play	伍 华 <singer> 谢 军 </singer> 的 歌 曲
 music.play	放 一 点 <singer> 谢 军 </singer> 的 歌 曲
 OTHERS	大 哈
 OTHERS	讲 个 笑 话
@@ -2169,7 +2169,7 @@ phone_call.make_a_phone_call	呼 叫 <contact_name> 绍 春 </contact_name>
 navigation.cancel_navigation	导 航 结 束
 navigation.cancel_navigation	结 束 导 航
 music.play	来 首 音 乐
-music.play	来 一 首 停 格 </song>
+music.play	来 一 首 <song> 停 格 </song>
 music.play	我 想 听 <singer> 张 学 </singer> 友 </singer> 的 歌
 music.play	我 要 听 <singer> 任 贤 </singer> 齐 </singer> 的 爱 你 的 最 后 一 天
 music.play	我 要 听 <singer> 任 贤 </singer> 齐 </singer> 的 爱 你 的 最 后 一 天
@@ -2212,11 +2212,11 @@ OTHERS	榜 单
 phone_call.make_a_phone_call	给 <contact_name> 妈 打 电 话
 music.play	给 我 来 首 歌
 navigation.navigation	我 要 去 <destination> 牡 丹 </destination> 江 </destination> 红 </destination> 旗 </destination> 医 </destination> 院 </destination>
-OTHERS	在 无 锡 空 气 怎 么 样
+navigation.navigation	在 无 锡 空 气 怎 么 样
 OTHERS	去 吧
 music.play	听 <song> 越 难 </song> 越 </song> 爱 </song>
-music.play	我 要 听 射 雕 英 雄 传 的 歌 曲
-music.play	我 要 听 射 雕 英 雄 传 的 歌 曲
+music.play	我 要 听 <song> 射 雕 英 雄 传 的 歌 曲
+music.play	我 要 听 <song> 射 雕 英 雄 传 的 歌 曲
 music.play	没 人 问 <song> 一 夜 </song> 老 </song> 了 </song>
 music.play	<song> 影 子 </song>
 OTHERS	应 宁
@@ -2239,12 +2239,12 @@ navigation.cancel_navigation	取 消
 OTHERS	[UNK] 中
 OTHERS	啊
 OTHERS	一
-navigation.navigation	<destination> 湖 南 </destination> 省 </destination> 邵 </destination> 阳 </destination> 市 </destination> 濮 </destination> 阳 </destination> 市 </destination> 湖 南 </destination> 省 邵 阳 市 </destination>
+navigation.navigation	<destination> 湖 南 </destination> 省 </destination> 邵 </destination> 阳 </destination> 市 </destination> 濮 </destination> 阳 </destination> 市 </destination> 湖 </destination> 南 </destination> 省 </destination> 邵 阳 市 </destination>
 navigation.navigation	<destination> 湖 南 </destination> 省 </destination> 邵 </destination> 阳 </destination> 市 </destination>
 phone_call.make_a_phone_call	呼 叫 <contact_name> 二 的 </contact_name> 菜 </contact_name> 粥 </contact_name>
 music.play	听 <singer> 毛 阿 </singer> 敏 </singer> 的 歌
 phone_call.make_a_phone_call	打 电 话 来
-phone_call.make_a_phone_call	<contact_name> 泽 轩 </contact_name>
+phone_call.make_a_phone_call	<contact_name> 泽 轩
 OTHERS	王 振 华
 music.play	给 我 放 歌 给 我 放 不 来 歌
 OTHERS	江 鹭
@@ -2265,7 +2265,7 @@ navigation.navigation	<destination> 铜 锣 </destination> 湾 </destination>
 navigation.navigation	<destination> 铜 锣 </destination> 湾 </destination>
 music.play	请 打 开 音 乐 我 要 唱 一 首 <song> 红 尘 </song> 情 </song> 歌 </song>
 music.play	<song> 让 我 </song> 一 </song> 次 </song> 爱 </song> 个 </song> 够 </song>
-phone_call.make_a_phone_call	接 电 话
+OTHERS	接 电 话
 OTHERS	二
 phone_call.make_a_phone_call	<contact_name> 怪 杰 </contact_name>
 music.play	唱 一 首 <singer> 腾 格 </singer> 尔 </singer> 的 传 说
@@ -2311,7 +2311,7 @@ phone_call.make_a_phone_call	拨 打 电 话
 OTHERS	覃 玫
 OTHERS	嗯 就 是 验 证 码 在 原 来 只 说 是 五 天 然 后 这 这 这 又 咋 又 这 又 演 唱 了
 OTHERS	这 身 衣 服 妹 子
-navigation.navigation	<destination> 韩 国
+OTHERS	韩 国
 music.play	给 我 搜 歌 曲 <song> 想 你 </song> 我 </song> 想 </song> 了 </song> 那 </song> 么 </song> 久 </song>
 music.play	给 我 搜 <song> 等 你 </song> 等 </song> 了 </song> 那 </song> 么 </song> 久 </song>
 music.play	<song> 想 着 </song> 你 </song> 亲 </song> 爱 </song> 的 </song>
@@ -2333,8 +2333,8 @@ music.play	我 想 听 <singer> ga ##la </singer> 的 gallery
 music.play	我 想 听 <singer> 赵 真 </singer> 的 光 头 强
 navigation.navigation	导 航 到 <destination> 永 兴 </destination>
 navigation.navigation	导 航 到 <destination> 永 永 </destination> 兴 </destination> 茶 </destination> 厂 </destination>
-music.play	<song> 本 色 </song>
-music.play	<song> 别 花 </song> 手 </song> 表 </song>
+OTHERS	本 色
+OTHERS	<song> 别 花 </song> 手 </song> 表 </song>
 OTHERS	并 未 能 打 电 话
 OTHERS	中 午 跟 她 视 频 里 和 文 件 删 了 几 分 钟
 music.play	播 放 <song> 追 光 </song>
@@ -2353,7 +2353,7 @@ OTHERS	你 叫 什 么 名 字
 music.play	<song> 他 无 </song> 悔 </song> 的 </song> 小 </song> 镇 </song>
 phone_call.make_a_phone_call	我 要 打 电 话
 music.play	请 播 放 一 首
-music.play	播 放 一 首 歌 给 你 听
+music.play	播 放 一 首 歌 给 你 </song> 听
 music.play	播 放 一 首 <song> 哭 给 </song> 你 </song> 听 </song>
 music.play	我 要 听
 music.play	我 要 听 <song> 全 部 </song> 都 </song> 是 </song>
@@ -2369,7 +2369,7 @@ navigation.cancel_navigation	结 束 导 航
 navigation.cancel_navigation	取 消
 navigation.navigation	我 要 去 <destination> 王 店 </destination> 镇 </destination>
 music.play	来 一 首 <style> 舞 曲 </style> 的 歌
-music.play	来 一 首 <singer> 白 雪 </singer> 的 久 别 的 人
+music.play	来 一 首 <song> 白 雪 </song> 的 </song> 久 </song> 别 </song> 的 </song> 人 </song>
 music.play	来 一 首 <song> 爱 我 </song> 的 </song> 人 </song> 和 </song> 我 </song> 爱 </song> 的 </song> 人 </song>
 music.play	来 一 首 <song> 别 怕 </song> 我 </song> 伤 </song> 心 </song>
 music.play	来 一 首 <song> 别 怕 </song> 我 </song> 伤 </song> 心 </song>
@@ -2390,7 +2390,7 @@ OTHERS	呵 呵 呵
 music.play	来 一 首 <song> 冷 酷 </song> 到 </song> 底 </song>
 music.play	放 一 首 <song> 嗨
 music.play	放 一 首 <song> 海 草 </song> 屋 </song>
-music.play	放 一 首 <song> 韩 朝 </singer> 舞
+music.play	放 一 首 <song> 韩 朝 </language> 舞
 OTHERS	你 好 啊
 music.play	来 一 首 <song> 金 兰 </song>
 music.play	来 一 首 <song> 惊 人 </song>
@@ -2403,8 +2403,8 @@ navigation.cancel_navigation	导 航 结 束
 music.play	<singer> 郭 静 </singer>
 music.play	我 想 听 <singer> 南 征 </singer> 北 </singer> 战 </singer> 的 歌
 music.play	我 想 听 <singer> mc 啊 </singer> 南 </singer> 的 歌
-music.play	216 <style> 车 载 </style> 舞 曲
-music.play	我 想 听 216 <song> 车 载 </song> 舞 曲
+music.play	216 <style> 车 载 </style> 舞 </style> 曲 </style>
+music.play	我 想 听 216 <song> 车 载 </song> 舞 </style> 曲
 phone_call.make_a_phone_call	打 个 电 话
 navigation.navigation	导 航 到 <destination> 惠 州 </destination> 济 </destination> 和 </destination> 堂 </destination> 药 </destination> 业 </destination> 有 </destination> 限 </destination> 公 </destination> 司 </destination>
 navigation.navigation	导 航 到 <destination> 惠 州 </destination> 济 </destination> 和 </destination> 堂 </destination> 药 </destination> 业 </destination> 有 </destination> 限 </destination> 公 </destination> 司 </destination>
@@ -2422,7 +2422,7 @@ music.play	<singer> 邰 正 </singer> 宵 </singer> 的 千 纸 鹤
 music.play	<song> 一 千 </song> 零 </song> 一 </song> 夜 </song>
 navigation.open	导 航
 OTHERS	文 石
-phone_call.make_a_phone_call	拨 打 <contact_name> 五 六 </contact_name> 的 电 话
+phone_call.make_a_phone_call	拨 打 <phone_num> 五 六 </phone_num> 的 电 话
 phone_call.make_a_phone_call	拨 打 <phone_num> 56 ##2 </phone_num> 电 话
 OTHERS	讲 个 笑 话
 navigation.cancel_navigation	取 消
@@ -2440,7 +2440,7 @@ OTHERS	你 好 啊
 navigation.navigation	搜 索 <destination> 贾 峪 </destination> 村 </destination> 机 </destination> 场 </destination>
 OTHERS	搜 索 新 元 素
 navigation.navigation	<destination> 苏 州 </destination> 三 </destination> 马 </destination> 工 </destination> 业 </destination> 区 </destination>
-navigation.navigation	去 <destination> 十 年 </destination>
+OTHERS	去 十 年
 navigation.navigation	搜 索 <destination> 三 马 </destination> 工 </destination> 业 </destination> 区 </destination>
 navigation.cancel_navigation	取 消 导 航
 phone_call.make_a_phone_call	打 电 话
@@ -2448,7 +2448,7 @@ OTHERS	清 越
 music.play	你 好 我 听 我 要 听 音 乐
 music.play	你 和 我 <style> 轻 音 </style> 乐 </style>
 music.pause	关 闭 音 乐
-OTHERS	落 王 新 天 地
+navigation.navigation	<destination> 落 王 </destination> 新 </destination> 天 </destination> 地 </destination>
 navigation.navigation	<destination> 新 天 </destination> 地 </destination>
 navigation.cancel_navigation	取 消
 navigation.navigation	<destination> 莆 田 </destination> 市 </destination> 涵 </destination> 江 </destination> 动 </destination> 车 </destination> 站 </destination>
@@ -2488,7 +2488,7 @@ navigation.navigation	<destination> 小 人 </destination> 民 </destination> �
 navigation.navigation	<destination> 武 汉 </destination> 大 </destination> 学 </destination> 人 </destination> 民 </destination> 医 </destination> 院 </destination>
 navigation.navigation	<destination> 小 龟 </destination> 山 </destination>
 phone_call.make_a_phone_call	打 电 话 问 问
-music.play	我 要 播 <singer> 丁 当 </singer>
+music.play	我 要 播 <song> 丁 当 </song>
 navigation.navigation	<destination> 高 安 </destination> 市 </destination>
 navigation.navigation	<destination> 月 亮 </destination> 湾 </destination>
 music.play	给 我 放 一 首 <song> 在 上 </song> 外 </song> 呢 </song>
@@ -2526,7 +2526,7 @@ music.play	打 开 音 乐
 phone_call.make_a_phone_call	打 电 话
 navigation.navigation	<destination> 华 林 </destination> 超 </destination> 市 </destination>
 navigation.navigation	<destination> 华 林 </destination> 超 </destination> 市 </destination>
-phone_call.make_a_phone_call	打 电 话 到 <phone_num> 一 万 </contact_name>
+phone_call.make_a_phone_call	打 电 话 到 <phone_num> 一 万
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 100 ##86 </phone_num>
 OTHERS	一
 navigation.cancel_navigation	导 航 结 束
@@ -2538,8 +2538,8 @@ OTHERS	桶 豆
 OTHERS	大 广 场 不 去 那 里
 music.play	叫 你 他 妈 放 首 歌 来 听
 music.pause	把 音 乐 关 掉
-navigation.navigation	从 高 速 回 家
-navigation.navigation	从 高 速 回 家
+navigation.navigation	从 高 速 回 <custom_destination> 家
+navigation.navigation	从 高 速 回 <custom_destination> 家
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 2100 ##00 </phone_num> ##69 </phone_num>
 music.play	我 想 听 <song> 体 面 </song>
 music.play	我 想 听 <singer> 于 文 </singer> 文 </singer> 的 体 面
@@ -2568,14 +2568,14 @@ navigation.navigation	导 航 到 <destination> 石 家 </destination> 庄 </des
 OTHERS	南 方
 navigation.cancel_navigation	取 消
 navigation.navigation	<destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 竹 </destination> 溪 </destination> 县 </destination> 蒋 </destination> 家 </destination> 堰 </destination> 镇 </destination>
-navigation.navigation	请 搜 索 <destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 蒋 </destination> 家 </destination> 堰 </destination> 镇 </destination> 然 后 </destination> 十 </destination> 字 </destination> 该 十 </destination> 字 </destination> 街 </destination>
+navigation.navigation	请 搜 索 <destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 蒋 </destination> 家 </destination> 堰 </destination> 镇 </destination> 然 </destination> 后 </destination> 十 </destination> 字 </destination> 该 </destination> 十 </destination> 字 </destination> 街 </destination>
 navigation.navigation	帮 我 搜 索 <destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 蒋 </destination> 家 </destination> 堰 </destination> 镇 </destination> 十 </destination> 字 </destination> 街 </destination> 老 </destination> 汽 </destination> 车 </destination> 站 </destination>
 navigation.navigation	请 帮 我 搜 索 <destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 张 </destination> 家 </destination> 堰 </destination> 镇 </destination> 十 </destination> 字 </destination> 街 </destination>
 navigation.navigation	搜 索 <destination> 湖 北 </destination> 省 </destination> 十 </destination> 堰 </destination> 市 </destination> 蒋 </destination> 家 </destination> 堰 </destination> 镇 </destination> 十 </destination> 字 </destination> 街 </destination>
 navigation.cancel_navigation	取 消
 OTHERS	丁 浩
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 你 妈 </contact_name>
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 music.play	播 放 <theme> dj 版 的 音 乐
 music.play	<theme> dj
 OTHERS	有 什 么 铃 声
@@ -2588,7 +2588,7 @@ music.play	<theme> dj
 music.play	播 放 <theme> dj
 music.play	<song> 我 最 </song> 爱 </song> 的 </song> 姑 </song> 娘 </song>
 music.play	<song> 我 最 </song> 爱 </song> 的 </song> 姑 </song> 娘 </song> dj
-music.play	播 放 <toplist> 新 款
+music.play	播 放 <toplist> 新 款 </toplist>
 music.play	播 放 <singer> 古 巨 </singer> 基 </singer> 的 情 歌 王
 music.play	播 放 <song> 闯 码 </song> 头 </song>
 OTHERS	362 ##6
@@ -2606,7 +2606,7 @@ music.play	给 我 播 放 一 首 <song> 一 壶 </song> 老 </song> 酒 </song
 music.play	给 我 播 放 一 首 <singer> 许 巍 </singer> 自 己 唱 的 歌 曲 曾 经 的 你
 music.play	给 我 播 放 一 首 <singer> 吴 亦 </singer> 凡 </singer> 赵 丽 颖 唱 的 想 你
 music.play	给 我 播 放 一 首 <singer> 赵 丽 </singer> 颖 </singer> 和 吴 亦 凡 唱 的 想 你
-music.play	请 给 我 播 放 一 首 <singer> 赵 丽 </singer> 颖 </singer> 和 吴 亦 凡 和 唱 的 降 <song> 你 不 是 像 </song> 你 </song> 记 住
+music.play	请 给 我 播 放 一 首 <singer> 赵 丽 </singer> 颖 </singer> 和 吴 亦 凡 和 唱 的 降 你 不 是 像 你 记 住
 OTHERS	老 大 我 们 没 说 话 取 消
 navigation.cancel_navigation	取 消
 music.play	音 乐
@@ -2641,7 +2641,7 @@ navigation.navigation	<destination> 大 连 </destination> 路 </destination> 88
 music.play	播 放 <song> 上 周 </song> 上 </song> 了 </song>
 music.play	播 放 <song> 单 周 </song> 单 </song>
 music.play	播 放 <song> 散 就 </song> 散 </song>
-music.play	播 放 <singer> 周 三 </singer>
+music.play	播 放 <song> 周 三 </song>
 music.play	我 要 听 <song> 告 白 </song> 气 </song> 球 </song>
 music.play	我 要 听 <singer> 刘 德 </singer> 华 </singer> 的 歌
 music.play	放 一 首
@@ -2689,7 +2689,7 @@ OTHERS	好 的
 music.play	我 想 听 <singer> 大 壮 </singer> 的 我 们 不 一 样
 navigation.cancel_navigation	取 消
 navigation.cancel_navigation	取 消 导 航
-navigation.navigation	<destination> 寮 步 </destination> 松 </destination> 湖 </destination> 传 奇 </destination>
+navigation.navigation	<destination> 寮 步 </destination> 松 湖 </destination> 传 奇
 navigation.open	导 航
 navigation.navigation	到 <destination> 团 结 </destination> 村 </destination>
 phone_call.make_a_phone_call	呼 叫 <phone_num> 680 ##69 </phone_num>
@@ -2727,7 +2727,7 @@ navigation.navigation	导 航 到 <destination> 喜 嘉 </destination> 庆 </des
 navigation.navigation	去 <destination> 恒 晨 </destination>
 music.play	播 放 <song> 体 面 </song>
 OTHERS	抹 微
-music.play	mini 播 放 器
+OTHERS	mini 播 放 器
 music.play	打 开 <song> 及 时 </song> 行 </song> 乐
 phone_call.make_a_phone_call	打 电 话 给 <phone_num> 10000 ##11 </phone_num>
 navigation.navigation	导 航 去 <destination> 垣 曲 </destination> 移 </destination> 动 </destination> 总 </destination> 公 </destination> 司 </destination>
@@ -2768,7 +2768,7 @@ navigation.navigation	<destination> 绩 溪 </destination> 县 </destination>
 OTHERS	给 我 讲 十 个 笑 话
 music.next	换 一 个
 music.pause	都 说 叫 你 关 闭 音 乐
-phone_call.make_a_phone_call	你 有 没 有 打 电 话 的 功 能
+OTHERS	你 有 没 有 打 电 话 的 功 能
 phone_call.make_a_phone_call	那 我 想 打 电 话 给 <contact_name> 一 零 </contact_name> 可 以 吗
 phone_call.make_a_phone_call	打 电 话 <phone_num> 110
 OTHERS	打 开 流 量
@@ -2835,7 +2835,7 @@ navigation.navigation	我 想 去 <destination> 丁 冲 </destination> 街 </des
 navigation.navigation	我 想 去 <destination> 丁 村 </destination> 街 </destination>
 navigation.navigation	到 <destination> 徐 大 </destination> 坡 </destination>
 navigation.navigation	去 <destination> 徐 大 </destination> 堡 </destination>
-OTHERS	你 把 他 电 话 给 我 吧
+phone_call.make_a_phone_call	你 把 他 电 话 给 <contact_name> 我 吧 </contact_name>
 OTHERS	晋 军
 OTHERS	to ##to
 OTHERS	住 了
@@ -2852,8 +2852,8 @@ music.play	放 一 首 <song> 江 湖 </song> 大 </song> 道 </song>
 music.play	放 一 首 <song> 江 湖 </song> 大 </song> 道 </song> dj 版
 music.play	放 一 首 <song> 把 酒 </song> 倒 </song> 满 </song>
 OTHERS	打 开 电 子 狗
-music.play	呃 我 要 听 <singer> 天 镇 </singer> 的 高 速
-music.play	我 要 天 正 的 朋 友
+music.play	呃 我 要 听 <song> 天 镇 </song> 的 </song> 高 </song> 速 </song>
+music.play	我 要 天 正 的 </song> 朋 </song> 友 </song>
 music.play	我 要 听 <song> 朋 友 </song>
 music.play	我 要 听 <song> 一 生 </song> 无 </song> 悔 </song>
 music.play	播 放 一 首 <singer> 小 芳 </singer>
@@ -2867,7 +2867,7 @@ OTHERS	那 你 把 上 衣 脱 了
 OTHERS	谢 谢 你
 navigation.navigation	<destination> 蔡 甸 </destination> 区 </destination>
 music.play	请 播 放 歌 曲 <song> 你 家 </song> 在 </song> 哪 </song> 里 </song>
-phone_call.make_a_phone_call	66 ##2 </phone_num>
+phone_call.make_a_phone_call	<phone_num> 66 ##2 </phone_num>
 navigation.navigation	到 <destination> 简 阳 </destination>
 OTHERS	可 以
 OTHERS	一
@@ -2907,7 +2907,7 @@ OTHERS	你 叫 我 爸 爸
 OTHERS	一 好 走 吗
 music.pause	关 闭 音 乐
 music.play	播 放 <song> 小 苹 </song> 果 </song>
-music.play	来 一 <singer> 大 风 </singer> 歌 曲
+music.play	来 一 <song> 大 风 </song> 歌 曲
 music.play	播 放 歌 曲
 music.play	播 放 一 大 波 歌 曲
 OTHERS	一 直 被 了 200 多 米 到 达 安 全 地 带 之 后 有 媒 体 采 访 刘 大 脑 袋 一 偏 我 做
@@ -2940,7 +2940,7 @@ OTHERS	好 好
 navigation.navigation	<destination> 东 丽 </destination> 医 </destination> 院 </destination>
 music.play	<song> 小 男 </song> 孩 </song>
 OTHERS	叮 当 你 好
-music.play	搜 索 小 男 </song> 孩 </song>
+music.play	搜 索 小 男 孩
 navigation.navigation	<destination> 芦 北 </destination> 口 </destination>
 music.play	<song> 一 晃 </song> 就 </song> 老 </song> 了 </song>
 phone_call.make_a_phone_call	打 电 话
@@ -2952,15 +2952,15 @@ navigation.navigation	我 要 去 <destination> 宝 利 </destination> 丰 </des
 OTHERS	你 听 到 了 吗
 OTHERS	不 是
 OTHERS	榜 单
-music.play	<song> 月 亮 </song> 之 </song> 上
-OTHERS	月 光 上 行 走
-OTHERS	月 光 上 行 走
+music.play	<song> 月 亮 </song> 之 </song> 上 </song>
+OTHERS	<song> 月 光 </song> 上 </song> 行 </song> 走 </song>
+OTHERS	<song> 月 光 </song> 上 </song> 行 </song> 走 </song>
 OTHERS	家 家
 OTHERS	旺 旺 月 光 上 行 走
 music.play	你 好 叮 当 我 想 听 <song> 月 光 </song> 上 </song> 行 </song> 走 </song>
 music.play	您 好 叮 当 我 想 听 <song> 月 光 </song> 上 </song> 行 </song> 走 </song>
 music.play	歌 曲 <song> 曹 操 </song> 争 </song> 霸 </song>
-music.play	歌 曲 <song> 场 上 </song> 的
+music.play	歌 曲 <song> 场 上 </song> 的 </song>
 music.play	歌 曲 <song> 场 上 </song> 争 </song> 霸 </song>
 OTHERS	米 洛
 navigation.navigation	找 一 条 去 <destination> 梅 特 </destination> 勒 </destination>
@@ -2984,12 +2984,12 @@ music.play	<song> 成 都 </song>
 music.play	播 放 <song> 成 都 </song> 啊 </song> 成 </song> 都 </song>
 phone_call.make_a_phone_call	打 电 话 给
 OTHERS	关 掉
-OTHERS	能 打 开 音 乐 吗
+music.play	能 打 开 音 乐 吗
 phone_call.make_a_phone_call	比 如 说 你 要 打 电 话 给 张 三 上 面 有 的
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 陈 先 </contact_name> 生 </contact_name>
 OTHERS	晓 橙
-OTHERS	<contact_name> 咖 咖 </contact_name>
-navigation.navigation	<destination> 喀 什 </destination> 东 </destination> 路 </destination> 是 </destination> 乐 橙 </destination>
+OTHERS	咖 咖
+navigation.navigation	<destination> 喀 什 </destination> 东 </destination> 路 </destination> 是 </destination> 乐 </destination> 橙 </destination>
 music.play	还 音 乐
 OTHERS	是 的
 navigation.navigation	我 要 去
@@ -3001,7 +3001,7 @@ navigation.navigation	我 要 去 <destination> 碧 峰 </destination> 峡 </des
 OTHERS	再 见
 OTHERS	他 是 个 瞎 子
 navigation.navigation	回 <custom_destination> 家
-phone_call.make_a_phone_call	<singer> 张 磊 </contact_name> 的 电 话
+phone_call.make_a_phone_call	<contact_name> 张 磊 </contact_name> 的 电 话
 navigation.navigation	<destination> 常 州 </destination> 市 </destination> 的 </destination> 阳 </destination> 曲 </destination>
 phone_call.make_a_phone_call	<contact_name> 江 南 </contact_name> 打 电 话
 OTHERS	我 要 手 写
@@ -3021,14 +3021,14 @@ OTHERS	提 达
 music.play	<singer> 那 英 </singer>
 OTHERS	向 晶
 navigation.navigation	<destination> 老 街 </destination>
-phone_call.make_a_phone_call	打 电 话 操 心
+OTHERS	打 电 话 操 心
 OTHERS	前 方 路 口 驶 出 环 岛 进 入 金 桂 大 道
 phone_call.make_a_phone_call	打 电 话
 navigation.cancel_navigation	取 消
 navigation.cancel_navigation	取 消
 navigation.navigation	我 要 回 <custom_destination> 家
 OTHERS	沙 崴
-music.play	我 要 听 <song> 拥 抱 </song> 你 </song> 的
+music.play	我 要 听 <song> 拥 抱 </song> 你 </song> 的 </song>
 music.play	<song> 拥 抱 </song> 你 </song> 离 </song> 去 </song>
 OTHERS	你 还 是 从 前 的 你 吗
 music.play	音 乐 <song> 你 还 </song> 是 </song> 从 </song> 前 </song> 的 </song> 你 </song> 吗
@@ -3063,7 +3063,7 @@ OTHERS	龚 珊
 navigation.navigation	我 想 去 <destination> 大 田 </destination>
 navigation.navigation	我 要 去 <destination> 大 田 </destination> 下 </destination> 沙 </destination> 马 </destination> 村 </destination>
 OTHERS	要 增 大 音 量
-OTHERS	退 出
+navigation.cancel_navigation	退 出
 navigation.cancel_navigation	结 束 导 航
 music.play	music
 music.play	音 乐
@@ -3084,7 +3084,7 @@ music.play	<song> 怀 念 </song> 青 </song> 春 </song>
 music.play	我 想 听 <song> 怀 念 </song> 青 </song> 春 </song>
 phone_call.make_a_phone_call	拨 打 电 话
 music.play	歌
-music.play	<singer> 袁 娅 </singer> 维 </singer> 的 <song> 说 散 </song> 就 </song> 散 </song>
+music.play	袁 娅 维 的 <song> 说 散 </song> 就 </song> 散 </song>
 navigation.cancel_navigation	取 消 导 航
 music.play	给 我 来 一 首 <singer> 周 杰 </singer> 伦 </singer> 的 双 截 棍
 navigation.cancel_navigation	取 消
@@ -3111,8 +3111,8 @@ phone_call.make_a_phone_call	帮 我 打 电 话 给 <contact_name> 健 康 </co
 music.play	播 放 <song> 小 苹 </song> 果 </song>
 music.play	<song> 天 有 </song> 海 </song> 迈 </song>
 music.play	<singer> mc 天 </singer> 佑 </singer>
-music.play	m <singer> c 天 </singer> 佑 </singer> 的 歌 曲
-music.play	喊 麦
+music.play	m <singer> c <singer> 天 佑 </singer> 的 歌 曲
+music.play	喊 麦 </theme>
 music.play	<theme> 喊 麦 </theme> 歌 曲
 music.play	<song> 拥 抱 </song> 明 </song> 天 </song>
 OTHERS	我 家 雯 是 笨 蛋 吗
@@ -3127,7 +3127,7 @@ phone_call.make_a_phone_call	打 电 话
 OTHERS	羊 学 敏
 OTHERS	羊 学 敏
 OTHERS	谢 谢
-OTHERS	沙 仑 站 冷 战
+navigation.navigation	<destination> 沙 仑 </destination> 站 冷 战
 music.play	<singer> 阿 果 </singer>
 OTHERS	抱 回 家
 navigation.navigation	我 要 回 <custom_destination> 家
@@ -3140,12 +3140,12 @@ music.play	音 乐
 phone_call.make_a_phone_call	那 我 打 个 电 话
 OTHERS	我 看 你 啊
 OTHERS	行 我 先 忙 好 吧
-navigation.navigation	<destination> 郎 府 </destination> 保 </destination> 利 </destination> 心 </destination> 语
-navigation.navigation	<destination> 郎 府 </destination> 保 </destination> 利 </destination> 心 </destination> 语
+navigation.navigation	<destination> 郎 府 </destination> 保 </destination> 利 </destination> 心 </destination> 语 </destination>
+navigation.navigation	<destination> 郎 府 </destination> 保 </destination> 利 </destination> 心 </destination> 语 </destination>
 music.play	我 想 听 <singer> 大 哲 </singer> 唱 的 我 不 一 样
-music.play	<singer> 大 众 </singer> 的 我 们 不 一 样
-phone_call.make_a_phone_call	<contact_name> 章 亭 PAD>
-music.play	我 想 听 <singer> 大 众 </singer> 的 我 们 都 一 样
+music.play	大 众 的 我 们 不 </song> 一 </song> 样
+phone_call.make_a_phone_call	<contact_name> 章 亭 </contact_name>
+music.play	我 想 听 <singer> 大 众 </singer> 的 <song> 我 们 都 一 </song> 样
 music.play	我 想 听 <singer> 大 壮 </singer> 的 我 们 不 一 样
 navigation.navigation	<destination> 昌 黎 </destination>
 navigation.navigation	导 航 去 <destination> 火 车 </destination> 站 </destination>
@@ -3178,11 +3178,11 @@ music.play	来 一 首 <song> 房 间 </song> 吧
 navigation.cancel_navigation	取 消
 music.play	你 给 我 放 一 首 <song> 时 间 </song> 都 </song> 去 </song> 哪 </song> 了 </song>
 music.play	播 放 <singer> 张 静 </singer> 波 </singer> 的 歌 曲
-music.play	帮 我 放 点 <singer> 劲 爆 </singer> 的 歌 曲
+music.play	帮 我 放 点 <emotion> 劲 爆 </emotion> 的 歌 曲
 music.play	<theme> 纯 音 </theme> 乐 </theme>
 OTHERS	打 电 话 从 来 不 接
 navigation.open	导 航
-navigation.navigation	到 达 <destination> 湘 江 </destination> 路 </destination> 解 </destination> 放 </destination> 路 </destination> 与 </destination> 湘 </destination> 江 路 </destination> 黄 </destination> 焖 </destination> 鸡 </destination> 米 </destination> 饭 </destination>
+navigation.navigation	到 达 <destination> 湘 江 </destination> 路 </destination> 解 </destination> 放 </destination> 路 </destination> 与 </destination> 湘 </destination> 江 </destination> 路 </destination> 黄 </destination> 焖 </destination> 鸡 </destination> 米 </destination> 饭 </destination>
 OTHERS	但 有 压 力
 music.play	我 想 听 <singer> 那 英 </singer> 的 歌 过 来 起 来 要 点
 phone_call.make_a_phone_call	打 电 话
@@ -3215,7 +3215,7 @@ music.play	<song> 吻 别 </song>
 music.play	<song> 吻 别 </song>
 music.play	我 想 听 <song> 独 唱 </song> 你 </song> 的
 music.play	我 想 听 <song> 不 是 </song> 你 </song> 的 </song>
-music.play	我 想 听 <song> 不 上 </song> 你 </song> 的 </song> 当 </song>
+music.play	我 想 听 <song> 不 上 </song> 你 </song> 的 当
 OTHERS	哎
 music.play	播 放
 music.play	请 播 放 <song> 彩 虹 </song> 唱 </song>
@@ -3271,8 +3271,8 @@ OTHERS	你 对 这 个 男 孩 的 母 亲 便 上 的 目
 OTHERS	你 好 捷 度
 phone_call.make_a_phone_call	请 拨 打 <contact_name> 张 科 </contact_name> 的 电 话
 OTHERS	叮 久 电
-OTHERS	走 高 速
-navigation.navigation	<destination> 我 们 </destination> 莱 </destination> 茵 </destination> 酒 </destination> 店 </destination>
+navigation.navigation	走 高 速
+OTHERS	我 们 莱 茵 酒 店
 navigation.navigation	<destination> 虎 门 </destination> 莱 </destination> 茵 </destination> 酒 </destination> 店 </destination>
 navigation.navigation	去 <destination> 开 发 </destination> 区 </destination> 管 </destination> 委 </destination> 会 </destination>
 navigation.cancel_navigation	取 消 导 航
@@ -3330,7 +3330,7 @@ phone_call.make_a_phone_call	打 电 话 <phone_num> 66 ##78 </phone_num>
 OTHERS	云 风
 navigation.navigation	去 <destination> 云 纺 </destination>
 OTHERS	请 把 地 图 打 开 我 们 到 阜 阳
-navigation.navigation	搜 索 阜 阳 </destination>
+OTHERS	搜 索 阜 阳
 navigation.navigation	搜 到 <destination> 阜 阳 </destination> 路 线
 OTHERS	是 的
 OTHERS	喂
@@ -3379,7 +3379,7 @@ OTHERS	你 认 识 李 子 轩 吗
 OTHERS	你 认 识 女 的 李 子 轩 吗
 navigation.cancel_navigation	取 消 导 航
 music.play	来 一 首 <singer> 降 央 </singer> 卓 </singer> 玛 </singer> 的
-music.play	来 一 首 秧 秧 降 央 卓 玛 的 西 海 情 歌
+music.play	来 一 首 <song> 秧 秧 </song> 降 </song> 央 卓 玛 的 西 海 情 歌
 music.play	来 一 首 <singer> 降 央 </singer> 卓 </singer> 玛 </singer> 的 西 海 情 歌
 navigation.cancel_navigation	取 消
 OTHERS	usb
@@ -3429,7 +3429,7 @@ navigation.navigation	我 要 去 <destination> 济 南 </destination> 遥 </des
 OTHERS	阿 露
 OTHERS	算 了 吧
 OTHERS	乐 无 颜
-OTHERS	王 梓 杰
+phone_call.make_a_phone_call	<contact_name> 王 梓 </contact_name> 杰 </contact_name>
 OTHERS	广 乐
 OTHERS	那 个
 music.play	来 一 首 <song> 退
@@ -3440,7 +3440,7 @@ navigation.navigation	去 <destination> 火 车 </destination> 东 </destination
 music.play	下 载 歌 曲
 phone_call.make_a_phone_call	打 电 话 得 了
 music.play	来 点 音 乐
-music.play	来 一 首 <song> 拥 抱 </song> 你 </song> 你 </song> 去 的 dj 版
+music.play	来 一 首 <song> 拥 抱 </song> 你 </song> 你 </song> 去 </song> 的 dj 版
 music.play	播 一 首 <song> 拥 抱 </song> 你 </song> 离 </song> 去 </song> 的 dj 版
 OTHERS	然 后 我 们 掉 了 行 吗
 navigation.navigation	<destination> 安 国 </destination> 市 </destination> 车 </destination> 之 </destination> 家 </destination> 汽 </destination> 修 </destination>
@@ -3542,7 +3542,7 @@ phone_call.make_a_phone_call	打 电 话 给 <contact_name> 孙 丹 </contact_na
 navigation.start_navigation	开 始 导 航
 music.play	拨 <singer> 韩 鹏 </singer> 的 歌 曲 何 鹏
 OTHERS	系 好 安 全 带
-phone_call.make_a_phone_call	<contact_name> 乾 坤
+phone_call.make_a_phone_call	<contact_name> 乾 坤 </contact_name>
 music.play	<singer> 廖 芊 </singer> 芊 </singer> 的 天 亮 前 说 晚 安
 phone_call.make_a_phone_call	拨 打 电 话
 OTHERS	高 德 地 图
@@ -3581,7 +3581,7 @@ navigation.navigation	距 <destination> 临 湘 </destination> 大 </destination
 OTHERS	888
 OTHERS	bo ##w ar ##row ##s 吗
 OTHERS	by 吗
-music.play	放 <singer> 白 龙 </singer> 吗
+music.play	放 <song> 白 龙 </song> 吗
 music.play	播 放 <song> 白 龙 </song> 马 </song>
 music.play	播 放 <song> 机 器 </song> 铃 </song> 砍 </song> 菜 </song> 刀 </song>
 OTHERS	猴 危
@@ -3590,11 +3590,11 @@ music.play	我 要 听 歌
 navigation.navigation	我 要 去 <destination> 丽 顺 </destination> 街 </destination>
 navigation.navigation	帮 我 导 航 到
 navigation.navigation	<destination> 长 葛 </destination> 市 </destination> 市 </destination> 政 </destination> 府 </destination>
-phone_call.make_a_phone_call	<contact_name> 贾 英 </contact_name> 华 </contact_name>
+OTHERS	贾 英 华
 phone_call.make_a_phone_call	这 里 着 打 电 话
-navigation.navigation	导 航 回 <custom_destination> 家 回 </destination> <custom_destination> 公 司 </destination>
+navigation.navigation	导 航 回 <custom_destination> 家 回 <custom_destination> 公 司 </custom_destination>
 music.play	请 播 放 <song> 红 色 </song> 高 </song> 跟 </song> 鞋 </song>
-music.play	播 放 完 <song> 红 色 </song> 高 </song> 跟 </song> 鞋 </song> 后 播 放 几 度 梦 回 </song> 大 </song> 唐 </song>
+music.play	播 放 完 <song> 红 色 </song> 高 </song> 跟 </song> 鞋 </song> 后 播 放 几 度 </song> 梦 </song> 回 </song> 大 </song> 唐 </song>
 music.play	请 播 放 <song> 被 过 </song> 手 </song>
 music.play	给 我 拨 <song> 背 过 </song> 手 </song>
 music.play	给 我 播 放 <song> 背 过 </song> 手 </song>
@@ -3610,7 +3610,7 @@ OTHERS	李 好
 OTHERS	不 行 啊
 navigation.cancel_navigation	取 消
 navigation.navigation	去 <destination> 林 溪 </destination> 森 </destination> 园 </destination> 小 </destination> 区 </destination>
-OTHERS	据 林 希 </destination> 森 </destination> 园 </destination> 小 </destination> 区 ， 傻 *
+navigation.navigation	据 林 希 </destination> 森 </destination> 园 </destination> 小 </destination> 区 </destination> ， 傻 *
 navigation.navigation	去 <destination> 林 溪 </destination> 森 </destination> 源 </destination> 小 </destination> 区 </destination>
 music.play	播 放 <singer> 茅 野 </singer> 爱 </singer> 衣 </singer> 的 歌 曲
 music.play	播 放 歌 曲 <song> 像 我 </song> 这 </song> 样 </song> 的 </song> 人 </song>
@@ -3627,8 +3627,8 @@ phone_call.make_a_phone_call	电 话 给 <phone_num> 151 ##40 </phone_num> ##8 <
 phone_call.make_a_phone_call	给 <phone_num> 151 ##000 </phone_num> ##08 </phone_num> ##33 </phone_num> ##8 </phone_num>
 navigation.navigation	我 到 <destination> 山 东 </destination> 平 </destination> 邑 </destination>
 OTHERS	钢 铁 是 眼 泪 炼 成 的
-music.play	放 一 首 <song> 钢 铁 </song> 是 </song> 怎 </song> 样 </song> 炼 </song> 成 </song> 的 </song>
-music.play	我 想 听 <song> 钢 铁 </song> 是 </song> 眼 </song> 泪 </song> 炼 </song> 成 </song> 的 </song>
+music.play	放 一 首 <song> 钢 铁 </song> 是 </song> 怎 </song> 样 </song> 炼 </song> 成 </song> 的
+music.play	我 想 听 <song> 钢 铁 </song> 是 </song> 眼 </song> 泪 </song> 炼 </song> 成 </song> 的
 music.play	<song> 下 辈 </song> 子 </song> 不 </song> 做 </song> 女 </song> 人 </song>
 music.play	<singer> 曾 春 </singer> 年 </singer> 的 歌
 music.play	<singer> 增 生 </singer> 年 </singer> 的 歌
@@ -3641,7 +3641,7 @@ music.play	我 想 看 <song> 熊 出 </song> 没 </song>
 OTHERS	我 要 看 熊 出 没
 music.play	我 想 看 <song> 熊 出 </song> 没 </song>
 OTHERS	是 的
-music.play	我 想 看 熊 出 </song> 没 </song> 吃 看 见 日 </song> 记
+OTHERS	我 想 看 熊 出 没 吃 看 见 日 记
 OTHERS	我 就 想 看 熊 出 没 之 泰 篇 日 记
 OTHERS	千 万 别 弄 了
 music.play	我 想 听 <song> 爱 死 </song> 了 </song> 昨 </song> 天 </song>
@@ -3657,7 +3657,7 @@ music.play	我 要 歌 曲 <song> 伤 心 </song> 太 </song> 平 </song> 洋 </
 navigation.navigation	<destination> 北 京 </destination> 王 </destination> 府 </destination> 井 </destination>
 OTHERS	回 首 页
 OTHERS	他 都 不 会 打 电 话
-navigation.navigation	当 <destination> 兴 盛 </destination> 路 </destination>
+navigation.navigation	当 兴 </destination> 盛 </destination> 路 </destination>
 navigation.navigation	导 航 <destination> 兴 盛 </destination> 路 </destination>
 phone_call.make_a_phone_call	打 电 话
 OTHERS	你 好 啊
@@ -3699,7 +3699,7 @@ navigation.cancel_navigation	取 消
 music.play	点 一 首 哦
 navigation.navigation	导 航 到 <destination> 维 也 </destination> 纳 </destination> 国 </destination> 际 </destination> 酒 </destination> 店 </destination>
 OTHERS	放 一 个 视 频
-OTHERS	放 一 个 三 级 片
+OTHERS	放 一 个 <song> 三 级 </song> 片
 music.play	放 一 首 <singer> 苏 运 </singer> 莹 </singer> 的 野 子
 music.play	放 一 首 <song> 我 的 </song> 歌 </song> 声 </song> 里 </song>
 music.play	换 一 首 <song> 体 面 </song> 与 雯 雯 的
@@ -3731,18 +3731,18 @@ navigation.navigation	<destination> 三 亚 </destination> 亚 </destination> �
 phone_call.make_a_phone_call	打 电 话
 music.play	来 一 首 <theme> dj
 music.play	来 一 首 <theme> dj
-music.play	来 一 首 <singer> 的 士 </singer> 高 </singer>
+music.play	来 一 首 <song> 的 士 </song> 高 </song>
 navigation.cancel_navigation	取 消 导 航 听 说 党 养 四 条 六 条
 music.play	<song> 爸 爸 </song> 妈 </song> 妈 </song> 听 </song> 我 </song> 说 </song>
 phone_call.make_a_phone_call	拨 打 <phone_num> 55 ##6 </phone_num>
-phone_call.make_a_phone_call	<contact_name> 大 姑 岭 街 </contact_name> 的 电 话
+phone_call.make_a_phone_call	<contact_name> 大 姑 </contact_name> 岭 </contact_name> 街 </contact_name> 的 电 话
 navigation.navigation	我 想 去 <destination> 凤 城 </destination> 医 </destination> 院 </destination>
 OTHERS	王 梅
 music.play	我 要 听 <singer> 刘 德 </singer> 华 </singer> 的 歌
 music.play	来 一 首 <song> 倔 强 </song>
 music.play	来 一 首 <song> 夜 空 </song> 中 </song> 最 </song> 亮 </song> 的 </song> 星 </song> 星 </song>
 music.play	来 一 首 <song> 知 足 </song>
-music.play	我 要 听 <song> 可 以 </song> 了 </song>
+music.play	我 要 听 可 以 了
 music.play	我 要 听 <singer> 钟 镇 </singer> 涛 </singer> 的 歌
 music.play	我 要 听 <singer> 郑 智 </singer> 化 </singer> 的 歌
 navigation.navigation	我 要 回 <custom_destination> 家
@@ -3759,7 +3759,7 @@ navigation.navigation	<destination> 联 英 </destination> 达 </destination>
 music.play	<singer> 刀 郎 </singer> 的 歌 曲
 music.play	<song> 不 能 </song> 没 </song> 有 </song> 你 </song>
 navigation.navigation	<destination> 桔 坑 </destination> 窑 </destination>
-music.play	<song> 桔 梗 </song> 谣
+music.play	<song> 桔 梗 </song> 谣 </song>
 phone_call.make_a_phone_call	不 要 给 <contact_name> 恩 力 </contact_name> 司 </contact_name> 阁 </contact_name> 打 电 话
 music.play	来 首 音 乐 听 一 下
 music.play	来 一 首 <song> 月 光 </song> 下 </song> 的 </song> 凤 </song> 尾 </song> 竹 </song>
@@ -3772,7 +3772,7 @@ phone_call.make_a_phone_call	拨 打 <phone_num> 153 ##000 </phone_num> ##08 </p
 phone_call.make_a_phone_call	拨 打 <phone_num> 153 ##000 </phone_num> ##08 </phone_num> ##86 </phone_num> ##6 </phone_num> 电 话
 navigation.navigation	<destination> 济 宁 </destination> 市 </destination> 梁 </destination> 山 </destination> 县 </destination> 汽 </destination> 车 </destination> 站 </destination>
 OTHERS	三 级
-music.play	<song> 神 曲 </theme>
+music.play	<song> 神 曲 </song>
 OTHERS	赛 琪
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 亲 爱 </contact_name> 的 </contact_name> 老 </contact_name> 婆 </contact_name>
 OTHERS	陪 我 睡 一 觉
@@ -3780,7 +3780,7 @@ navigation.cancel_navigation	结 束 导 航
 OTHERS	爱 莎
 OTHERS	李 岩
 music.play	播 放 <singer> 章 丽 </singer>
-music.play	放 <singer> 旮 [UNK] </singer> 的 当 </song> 你 </song>
+music.play	放 <singer> 旮 [UNK] </singer> 的 <song> 当 你 </song>
 OTHERS	大 米
 OTHERS	李 岩
 music.play	播 放 <singer> 旮 [UNK] </singer> 的 歌
@@ -3824,7 +3824,7 @@ music.play	<singer> 周 润 </singer> 发 </singer>
 music.play	播 放 歌
 music.play	<song> 说 散 </song> 就 </song> 散 </song>
 OTHERS	去 你 娘 的 蛋
-OTHERS	到 两 当
+navigation.navigation	到 <destination> 两 当 </destination>
 OTHERS	打 开 电 话 簿
 OTHERS	新 月
 music.play	音 乐
@@ -3921,10 +3921,10 @@ OTHERS	哦
 OTHERS	哦
 OTHERS	已 经 打 过 去 了
 OTHERS	好 吧 那 我 再 找
-OTHERS	导 航 到 这 个 一 看
+navigation.navigation	导 航 到 这 个 一 看
 OTHERS	电 话 了
 music.play	来 点 <singer> 杨 光 </singer> 的 男 人 歌
-music.play	殷 秀 梅 我 爱 你 <song> 塞 北 的 </song> 雪
+music.play	殷 秀 梅 我 爱 你 <song> 塞 北 </song> 的 </song> 雪 </song>
 music.play	<singer> 冷 漠 </singer> 你 是 我 最 爱 的 女 孩
 music.play	<singer> 冷 漠 </singer> 的 你 是 我 最 爱 的 女 人
 OTHERS	没 治 好 巡 警 大 队
@@ -3958,7 +3958,7 @@ OTHERS	打 开 蓝 牙
 phone_call.make_a_phone_call	拨 打 <phone_num> 100 ##86 </phone_num>
 music.play	帮 我 播 放 一 首 <song> 一 剪 </song> 梅 </song>
 navigation.navigation	去 <destination> 琉 璃 </destination> 河 </destination>
-music.play	帮 我 播 放 <singer> 孙 娄 </singer> 艺 </singer>
+music.play	帮 我 播 放 <singer> 孙 娄 </singer> 艺
 music.play	唱 <singer> 许 冠 </singer> 杰 </singer> 的 歌
 music.play	播 放 <singer> 许 冠 </singer> 杰 </singer>
 music.play	播 放 <singer> 许 冠 </singer> 杰 </singer> 的 天 才 与 白 痴
@@ -3968,9 +3968,9 @@ music.play	我 想 听
 music.play	<song> 有 酒 </song> 今 </song> 朝 </song> 醉 </song>
 navigation.navigation	回 <custom_destination> 家
 navigation.navigation	回 <custom_destination> 家
-OTHERS	67 ##11 </phone_num> ##28 </phone_num>
+OTHERS	67 ##11 ##28
 navigation.navigation	导 航 到 <destination> 佳 音 </destination> 幼 </destination> 儿 </destination> 园 </destination>
-phone_call.make_a_phone_call	呼 叫 <phone_num> 66 ##3 </phone_num> 叮 当 PAD> 你 好
+phone_call.make_a_phone_call	呼 叫 <phone_num> 66 ##3 </phone_num> 叮 当 你 好
 phone_call.make_a_phone_call	呼 叫 <phone_num> 66 ##3 </phone_num>
 phone_call.make_a_phone_call	呼 叫 <phone_num> 66 ##3 </phone_num>
 navigation.open	把 导 航
@@ -4031,12 +4031,12 @@ music.play	我 想 听 个 <song> 社 会 </song> 摇 </song>
 music.play	我 要 听 <song> 光 辉 </song> 岁 </song> 月 </song> 至 于 网 络 了
 music.play	我 要 听
 music.play	我 要 听 <song> 一 生 </song> 所 </song> 爱 </song>
-OTHERS	蔡 明
+phone_call.make_a_phone_call	<contact_name> 蔡 明 </contact_name>
 music.play	<song> 在 这 </song> 里 </song>
 navigation.navigation	到 <destination> 织 里 </destination>
 phone_call.make_a_phone_call	呼 叫 <contact_name> 王 宝 </contact_name> 掌 </contact_name>
 phone_call.make_a_phone_call	呼 叫 <contact_name> 王 宝 </contact_name> 掌 </contact_name>
-OTHERS	显 示 导 航
+navigation.open	显 示 导 航
 phone_call.make_a_phone_call	打 电 话 给
 OTHERS	凤 雪
 music.next	下 一 曲
@@ -4044,7 +4044,7 @@ music.play	帮 我 播 放 <song> 兄 弟 </song>
 music.play	播 放 <song> 兄 弟 </song>
 music.play	我 要 <emotion> 快 歌 </emotion>
 music.play	播 放 音 乐
-music.play	播 放 <emotion> 儿 童 </theme> 歌 曲
+music.play	播 放 <emotion> 儿 童 </emotion> 歌 曲
 OTHERS	许 嵩
 OTHERS	音 量 大 一 点
 OTHERS	音 量 加 到 13
@@ -4054,7 +4054,7 @@ music.play	来 一 首 <singer> 伍 佰 </singer> 的 爱 你 一 万 年
 OTHERS	帮 我 查 一 下 大 一 到 雅 安 的 客 车 还 有 没 有
 music.play	播 放 歌 曲 <song> 三 月 </song> 里 </song> 的 </song> 小 </song> 雨 </song>
 music.play	播 放 <singer> 卓 依 </singer> 婷 </singer> 的 歌 曲 三 月 里 的 小 雨
-music.play	播 放 <singer> 于 文 </singer> 文 </singer> 的 t ##ro ##ub ##le is PAD> af ##rie ##nd
+music.play	播 放 <singer> 于 文 </singer> 文 </singer> 的 t ##ro ##ub ##le is af ##rie ##nd
 navigation.navigation	<destination> 在 水 </destination> 一 </destination> 方 </destination>
 OTHERS	呵 呵 呵
 navigation.navigation	<destination> 在 水 </destination> 一 </destination> 方 </destination>
@@ -4065,7 +4065,7 @@ music.pause	关 闭
 phone_call.make_a_phone_call	拨 打 <phone_num> 63 ##78 </phone_num>
 phone_call.make_a_phone_call	拨 打 <phone_num> 56 ##8 </phone_num>
 navigation.navigation	我 要 去 <destination> 中 山 </destination> 大 </destination> 学 </destination> 附 </destination> 属 </destination> 第 </destination> 一 </destination> 医 </destination> 院 </destination>
-phone_call.make_a_phone_call	打 电 话 给 <contact_name> 车 城 </contact_name> 附 近
+phone_call.make_a_phone_call	打 电 话 给 <contact_name> 车 城 </contact_name> 附 </contact_name> 近 </contact_name>
 phone_call.make_a_phone_call	打 电 话 给 <contact_name> 附 件 </contact_name>
 navigation.open	我 要 导 航
 navigation.navigation	<destination> 凯 旋 </destination> 尊 </destination> 邸 </destination>
@@ -4097,8 +4097,8 @@ music.play	我 想 听 <song> 大 王 </song> 叫 </song> 我 </song> 来 </song
 music.play	想 听 <song> 大 王 </song> 叫 </song> 我 </song> 来 </song> 巡 </song> 山 </song>
 OTHERS	你 好 叮 当
 navigation.navigation	请 你 帮 我 导 航 <destination> 德 阳 </destination> 市 </destination> 庐 </destination> 山 </destination> 南 </destination> 路 </destination> 三 </destination> 段 </destination> 29 </destination> 号 </destination>
-navigation.navigation	<destination> 天 堂 </destination> 草 </destination> 原 </destination>
-navigation.navigation	<destination> 天 堂 </destination> 草 </destination> 原 </destination>
+music.play	<song> 天 堂 </song> 草 </song> 原 </song>
+music.play	<song> 天 堂 </song> 草 </song> 原 </song>
 music.play	播 放 <singer> 陈 奕 </singer> 迅 </singer> 的 歌
 OTHERS	现 在 走 最 快
 OTHERS	冯 义
@@ -4113,12 +4113,12 @@ music.play	<song> 我 的 </song> 快 </song> 乐 </song> 就 </song> 是 </song
 music.play	请 播 放 <song> 站 台 </song>
 music.play	请 播 放 <song> 我 的 </song> 舞 </song> 台 </song>
 OTHERS	各 位 开 玩 笑
-OTHERS	860 ##0
+OTHERS	860 ##0 </phone_num>
 OTHERS	饿 死 了
 navigation.navigation	回 <custom_destination> 家
 navigation.navigation	我 要 回 <custom_destination> 家
 phone_call.make_a_phone_call	请 打 电 话
-navigation.navigation	中 江 </destination>
+navigation.navigation	<destination> 中 江 </destination>
 navigation.navigation	<destination> 中 江 </destination> 李 </destination> 园 </destination> 村 </destination>
 navigation.navigation	我 要 到 <destination> 红 塔 </destination> 九 </destination> 江 </destination>
 navigation.navigation	我 要 到 <destination> 鸿 塔 </destination> 酒 </destination> 家 </destination>
@@ -4158,7 +4158,7 @@ OTHERS	史 宪 文
 navigation.navigation	到 <destination> 工 商 </destination> 银 </destination> 行 </destination>
 OTHERS	警 方 连 接 蓝 牙
 OTHERS	连 接 蓝 牙
-OTHERS	要 关 闭 咯
+music.pause	要 关 闭 咯
 music.play	<singer> 娜 娜 </singer>
 music.play	现 在 我 要 听 歌
 music.play	想 乐 小 楽 我 要 听 <singer> 刘 德 </singer> 华 </singer> 的 歌 曲
@@ -4175,7 +4175,7 @@ music.play	<style> 舞 曲 </style>
 music.play	放 <song> 曹 操 </song>
 OTHERS	<singer> 鹿 晗 </singer> 勋 章
 music.play	<singer> 鹿 晗 </singer> 的 勋 章
-OTHERS	下 载 <song> 水 果 </song>
+OTHERS	下 载 水 果
 phone_call.make_a_phone_call	打 电 话
 OTHERS	东 风
 OTHERS	东 风
@@ -4221,7 +4221,7 @@ music.play	播 放 <song> 广 东 </song> 爱 </song> 情 </song> 故 </song> �
 OTHERS	爱 人 跟 前 儿 了 还 可 以 做 啥 子 呀
 phone_call.make_a_phone_call	该 打 打 个 电 话
 music.play	下 载 歌
-navigation.navigation	<destination> 低 村 </destination>
+OTHERS	低 村
 OTHERS	记 录
 music.play	我 要 听 歌
 OTHERS	割 手
@@ -4272,7 +4272,7 @@ navigation.cancel_navigation	取 消
 navigation.navigation	我 要 去 <destination> 杞 县 </destination>
 phone_call.make_a_phone_call	打 电 话 吧 应 该 没 没 多 大 问 题
 music.play	点 歌
-music.next	换 一 首 <toplist> 猛 歌 </toplist>
+music.next	换 一 首 <emotion> 猛 歌 </toplist>
 phone_call.make_a_phone_call	我 打 电 话 呀
 phone_call.make_a_phone_call	我 准 备 打 电 话 呀
 OTHERS	那 我 就 打
@@ -4297,7 +4297,7 @@ music.play	播 放 音 乐
 phone_call.make_a_phone_call	给 <contact_name> 条 路 </contact_name> 刚 </contact_name> 一 </contact_name> 打 电 话
 music.play	<song> 爱 江 </song> 山 </song> 更 </song> 爱 </song> 美 </song> 人 </song>
 music.play	<song> 一 人 </song> 饮 </song> 酒 </song> 醉 </song>
-music.play	<song> 佛 说 </song>
+music.play	<song> 佛 说
 OTHERS	慕 来
 phone_call.make_a_phone_call	<contact_name> 媳 妇 </contact_name> 儿 </contact_name> 的 电 话
 navigation.navigation	导 航 到 <destination> 广 州 </destination> 东 </destination> 站 </destination>

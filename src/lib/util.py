@@ -14,8 +14,6 @@ import pandas as pd
 pd.set_option('display.max_columns', None)
 # 显示所有行
 pd.set_option('display.max_rows', None)
-# # 列数
-# pd.set_option("display.max_columns", 1000)
 
 import random
 import numpy as np
@@ -26,16 +24,16 @@ from src.core.predict import predict_sample
 random.seed(42)
 np.random.seed(42)
 
+input_dir = os.path.join(project_dir, 'data', 'input')
+yanxishe_dir = os.path.join(project_dir, 'data', 'yanxishe')
+
+if not os.path.exists(yanxishe_dir):
+    os.makedirs(yanxishe_dir)
+
 
 class Util(object):
     def __init__(self, model_type='albert'):
         self.model_type = model_type
-        self.input_dir = os.path.join(project_dir, 'data', 'input')
-        self.output_dir = os.path.join(project_dir, 'data', 'output')
-        self.yanxishe_dir = os.path.join(project_dir, 'data', 'yanxishe')
-
-        if not os.path.exists(self.yanxishe_dir):
-            os.makedirs(self.yanxishe_dir)
 
         vocabs = []
         with open(os.path.join(project_dir, 'data', 'pre_train_model', 'chinese_wwm_pytorch', 'vocab.txt')) as file:
@@ -107,22 +105,22 @@ class Util(object):
         :return:
         """
         # original
-        test_csv_path = os.path.join(self.input_dir, 'test.csv')
-        train_csv_path = os.path.join(self.input_dir, 'train.csv')
-        slot_dictionaries_dir = os.path.join(self.input_dir, 'slot_dictionaries')
+        test_csv_path = os.path.join(input_dir, 'test.csv')
+        train_csv_path = os.path.join(input_dir, 'train.csv')
+        slot_dictionaries_dir = os.path.join(input_dir, 'slot_dictionaries')
 
         # generate
-        train_dir = os.path.join(self.yanxishe_dir, 'train')
-        dev_dir = os.path.join(self.yanxishe_dir, 'dev')
-        test_dir = os.path.join(self.yanxishe_dir, 'test')
+        train_dir = os.path.join(yanxishe_dir, 'train')
+        dev_dir = os.path.join(yanxishe_dir, 'dev')
+        test_dir = os.path.join(yanxishe_dir, 'test')
 
         if not os.path.exists(train_dir) and not os.path.exists(dev_dir) and not os.path.exists(test_dir):
             os.makedirs(train_dir)
             os.makedirs(dev_dir)
             os.makedirs(test_dir)
 
-        intent_label_path = os.path.join(self.yanxishe_dir, 'intent_label.txt')
-        slot_label_path = os.path.join(self.yanxishe_dir, 'slot_label.txt')
+        intent_label_path = os.path.join(yanxishe_dir, 'intent_label.txt')
+        slot_label_path = os.path.join(yanxishe_dir, 'slot_label.txt')
 
         """
         'session_id', 'query', 'intent', 'slot_annotation'
@@ -220,28 +218,11 @@ class Util(object):
 
                 file.write(' '.join(split_tokens) + '\n')
 
-    def select_token_from_slot_dictionary(self, text, token):
-        slot_dictionaries_dir = os.path.join(self.input_dir, 'slot-dictionaries')
-
-        for slot in ['age', 'custom_destination', 'emotion', 'instrument', 'language', 'scene', 'singer', 'song',
-                     'style', 'theme', 'toplist']:
-            slot_path = os.path.join(slot_dictionaries_dir, slot + '.txt')
-            slot_token_list = []
-            with open(file=slot_path, encoding='utf-8', mode='r') as file:
-                for line in file.readlines():
-                    line = line.strip().strip('\n')
-                    slot_token_list.append(line)
-
-            if text in slot_token_list:
-                return slot
-
-        return token
-
     def generate_result(self):
-        test_dir = os.path.join(self.yanxishe_dir, 'test')
+        test_dir = os.path.join(yanxishe_dir, 'test')
         sample_pred_out_txt_path = os.path.join(test_dir, 'sample_pred_out.txt')
 
-        test_data = pd.read_csv(filepath_or_buffer=os.path.join(self.input_dir, 'test.csv'), encoding='utf-8')
+        test_data = pd.read_csv(filepath_or_buffer=os.path.join(input_dir, 'test.csv'), encoding='utf-8')
         intent_list = []
         slot_annotation_list = []
 
@@ -262,6 +243,7 @@ class Util(object):
                     if start != -1 and end != -1:
                         token = slot_annotation[start + 1: end]
 
+                        # [我要听大壮</singer>不一样] -> [我要听<singer>大壮</singer>不一样]
                         if '/' in token:
                             result = predict_sample(lines=[self.tokenization(test_data.iloc[index, 1])])
                             if result is not None:
@@ -270,6 +252,7 @@ class Util(object):
                                 # TODO: 播 放 歌 手 </song> 带 </song> 你 </song> 去 </song> 旅 </song> 游 </song>
                                 slot_annotation = slot_annotation.replace('<' + token + '>', '')
 
+                        # [<singer>张靓</singer>玫</singer>] -> [<singer>张靓玫</singer>]
                         end_token = '</' + token + '>'
                         count = slot_annotation.count(end_token) - 1
                         if count != 0:
@@ -278,17 +261,19 @@ class Util(object):
                         slot_annotation = slot_annotation.replace(' ', '')
                         slot_annotation = slot_annotation.replace('##', '')
 
+                        # [回<custom_destination>家] -> [回<custom_destination>家</custom_destination>]
                         if slot_annotation.find(end_token) == -1 and '//' not in end_token:
                             slot_annotation += end_token
 
-                        token = token.replace(' ', '')
-                        text = slot_annotation[
-                               slot_annotation.find(token) + len(token) + 1:slot_annotation.rfind(token) - 2]
-
-                        if text != '':
-                            new_token = self.select_token_from_slot_dictionary(token=token, text=text)
-
-                            slot_annotation = slot_annotation.replace(token, new_token)
+                        # TODO: 不要直接替换, 在槽值不属于意图的情况下, 再进行替换
+                        # token = token.replace(' ', '')
+                        # text = slot_annotation[
+                        #        slot_annotation.find(token) + len(token) + 1:slot_annotation.rfind(token) - 2]
+                        # if text != '':
+                        #     new_token = Slot.select_token_from_slot_dictionary(
+                        #         slot_dir=os.path.join(input_dir, 'new-slot-dictionaries'), token=token, text=text, intent=intent)
+                        #
+                        #     slot_annotation = slot_annotation.replace(token, new_token)
                     else:
                         slot_annotation = slot_annotation.replace(' ', '')
                         slot_annotation = slot_annotation.replace('##', '')
@@ -300,19 +285,150 @@ class Util(object):
 
         test_data.to_csv('../../data/result.csv', encoding='utf-8', header=None, index=None)
 
-    def rule(self):
+
+class Slot(object):
+    @staticmethod
+    def select_token_from_slot_dictionary(slot_dir, text, intent, token):
+        if 'new' in slot_dir:
+            slot_dict = {'navigation.navigation': ['destination', 'custom_destination', 'origin'],
+                         'phone_call.make_a_phone_call': ['phone_num', 'contact_name'],
+                         'music.play': ['age', 'emotion', 'instrument', 'language', 'scene',
+                                        'singer', 'song', 'style', 'theme', 'toplist']}
+        else:
+            slot_dict = {'music.play': ['age', 'emotion', 'instrument', 'language', 'scene',
+                                        'singer', 'song', 'style', 'theme', 'toplist']}
+
+        try:
+            for slot in slot_dict[intent]:
+                slot_path = os.path.join(slot_dir, slot + '.txt')
+                slot_token_list = []
+                with open(file=slot_path, encoding='utf-8', mode='r') as file:
+                    for line in file.readlines():
+                        line = line.strip().strip('\n')
+                        slot_token_list.append(line)
+
+                if text in slot_token_list:
+                    token = slot
+        except:
+            return token
+        finally:
+            return token
+
+    @staticmethod
+    def generate_new_slot_dictionary(slot_dir, new_slot_dir):
+        if not os.path.exists(new_slot_dir):
+            os.makedirs(new_slot_dir)
+
+        slot_list = ['age', 'custom_destination', 'emotion', 'instrument', 'language', 'scene', 'singer', 'song',
+                     'style', 'theme', 'toplist']
+
+        slot_dict = dict(zip(slot_list, [[]] * len(slot_list)))
+
+        for slot_item in slot_list:
+            slot_item_path = os.path.join(slot_dir, slot_item + '.txt')
+            slot_item_list = []
+
+            with open(slot_item_path, encoding='utf-8', mode='r') as file:
+                for line in file.readlines():
+                    line = line.strip().strip('\n')
+                    slot_item_list.append(line)
+
+            slot_dict[slot_item] = slot_item_list
+
+        """
+        'session_id', 'query', 'intent', 'slot_annotation'
+        """
+        train_csv_path = os.path.join(input_dir, 'train.csv')
+        train_data = pd.read_csv(train_csv_path, encoding='utf-8')
+
+        error_pair = []
+        for index in range(train_data.shape[0]):
+            session_id = train_data.iloc[index, 0]
+            query = train_data.iloc[index, 1]
+            intent = train_data.iloc[index, 2]
+            slot_annotation = train_data.iloc[index, 3]
+
+            if slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1:
+                token = slot_annotation[slot_annotation.find('<') + 1:slot_annotation.find('>')]
+                median_slot = slot_annotation[slot_annotation.find('>') + 1:slot_annotation.find('</')]
+
+                if '||' in median_slot:
+                    error_pair.append(token + '\t' + median_slot)
+                    continue
+
+                if token not in slot_dict:
+                    slot_dict[token] = [median_slot]
+                else:
+                    slot_dict[token].append(median_slot)
+
+        for slot_item in slot_dict:
+            slot_item_path = os.path.join(new_slot_dir, slot_item + '.txt')
+            with open(slot_item_path, encoding='utf-8', mode='w') as file:
+                for item in set(slot_dict[slot_item]):
+                    file.write(item + '\n')
+
+        with open(os.path.join(new_slot_dir, 'error_pairs.txt'), 'w', encoding='utf-8') as file:
+            for item in error_pair:
+                file.write(item + '\n')
+
+
+class Rule(object):
+    @staticmethod
+    def rule():
         result_path = '../../data/result.csv'
         result = pd.read_csv(filepath_or_buffer=result_path, encoding='utf-8', header=None)
         result.columns = ['session_id', 'query', 'intent', 'slot_annotation']
 
-        # TODO：经检验无误，但是精度不增反下降
-        result = self.rule_4(result=result)
+        result = Rule.rule_1(result=result)
+
+        result = Rule.rule_4(result=result)
+
+        result = Rule.rule_8(result=result)
 
         result.to_csv('../../data/result_rule.csv', encoding='utf-8', header=None, index=None)
 
-    def rule_4(self, result: pd.DataFrame):
+    @staticmethod
+    def rule_1(result: pd.DataFrame):
         """
-        无上文影响的情况下，除了 11 位手机号码之外的纯数字 query，标注为 OTHERS。上文为 phone_call 时，3 位以上纯数字标注为 phone_call. make_a_phone_call。
+        1、意图设计中未给出的语义槽，不用标注语义槽，但是需要标注意图。
+        :param result:
+        :return:
+        """
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            # 意图
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1 and slot_annotation.find('</') != -1:
+                token = slot_annotation[slot_annotation.find('<') + 1:slot_annotation.find('>')]
+                text = slot_annotation[slot_annotation.find('>') + 1:slot_annotation.find('</')]
+
+                new_token = Slot.select_token_from_slot_dictionary(
+                    slot_dir=os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries'), text=text,
+                    intent=intent,
+                    token=token)
+                # print(session_id, query, new_token, token)
+
+                if new_token != token:
+                    result.iloc[index, 3] = slot_annotation.replace(token, new_token)
+
+        return result
+
+    @staticmethod
+    def rule_3(result: pd.DataFrame):
+        """
+        3、单独的人名仅在上文为 phone_call 领域时，才标注为 phone_call. make_a_phone_call 意图，其余标注为 OTHERS。
+        :param result:
+        :return:
+        """
+
+    @staticmethod
+    def rule_4(result: pd.DataFrame):
+        """
+        4、无上文影响的情况下，除了 11 位手机号码之外的纯数字 query，标注为 OTHERS。上文为 phone_call 时，3 位以上纯数字标注为 phone_call. make_a_phone_call。
+        :param result:
         :return:
         """
         digit_list = []
@@ -353,14 +469,44 @@ class Util(object):
 
         return result
 
+    @staticmethod
+    def rule_8(result: pd.DataFrame):
+        """
+        8、处理UNK
+        :param result:
+        :return:
+        """
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if '[UNK]' in slot_annotation:
+                sequence = ''
+                unk_index = slot_annotation.find('[UNK]')
+
+                for char_index in [-2, -1]:
+                    if slot_annotation[unk_index + char_index] in query:
+                        sequence += slot_annotation[unk_index + char_index]
+
+                result.iloc[index, 3] = slot_annotation.replace('[UNK]', query[query.find(sequence) + len(sequence)])
+
+        return result
+
 
 if __name__ == '__main__':
     util = Util()
+
+    # 生成新的slot dictionary
+    # Slot.generate_new_slot_dictionary(slot_dir=os.path.join(project_dir, 'data', 'input', 'slot-dictionaries'),
+    #                                   new_slot_dir=os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries'))
+
     # 生成标准的输入数据
-    util.generate_yanxishe_input_data()
+    # util.generate_yanxishe_input_data()
 
     # 生成结果数据
     # util.generate_result()
 
     # 经过规则
-    # util.rule()
+    Rule.rule()

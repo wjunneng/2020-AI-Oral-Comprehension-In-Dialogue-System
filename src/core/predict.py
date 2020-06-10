@@ -226,6 +226,106 @@ def predict_sample(lines: list):
         return None
 
 
+def padding_zero_value(intent_label_lst, slot_label_lst, intent_pred, slot_pred, slot_predict):
+    """
+    填充0值
+    :param intent_label_lst: 所有的意图
+    :param slot_label_lst: 所有的槽值
+    :param intent_pred: [batch_size]    i.e. (32,)
+    :param slot_pred: [batch_size, seq_length, slot_size] i.e. (32, 52, 33)
+    :param slot_predict: [batch_size, seq_length] i.e. (32, 52)
+    :return:
+    """
+    # intent
+    music_play_index = intent_label_lst.index('music.play')
+    navigation_navigation_index = intent_label_lst.index('navigation.navigation')
+    phone_call_make_a_phone_call_index = intent_label_lst.index('phone_call.make_a_phone_call')
+
+    # slot
+    b_music_slot_indexes = [slot_label_lst.index('B-' + i) for i in
+                            ['age', 'emotion', 'instrument', 'language', 'scene',
+                             'singer', 'song', 'style', 'theme', 'toplist']]
+    b_navigation_slot_indexes = [slot_label_lst.index('B-' + i) for i in
+                                 ['destination', 'custom_destination', 'origin']]
+    b_phone_slot_indexes = [slot_label_lst.index('B-' + i) for i in ['phone_num', 'contact_name']]
+
+    i_music_slot_indexes = [slot_label_lst.index('I-' + i) for i in
+                            ['age', 'emotion', 'instrument', 'language', 'scene',
+                             'singer', 'song', 'style', 'theme', 'toplist']]
+    i_navigation_slot_indexes = [slot_label_lst.index('I-' + i) for i in
+                                 ['destination', 'custom_destination', 'origin']]
+    i_phone_slot_indexes = [slot_label_lst.index('I-' + i) for i in ['phone_num', 'contact_name']]
+
+    music_slot_indexes = b_music_slot_indexes + i_music_slot_indexes
+    navigation_slot_indexes = b_navigation_slot_indexes + i_navigation_slot_indexes
+    phone_slot_indexes = b_phone_slot_indexes + i_phone_slot_indexes
+
+    slot_indexes = [i for i in range(len(slot_label_lst))]
+    slot_indexes.remove(slot_label_lst.index('PAD'))
+    slot_indexes.remove(slot_label_lst.index('UNK'))
+    slot_indexes.remove(slot_label_lst.index('O'))
+
+    # TODO：直接填充0的效果不好
+    # result = []
+    # for intent_sample, slot_sample in zip(intent_pred, slot_pred):
+    #     if intent_sample == music_play_index:
+    #         delete_list = list(set(slot_indexes) - set(music_slot_indexes))
+    #     elif intent_sample == navigation_navigation_index:
+    #         delete_list = list(set(slot_indexes) - set(navigation_slot_indexes))
+    #     elif intent_sample == phone_call_make_a_phone_call_index:
+    #         delete_list = list(set(slot_indexes) - set(phone_slot_indexes))
+    #     else:
+    #         delete_list = []
+    #
+    #     for item in delete_list:
+    #         slot_sample[:, item] = [i if i > 0 else i for i in slot_sample[:, item]]
+    #
+    #     result.append(slot_sample)
+    #
+    # return np.asarray(result)
+
+    result = []
+    # TODO: 定点修改
+    for intent_pred_sample, slot_pred_sample, slot_predict_sample in zip(intent_pred, slot_pred, slot_predict):
+        # intent_pred_sample: (1,)
+        # slot_pred_sample: (52, 33)
+        # slot_predict_sample: (52,)
+        replace = False
+        if intent_pred_sample == music_play_index:
+            index_list = music_slot_indexes
+            re_index_list = list(set(slot_indexes) - set(index_list))
+        elif intent_pred_sample == navigation_navigation_index:
+            index_list = navigation_slot_indexes
+            re_index_list = list(set(slot_indexes) - set(index_list))
+        elif intent_pred_sample == phone_call_make_a_phone_call_index:
+            index_list = phone_slot_indexes
+            re_index_list = list(set(slot_indexes) - set(index_list))
+        else:
+            result.append(slot_predict_sample)
+            continue
+
+        seq_actual_length = 0
+        for index in slot_predict_sample[1:]:
+            seq_actual_length += 1
+            if index == 0:
+                break
+
+            if (index not in index_list) and (index not in [slot_label_lst.index('PAD'), slot_label_lst.index('UNK'),
+                                                            slot_label_lst.index('O')]):
+                replace = True
+
+        if replace:
+            actual_slot_pred_sample = slot_pred_sample[1:seq_actual_length, :]
+            for index in re_index_list:
+                actual_slot_pred_sample[:, index] = -10000
+
+            slot_predict_sample[1: seq_actual_length] = np.argmax(actual_slot_pred_sample, axis=1)
+
+        result.append(slot_predict_sample)
+
+    return result
+
+
 def predict_batch(pred_config):
     # load model and args
     args = get_args(pred_config)
@@ -247,7 +347,7 @@ def predict_batch(pred_config):
     data_loader = DataLoader(dataset, sampler=sampler, batch_size=pred_config.batch_size)
 
     all_slot_label_mask = None
-    intent_preds = None
+    intent_preds = []
     slot_preds = None
 
     for batch in tqdm(data_loader, desc="Predicting"):
@@ -261,27 +361,41 @@ def predict_batch(pred_config):
             _, (intent_logits, slot_logits) = outputs[:2]
 
             # Intent Prediction
-            if intent_preds is None:
-                intent_preds = intent_logits.detach().cpu().numpy()
-            else:
-                intent_preds = np.append(intent_preds, intent_logits.detach().cpu().numpy(), axis=0)
+            intent_pred = np.argmax(intent_logits.detach().cpu().numpy(), axis=1)
+            intent_preds.extend(list(intent_pred))
 
             # Slot prediction
             if slot_preds is None:
                 if args.use_crf:
                     # decode() in `torchcrf` returns list with best index directly
-                    slot_preds = np.array(model.crf.decode(slot_logits))
+                    slot_predict = np.array(model.crf.decode(slot_logits))
                 else:
-                    slot_preds = slot_logits.detach().cpu().numpy()
+                    slot_predict = slot_logits.detach().cpu().numpy()
+
+                # Padding zero value
+                slot_pred = padding_zero_value(intent_label_lst=intent_label_lst, slot_label_lst=slot_label_lst,
+                                               intent_pred=intent_pred, slot_pred=slot_logits.detach().cpu().numpy(),
+                                               slot_predict=slot_predict)
+                # slot_pred = deepcopy(slot_predict)
+
+                slot_preds = deepcopy(slot_pred)
                 all_slot_label_mask = batch[3].detach().cpu().numpy()
             else:
                 if args.use_crf:
-                    slot_preds = np.append(slot_preds, np.array(model.crf.decode(slot_logits)), axis=0)
+                    slot_predict = np.array(model.crf.decode(slot_logits))
                 else:
-                    slot_preds = np.append(slot_preds, slot_logits.detach().cpu().numpy(), axis=0)
+                    slot_predict = np.array(model.crf.decode(slot_logits))
+
+                # Padding zero value
+                slot_pred = padding_zero_value(intent_label_lst=intent_label_lst, slot_label_lst=slot_label_lst,
+                                               intent_pred=intent_pred, slot_pred=slot_logits.detach().cpu().numpy(),
+                                               slot_predict=slot_predict)
+                # slot_pred = deepcopy(slot_predict)
+
+                slot_preds = np.append(slot_preds, slot_pred, axis=0)
                 all_slot_label_mask = np.append(all_slot_label_mask, batch[3].detach().cpu().numpy(), axis=0)
 
-    intent_preds = np.argmax(intent_preds, axis=1)
+    intent_preds = np.asarray(intent_preds)
 
     if args.use_crf:
         pass
@@ -319,20 +433,22 @@ def predict_batch(pred_config):
 
 
 if __name__ == "__main__":
-    # init_logger()
-    # parser = argparse.ArgumentParser()
-    #
-    # parser.add_argument("--input_file", default="../../data/yanxishe/test/sample_pred_in.txt", type=str,
-    #                     help="Input file for prediction")
-    # parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
-    #                     help="Output file for prediction")
-    # parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str, help="Path to save, load model")
-    #
-    # parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
-    # parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
-    #
-    # pred_config = parser.parse_args()
-    # predict_batch(pred_config)
+    # ###################### batch ######################
+    init_logger()
+    parser = argparse.ArgumentParser()
 
+    parser.add_argument("--input_file", default="../../data/yanxishe/test/sample_pred_in.txt", type=str,
+                        help="Input file for prediction")
+    parser.add_argument("--output_file", default="../../data/yanxishe/test/sample_pred_out.txt", type=str,
+                        help="Output file for prediction")
+    parser.add_argument("--model_dir", default="../../data/yanxishe_model", type=str, help="Path to save, load model")
+
+    parser.add_argument("--batch_size", default=32, type=int, help="Batch size for prediction")
+    parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+
+    pred_config = parser.parse_args()
+    predict_batch(pred_config)
+
+    # ###################### sample ######################
     # print(predict_sample(lines=[['来', '一', '首', '停', '格']]))
-    print(predict_sample(lines=[['青', '海', '咏', '琳', '的', '歌', '曲']]))
+    # print(predict_sample(lines=[['青', '海', '咏', '琳', '的', '歌', '曲']]))
