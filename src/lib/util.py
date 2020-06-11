@@ -282,6 +282,7 @@ class Util(object):
 
                         # [我要听大壮</singer>不一样] -> [我要听<singer>大壮</singer>不一样]
                         if '/' in token:
+                            token = token.replace('/', '')
                             result = predict_sample(lines=[self.tokenization(test_data.iloc[index, 1])])
                             if result is not None:
                                 slot_annotation = result
@@ -302,15 +303,6 @@ class Util(object):
                         if slot_annotation.find(end_token) == -1 and '//' not in end_token:
                             slot_annotation += end_token
 
-                        # TODO: 不要直接替换, 在槽值不属于意图的情况下, 再进行替换
-                        # token = token.replace(' ', '')
-                        # text = slot_annotation[
-                        #        slot_annotation.find(token) + len(token) + 1:slot_annotation.rfind(token) - 2]
-                        # if text != '':
-                        #     new_token = Slot.select_token_from_slot_dictionary(
-                        #         slot_dir=os.path.join(input_dir, 'new-slot-dictionaries'), token=token, text=text, intent=intent)
-                        #
-                        #     slot_annotation = slot_annotation.replace(token, new_token)
                     else:
                         slot_annotation = slot_annotation.replace(' ', '')
                         slot_annotation = slot_annotation.replace('##', '')
@@ -416,6 +408,8 @@ class Rule(object):
         result = pd.read_csv(filepath_or_buffer=result_path, encoding='utf-8', header=None)
         result.columns = ['session_id', 'query', 'intent', 'slot_annotation']
 
+        result = Rule.rule_0(result=result)
+
         result = Rule.rule_1(result=result)
 
         result = Rule.rule_2(result=result)
@@ -424,9 +418,78 @@ class Rule(object):
 
         result = Rule.rule_4(result=result)
 
-        result = Rule.rule_8(result=result)
-
         result.to_csv('../../data/result_rule.csv', encoding='utf-8', header=None, index=None)
+
+    @staticmethod
+    def rule_0(result: pd.DataFrame):
+        """
+        0、处理UNK 和 空格
+        :param result:
+        :return:
+        """
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            """
+            我要听唐朝的 我要听<song>唐朝</singer>的</song>
+            来一首k歌之王 来一首<theme>k歌</theme>之</song>王</song>
+            伤歌有吗 <emotion>伤歌</toplist>有吗</emotion>
+            放一首钢琴的名起来听一下 放一首<style>钢琴</instrument>的名起来听一下</style>
+            高阳打电话给高阳 <contact_name>高阳打电话给<contact_name>高阳</contact_name>
+            老歌 <theme>老歌</toplist></theme>
+            我要听音乐亲子装的歌曲 我要听音乐<song>亲子</emotion>装</song>的歌曲
+            请帮我点一首狮子团合唱的的百年孤独 请帮我点一首<singer>狮子团</singer>合唱的的<song>百年</song>孤</song>独
+            一把杀猪刀的歌给我 <song>一把<song>杀猪刀</song>的歌给我
+            阜新市文化宫阜新市工人文化宫 <destination>阜新市文化宫<destination>阜新市工人文化宫</destination>
+            放一个ye ye 放一个<song>ye<song>ye</song>
+            龙梅子歌首农民 <singer>龙梅子</singer>歌首<emotion>农民</style>
+            只要有你陪在我身边 <song>只要<song>有你陪在我身边</song>
+            放一首韩朝舞 放一首<song>韩朝</language>舞</song>
+            我想听216车载舞曲 我想听216<song>车载</song>舞</style>曲
+            m c天佑的歌曲 m<singer>c<singer>天佑</singer>的歌曲
+            我想听大众的我们都一样 我想听<singer>大众</singer>的<song>我们都一</song>样
+            导航回家回公司 导航回<custom_destination>家回<custom_destination>公司</custom_destination>
+            放旮旯的当你 放<singer>旮[UNK]</singer>的<song>当你</song>
+            电话给六四打电话给6454 电话给<contact_name>六四</contact_name>打电话给<phone_num>6454</phone_num>
+            dj小浩 <theme>dj小</singer>浩</singer></theme>
+            换一首猛歌 换一首<emotion>猛歌</toplist></emotion>
+            
+            """
+            if slot_annotation.count('</') > 1 or slot_annotation.count('<') > 2:
+                print(query, slot_annotation)
+
+            if '[UNK]' in slot_annotation:
+                sequence = ''
+                unk_index = slot_annotation.find('[UNK]')
+
+                for char_index in [-2, -1]:
+                    if slot_annotation[unk_index + char_index] in query:
+                        sequence += slot_annotation[unk_index + char_index]
+
+                result.iloc[index, 3] = slot_annotation.replace('[UNK]', query[query.find(sequence) + len(sequence)])
+
+            if ' ' in query and slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1:
+                space_indexes = []
+                for token_index in range(len(query)):
+                    if query[token_index] == ' ':
+                        space_indexes.append(token_index)
+
+                for space_index in space_indexes:
+                    match_sequence = query[space_index - 1] + query[space_index + 1]
+
+                    match_index = slot_annotation.find(match_sequence)
+                    if match_index != -1:
+                        slot_annotation = slot_annotation[
+                                          :match_index + len(match_sequence) - 1] + ' ' + slot_annotation[
+                                                                                          match_index + len(
+                                                                                              match_sequence) - 1:]
+
+                result.iloc[index, 3] = slot_annotation
+
+        return result
 
     @staticmethod
     def rule_1(result: pd.DataFrame):
@@ -599,21 +662,17 @@ class Rule(object):
                 contact_name_session_id_list.append(session_id)
 
         print('contact_name_session_id_list_length:{}'.format(len(contact_name_session_id_list)))
-        print('contact_name_query_list:{}'.format(contact_name_query_list))
         print(contact_name_session_id_list)
         before_id = None
 
-        other = True
         phone_call = False
         for index in range(result.shape[0]):
             session_id = int(result.iloc[index, 0])
             query = result.iloc[index, 1].strip()
             intent = result.iloc[index, 2].strip()
-            slot_annotation = result.iloc[index, 3].strip()
 
             if session_id in contact_name_session_id_list:
                 if before_id != session_id:
-                    other = True
                     phone_call = False
 
                 if before_id is None or before_id != session_id:
@@ -624,10 +683,6 @@ class Rule(object):
                     else:
                         if 'phone_call' in intent:
                             phone_call = True
-                            other = False
-                        else:
-                            phone_call = False
-                            other = True
                     continue
 
                 if before_id == session_id:
@@ -642,7 +697,6 @@ class Rule(object):
                     else:
                         if 'phone_call' in intent:
                             phone_call = True
-                            other = False
         return result
 
     @staticmethod
@@ -690,49 +744,6 @@ class Rule(object):
 
         return result
 
-    @staticmethod
-    def rule_8(result: pd.DataFrame):
-        """
-        8、处理UNK
-        :param result:
-        :return:
-        """
-        for index in range(result.shape[0]):
-
-            query = result.iloc[index, 1].strip()
-
-            slot_annotation = result.iloc[index, 3].strip()
-
-            if '[UNK]' in slot_annotation:
-                sequence = ''
-                unk_index = slot_annotation.find('[UNK]')
-
-                for char_index in [-2, -1]:
-                    if slot_annotation[unk_index + char_index] in query:
-                        sequence += slot_annotation[unk_index + char_index]
-
-                result.iloc[index, 3] = slot_annotation.replace('[UNK]', query[query.find(sequence) + len(sequence)])
-
-            if ' ' in query and slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1:
-                space_indexes = []
-                for token_index in range(len(query)):
-                    if query[token_index] == ' ':
-                        space_indexes.append(token_index)
-
-                for space_index in space_indexes:
-                    match_sequence = query[space_index - 1] + query[space_index + 1]
-
-                    match_index = slot_annotation.find(match_sequence)
-                    if match_index != -1:
-                        slot_annotation = slot_annotation[
-                                          :match_index + len(match_sequence) - 1] + ' ' + slot_annotation[
-                                                                                          match_index + len(
-                                                                                              match_sequence) - 1:]
-
-                result.iloc[index, 3] = slot_annotation
-
-        return result
-
 
 if __name__ == '__main__':
     pass
@@ -741,7 +752,7 @@ if __name__ == '__main__':
     # eda.match_train_test()
 
     # ################ 数据处理 ################
-    # util = Util()
+    util = Util()
     #
     # # 生成新的slot dictionary
     # # Slot.generate_new_slot_dictionary(slot_dir=os.path.join(project_dir, 'data', 'input', 'slot-dictionaries'),
@@ -750,8 +761,8 @@ if __name__ == '__main__':
     # # 生成标准的输入数据
     # # util.generate_yanxishe_input_data()
     #
-    # # 生成结果数据
-    # # util.generate_result()
+    # 生成结果数据
+    # util.generate_result()
 
     # ################ 规则生成 ################
 
