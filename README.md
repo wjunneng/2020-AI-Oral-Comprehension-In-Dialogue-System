@@ -9,3 +9,11 @@
 ![image](/data/image/rule_2.png)
 
 ![image](/data/image/rule_3.png)
+
+
+## TODO
+
+    1、测试集和训练集是否存在相同的数据
+    2、原始训练集是否需要依据规则进行修正
+    3、空格
+    

@@ -371,7 +371,7 @@
 88,不要,OTHERS,不要
 88,我要上沂水,navigation.navigation,我要上<destination>沂水</destination>
 88,导航到同德围,navigation.navigation,导航到<destination>同德围</destination>
-89,阿布,music.play,<singer>阿布</singer>
+89,阿布,OTHERS,阿布
 89,今晚八零后脱口秀,OTHERS,今晚八零后脱口秀
 89,电话给669,phone_call.make_a_phone_call,电话给<phone_num>669</phone_num>
 89,打电话给663,phone_call.make_a_phone_call,打电话给<phone_num>663</phone_num>
@@ -506,7 +506,7 @@
 123,左邻右里,OTHERS,左邻右里
 123,左麟右李的歌曲,music.play,<singer>左麟</singer>右李的歌曲
 124,打电话去买火柴抓狂你不干啥,phone_call.make_a_phone_call,打电话去买火柴抓狂你不干啥
-124,覃玫,OTHERS,覃玫
+124,覃玫,phone_call.make_a_phone_call,<contact_name>覃玫</contact_name>
 124,去广州,navigation.navigation,去<destination>广州</destination>
 125,播放歌曲独立,music.play,播放歌曲<song>独立</song>
 125,播放音乐独立,music.play,播放音乐<song>独立</song>
@@ -847,12 +847,12 @@
 199,切歌,music.next,切歌
 199,要多方去小状元幼儿园,navigation.navigation,要多方去<destination>小状元幼儿园</destination>
 200,打电话给的歌好吗,phone_call.make_a_phone_call,打电话给的歌好吗
-200,布什,OTHERS,布什
+200,布什,phone_call.make_a_phone_call,<contact_name>布什</contact_name>
 200,曹杨,navigation.navigation,<destination>曹杨</destination>
 200,你不她是怕我打死你,OTHERS,你不她是怕我打死你
 200,来一首放过自己的歌曲,music.play,来一首<song>放过自己</song>的歌曲
 201,打电话给15000000109,phone_call.make_a_phone_call,打电话给<phone_num>15000000109</phone_num>
-201,阿布,music.play,<singer>阿布</singer>
+201,阿布,phone_call.make_a_phone_call,<contact_name>阿布</contact_name>
 201,只是我心中不再有火花,OTHERS,只是我心中不再有火花
 202,打电话打不通,OTHERS,打电话打不通
 202,魏鹏,OTHERS,魏鹏
@@ -952,7 +952,7 @@
 222,打开usb里面的音乐,OTHERS,打开usb里面的音乐
 223,导航到临河街三俞竹苑,navigation.navigation,导航到<destination>临河街三俞竹苑</destination>
 223,打个电话给10000,phone_call.make_a_phone_call,打个电话给<phone_num>10000</phone_num>
-223,某某某,OTHERS,某某某
+223,某某某,phone_call.make_a_phone_call,<contact_name>某某某</contact_name>
 224,我想听潮湿的心,music.play,我想听<song>潮湿的心</song>
 224,取消,music.pause,取消
 224,没有了,OTHERS,没有了
@@ -1110,7 +1110,7 @@
 252,打电话给刘烨,phone_call.make_a_phone_call,打电话给<contact_name>刘烨</contact_name>
 253,搜索福田区建丽家私广场,navigation.navigation,搜索<destination>福田区建丽家私广场</destination>
 253,嘉里建设广场,navigation.navigation,<destination>嘉里建设广场</destination>
-253,大兵,phone_call.make_a_phone_call,<contact_name>大兵</contact_name>
+253,大兵,OTHERS,大兵
 253,拨打王丽的短信我也爱,phone_call.make_a_phone_call,拨打<contact_name>王丽</contact_name>的短信我也爱
 254,打电话,phone_call.make_a_phone_call,打电话
 254,导航去钱塘江,navigation.navigation,导航去<destination>钱塘江</destination>
@@ -1316,7 +1316,7 @@
 301,那你听不了了,OTHERS,那你听不了了
 301,妈妈的吻,music.play,<song>妈妈的吻</song>
 301,取消,music.pause,取消
-301,胡蝶,phone_call.make_a_phone_call,<contact_name>胡蝶</contact_name>
+301,胡蝶,OTHERS,胡蝶
 301,joey,OTHERS,joey
 301,盛京银行,navigation.navigation,<destination>盛京银行</destination>
 302,播放刘若英后来,music.play,播放<singer>刘若英</singer>后来
@@ -1623,7 +1623,7 @@
 365,拨打652518,phone_call.make_a_phone_call,拨打<phone_num>652518</phone_num>
 365,导航到,navigation.navigation,导航到
 365,常发豪郡花园,navigation.navigation,<destination>常发豪郡花园</destination>
-366,泽轩,phone_call.make_a_phone_call,<contact_name>泽轩</contact_name>
+366,泽轩,OTHERS,泽轩
 366,放一首,music.play,放一首
 366,取消,music.pause,取消
 367,想听就当我们没爱过,music.play,想听<song>就当我们没爱过</song>
@@ -1828,7 +1828,7 @@
 411,播放歌曲吗,music.play,播放歌曲吗
 411,蓝牙歌曲,music.play,蓝牙歌曲
 411,雨荷,music.play,<song>雨荷</song>
-411,大兵,phone_call.make_a_phone_call,<contact_name>大兵</contact_name>
+411,大兵,OTHERS,大兵
 411,播放歌曲,music.play,播放歌曲
 411,雨后人去楼空,music.play,<song>雨后人去楼空</song>
 411,歌曲哎呀,music.play,歌曲<song>哎呀</song>
@@ -2195,7 +2195,7 @@
 484,嗯,OTHERS,嗯
 484,am,OTHERS,am
 485,来一首,music.play,来一首
-485,阿布,music.play,<singer>阿布</singer>
+485,阿布,OTHERS,阿布
 485,下一首,music.next,下一首
 486,打电话,phone_call.make_a_phone_call,打电话
 486,你在等着我回家走不到吗,OTHERS,你在等着我回家走不到吗
@@ -2267,7 +2267,7 @@
 499,让我一次爱个够,music.play,<song>让我一次爱个够</song>
 499,接电话,OTHERS,接电话
 499,二,OTHERS,二
-499,怪杰,phone_call.make_a_phone_call,<contact_name>怪杰</contact_name>
+499,怪杰,OTHERS,怪杰
 499,唱一首腾格尔的传说,music.play,唱一首<singer>腾格尔</singer>的传说
 499,小猪佩奇,OTHERS,小猪佩奇
 499,关闭小猪佩奇,OTHERS,关闭小猪佩奇
@@ -2308,7 +2308,7 @@
 507,打电话给,phone_call.make_a_phone_call,打电话给
 508,大王,OTHERS,大王
 508,拨打电话,phone_call.make_a_phone_call,拨打电话
-508,覃玫,OTHERS,覃玫
+508,覃玫,phone_call.make_a_phone_call,<contact_name>覃玫</contact_name>
 508,嗯就是验证码在原来只说是五天然后这这这又咋又这又演唱了,OTHERS,嗯就是验证码在原来只说是五天然后这这这又咋又这又演唱了
 508,这身衣服妹子,OTHERS,这身衣服妹子
 508,韩国,OTHERS,韩国
@@ -2461,7 +2461,7 @@
 537,关闭,phone_call.cancel,关闭
 537,结束导航,navigation.cancel_navigation,结束导航
 538,拨打电话,phone_call.make_a_phone_call,拨打电话
-538,大王,OTHERS,大王
+538,大王,phone_call.make_a_phone_call,<contact_name>大王</contact_name>
 538,哦,OTHERS,哦
 538,你好啊,OTHERS,你好啊
 538,我去舵落口,navigation.navigation,我去<destination>舵落口</destination>
@@ -2988,7 +2988,7 @@
 651,比如说你要打电话给张三上面有的,phone_call.make_a_phone_call,比如说你要打电话给张三上面有的
 651,打电话给陈先生,phone_call.make_a_phone_call,打电话给<contact_name>陈先生</contact_name>
 651,晓橙,OTHERS,晓橙
-651,咖咖,OTHERS,咖咖
+651,咖咖,phone_call.make_a_phone_call,<contact_name>咖咖</contact_name>
 651,喀什东路是乐橙,navigation.navigation,<destination>喀什东路是乐橙</destination>
 652,还音乐,music.play,还音乐
 652,是的,OTHERS,是的
@@ -3144,7 +3144,7 @@
 683,郎府保利心语,navigation.navigation,<destination>郎府保利心语</destination>
 684,我想听大哲唱的我不一样,music.play,我想听<singer>大哲</singer>唱的我不一样
 684,大众的我们不一样,music.play,大众的<song>我们不</song>一</song>样
-684,章亭,phone_call.make_a_phone_call,<contact_name>章亭</contact_name>
+684,章亭,OTHERS,章亭
 684,我想听大众的我们都一样,music.play,我想听<singer>大众</singer>的<song>我们都一</song>样
 684,我想听大壮的我们不一样,music.play,我想听<singer>大壮</singer>的我们不一样
 685,昌黎,navigation.navigation,<destination>昌黎</destination>
@@ -3542,7 +3542,7 @@
 775,开始导航,navigation.start_navigation,开始导航
 775,拨韩鹏的歌曲何鹏,music.play,拨<singer>韩鹏</singer>的歌曲何鹏
 775,系好安全带,OTHERS,系好安全带
-775,乾坤,phone_call.make_a_phone_call,<contact_name>乾坤</contact_name>
+775,乾坤,OTHERS,乾坤
 775,廖芊芊的天亮前说晚安,music.play,<singer>廖芊芊</singer>的天亮前说晚安
 776,拨打电话,phone_call.make_a_phone_call,拨打电话
 776,高德地图,OTHERS,高德地图
@@ -3858,7 +3858,7 @@
 843,取消,OTHERS,取消
 843,今天的天气怎么样,OTHERS,今天的天气怎么样
 843,蓬莱市的天气怎么样,OTHERS,蓬莱市的天气怎么样
-843,阿布,music.play,<singer>阿布</singer>
+843,阿布,OTHERS,阿布
 843,放首歌来听听,music.play,放首歌来听听
 844,来一首银行,music.play,来一首<song>银行</song>
 844,紫晟大健康科技有限公司,navigation.navigation,<destination>紫晟大健康科技有限公司</destination>
@@ -3953,7 +3953,7 @@
 864,给我播放王杰的歌曲,music.play,给我播放<singer>王杰</singer>的歌曲
 865,科7路,navigation.navigation,<destination>科7路</destination>
 865,科7路,navigation.navigation,<destination>科7路</destination>
-865,何琦,phone_call.make_a_phone_call,<contact_name>何琦</contact_name>
+865,何琦,OTHERS,何琦
 865,打开蓝牙,OTHERS,打开蓝牙
 865,拨打10086,phone_call.make_a_phone_call,拨打<contact_name>10086</contact_name>
 866,帮我播放一首一剪梅,music.play,帮我播放一首<song>一剪梅</song>
@@ -3982,7 +3982,7 @@
 872,去一下知足,music.play,去一下<song>知足</song>
 872,给我导一下去自忠学校,navigation.navigation,给我导一下去<destination>自忠学校</destination>
 872,这种学校,OTHERS,这种学校
-872,苏浅,music.play,<singer>苏浅</singer>
+872,苏浅,phone_call.make_a_phone_call,<contact_name>苏浅</contact_name>
 872,自忠学校,navigation.navigation,<destination>自忠学校</destination>
 872,六只装了肚子之中,OTHERS,六只装了肚子之中
 872,大楼这种选秀,OTHERS,大楼这种选秀

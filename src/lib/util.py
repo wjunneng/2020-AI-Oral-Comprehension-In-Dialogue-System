@@ -31,6 +31,42 @@ if not os.path.exists(yanxishe_dir):
     os.makedirs(yanxishe_dir)
 
 
+class Eda(object):
+    def __init__(self):
+        self.train_csv_path = os.path.join(input_dir, 'train.csv')
+        self.test_csv_path = os.path.join(input_dir, 'test.csv')
+
+    def match_train_test(self):
+        train_data = pd.read_csv(self.train_csv_path, encoding='utf-8')
+        test_data = pd.read_csv(self.test_csv_path, encoding='utf-8')
+
+        train_list = []
+        test_list = []
+        for group_session_id, group_train_data in train_data.groupby(by=['session_id']):
+            train_list.append(' '.join(group_train_data['query'].values))
+
+        for group_session_id, group_test_data in test_data.groupby(by=['session_id']):
+            test_list.append(' '.join(group_test_data['query'].values))
+
+        print('\n')
+        # train_list.length: 17010
+        # test_list.length: 4342
+        print('train_list.length: {}'.format(len(train_data)))
+        print('test_list.length: {}'.format(len(test_data)))
+        for test_sample in test_list:
+            if test_sample in train_list:
+                # 仅仅匹配一条数据： 我要回家 取消 取消
+                print(test_sample)
+
+        train_list = list(set(train_list))
+        test_list = list(set(test_list))
+
+        # train_list.length: 17010
+        # test_list.length: 4342
+        print('train_list.length: {}'.format(len(train_data)))
+        print('test_list.length: {}'.format(len(test_data)))
+
+
 class Util(object):
     def __init__(self, model_type='albert'):
         self.model_type = model_type
@@ -384,6 +420,8 @@ class Rule(object):
 
         result = Rule.rule_2(result=result)
 
+        result = Rule.rule_3(result=result)
+
         result = Rule.rule_4(result=result)
 
         result = Rule.rule_8(result=result)
@@ -398,8 +436,6 @@ class Rule(object):
         :return:
         """
         for index in range(result.shape[0]):
-            session_id = int(result.iloc[index, 0])
-            query = result.iloc[index, 1].strip()
             # 意图
             intent = result.iloc[index, 2].strip()
             slot_annotation = result.iloc[index, 3].strip()
@@ -470,7 +506,6 @@ class Rule(object):
             session_id = int(result.iloc[index, 0])
             query = result.iloc[index, 1].strip()
             intent = result.iloc[index, 2].strip()
-            slot_annotation = result.iloc[index, 3].strip()
 
             if session_id in cancel_session_id_list:
                 if before_id != session_id:
@@ -538,6 +573,77 @@ class Rule(object):
         :param result:
         :return:
         """
+        contact_name_txt_path = os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries', 'contact_name.txt')
+        destination_txt_path = os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries', 'destination.txt')
+
+        contact_name_list = []
+        with open(contact_name_txt_path, mode='r') as file:
+            for line in file.readlines():
+                line = line.strip().strip('\n')
+                contact_name_list.append(line)
+
+        destination_list = []
+        with open(destination_txt_path, mode='r') as file:
+            for line in file.readlines():
+                line = line.strip().strip('\n')
+                destination_list.append(line)
+
+        contact_name_session_id_list = []
+        contact_name_query_list = []
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+
+            if query in contact_name_list and query not in destination_list:
+                contact_name_query_list.append(query)
+                contact_name_session_id_list.append(session_id)
+
+        print('contact_name_session_id_list_length:{}'.format(len(contact_name_session_id_list)))
+        print('contact_name_query_list:{}'.format(contact_name_query_list))
+        print(contact_name_session_id_list)
+        before_id = None
+
+        other = True
+        phone_call = False
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if session_id in contact_name_session_id_list:
+                if before_id != session_id:
+                    other = True
+                    phone_call = False
+
+                if before_id is None or before_id != session_id:
+                    before_id = session_id
+                    if query in contact_name_query_list:
+                        result.iloc[index, 2] = 'OTHERS'
+                        result.iloc[index, 3] = query
+                    else:
+                        if 'phone_call' in intent:
+                            phone_call = True
+                            other = False
+                        else:
+                            phone_call = False
+                            other = True
+                    continue
+
+                if before_id == session_id:
+                    if query in contact_name_query_list:
+                        if phone_call:
+                            result.iloc[index, 2] = 'phone_call.make_a_phone_call'
+                            result.iloc[index, 3] = '<contact_name>' + query + '</contact_name>'
+                        else:
+                            result.iloc[index, 2] = 'OTHERS'
+                            result.iloc[index, 3] = query
+
+                    else:
+                        if 'phone_call' in intent:
+                            phone_call = True
+                            other = False
+        return result
 
     @staticmethod
     def rule_4(result: pd.DataFrame):
@@ -592,9 +698,9 @@ class Rule(object):
         :return:
         """
         for index in range(result.shape[0]):
-            session_id = int(result.iloc[index, 0])
+
             query = result.iloc[index, 1].strip()
-            intent = result.iloc[index, 2].strip()
+
             slot_annotation = result.iloc[index, 3].strip()
 
             if '[UNK]' in slot_annotation:
@@ -608,9 +714,12 @@ class Rule(object):
                 result.iloc[index, 3] = slot_annotation.replace('[UNK]', query[query.find(sequence) + len(sequence)])
 
             if ' ' in query and slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1:
-                space_indexs = list(set([query.find(' '), query.rfind(' ')]))
+                space_indexes = []
+                for token_index in range(len(query)):
+                    if query[token_index] == ' ':
+                        space_indexes.append(token_index)
 
-                for space_index in space_indexs:
+                for space_index in space_indexes:
                     match_sequence = query[space_index - 1] + query[space_index + 1]
 
                     match_index = slot_annotation.find(match_sequence)
@@ -626,17 +735,25 @@ class Rule(object):
 
 
 if __name__ == '__main__':
-    util = Util()
+    pass
+    # ################ 数据探索 ################
+    # eda = Eda()
+    # eda.match_train_test()
 
-    # 生成新的slot dictionary
-    # Slot.generate_new_slot_dictionary(slot_dir=os.path.join(project_dir, 'data', 'input', 'slot-dictionaries'),
-    #                                   new_slot_dir=os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries'))
+    # ################ 数据处理 ################
+    # util = Util()
+    #
+    # # 生成新的slot dictionary
+    # # Slot.generate_new_slot_dictionary(slot_dir=os.path.join(project_dir, 'data', 'input', 'slot-dictionaries'),
+    # #                                   new_slot_dir=os.path.join(project_dir, 'data', 'input', 'new-slot-dictionaries'))
+    #
+    # # 生成标准的输入数据
+    # # util.generate_yanxishe_input_data()
+    #
+    # # 生成结果数据
+    # # util.generate_result()
 
-    # 生成标准的输入数据
-    # util.generate_yanxishe_input_data()
-
-    # 生成结果数据
-    # util.generate_result()
+    # ################ 规则生成 ################
 
     # 经过规则
     Rule.rule()
