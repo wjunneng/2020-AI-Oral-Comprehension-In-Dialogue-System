@@ -350,6 +350,30 @@ class Slot(object):
             return token
 
     @staticmethod
+    def filter_slot(slot_item_set_list):
+        """
+        过滤无必要的singer和song
+        :param slot_item_set_list:
+        :return:
+        """
+        slot_item_set_list = [i for i in slot_item_set_list if len(i) > 1]
+
+        # slot_item_set_list = sorted(slot_item_set_list, key=lambda a: len(a))
+        # result = []
+        # for i in range(len(slot_item_set_list)):
+        #     to_add = True
+        #     for j in range(i + 1, len(slot_item_set_list)):
+        #         if slot_item_set_list[i] in slot_item_set_list[j]:
+        #             to_add = False
+        #             j_copy = j
+        #     if to_add:
+        #         result.append(slot_item_set_list[i])
+        #     else:
+        #         print(slot_item_set_list[i], slot_item_set_list[j_copy])
+
+        return slot_item_set_list
+
+    @staticmethod
     def generate_new_slot_dictionary(slot_dir, new_slot_dir):
         if not os.path.exists(new_slot_dir):
             os.makedirs(new_slot_dir)
@@ -391,22 +415,19 @@ class Slot(object):
                     error_pair.append(token + '\t' + median_slot)
                     continue
 
-                if token in ['singer', 'song']:
-                    if len(median_slot) > 1:
-                        if token not in slot_dict:
-                            slot_dict[token] = [median_slot]
-                        else:
-                            slot_dict[token].append(median_slot)
+                if token not in slot_dict:
+                    slot_dict[token] = [median_slot]
                 else:
-                    if token not in slot_dict:
-                        slot_dict[token] = [median_slot]
-                    else:
-                        slot_dict[token].append(median_slot)
+                    slot_dict[token].append(median_slot)
 
         for slot_item in slot_dict:
             slot_item_path = os.path.join(new_slot_dir, slot_item + '.txt')
             with open(slot_item_path, encoding='utf-8', mode='w') as file:
-                for item in set(slot_dict[slot_item]):
+                slot_item_set_list = set(slot_dict[slot_item])
+                if slot_item in ['singer', 'song']:
+                    slot_item_set_list = Slot.filter_slot(slot_item_set_list)
+
+                for item in slot_item_set_list:
                     file.write(item + '\n')
 
         with open(os.path.join(new_slot_dir, 'error_pairs.txt'), 'w', encoding='utf-8') as file:
@@ -774,12 +795,14 @@ class Rule(object):
             for line in file.readlines():
                 line = line.strip().strip('\n')
                 singer_list.append(line)
+        singer_list = sorted(singer_list, key=lambda a: len(a), reverse=True)
 
         song_list = []
         with open(song_txt_path, mode='r') as file:
             for line in file.readlines():
                 line = line.strip().strip('\n')
                 song_list.append(line)
+        song_list = sorted(song_list, key=lambda a: len(a), reverse=True)
 
         error_pairs_dict = {}
         with open(error_pairs_txt_path, mode='r') as file:
@@ -846,11 +869,22 @@ class Rule(object):
                                 query_song = query[query.find(song[0]): query.find(song[-1]) + 1]
                                 result.iloc[index, 3] = query.replace(query_song,
                                                                       '<song>' + query_song + '||' + song + '</song>')
+                                break
                             else:
                                 result.iloc[index, 3] = query.replace(song, '<song>' + song + '</song>')
+                                break
 
-                        elif '<song>' + song + '</song>' not in slot_annotation and len(song) > 2:
-                            result.iloc[index, 3] = slot_annotation.replace(song, '<song>' + song + '</song>')
+                        elif '<song>' + song + '</song>' not in slot_annotation:
+                            song_median_sequence = slot_annotation[
+                                                   slot_annotation.find('<song>') + len('<song>'):slot_annotation.find(
+                                                       '</song>')]
+                            if song in song_median_sequence:
+                                result.iloc[index, 3] = slot_annotation.replace(song_median_sequence,
+                                                                                song_median_sequence + '||' + song)
+                                break
+
+                        elif '<song>' + song + '</song>' in slot_annotation:
+                            break
 
                 if median_sequence not in song_list:
                     if median_sequence in error_pairs_dict:
