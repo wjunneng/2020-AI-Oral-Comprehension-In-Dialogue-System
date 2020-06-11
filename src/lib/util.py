@@ -794,161 +794,19 @@ class Rule(object):
             intent = result.iloc[index, 2].strip()
             slot_annotation = result.iloc[index, 3].strip()
 
-            """
-            song: 落的幸福
-            song: 唱雪
-            song: 苏珊鸠山
-            song: 单就单
-            song: 最重要的决定傻逼
-            song: 来自北方的狼
-            song: 带你去money土耳其
-            song: 赞元街
-            song: 伤歌</toplist>有吗
-            song: 带你带我去
-            song: 普贤乐
-            singer: 嗨嗨
-            song: 梦一场
-            song: 诱惑首
-            song: 熊出没环球世界
-            song: 熊出没大冒险
-            song: 梁梁
-            singer: 左麟
-            singer: 萧潇
-            song: 爱我别伤害我
-            song: 爱我别伤害我
-            song: 瞳听
-            song: 今夜的你和谁在约会
-            song: 盗墓笔记
-            song: 七星鲁王宫
-            song: 广州爱情故
-            singer: 力拔
-            singer: 高圆
-            song: 草原不落的太阳
-            song: 我只在
-            song: 轻轻的二人台
-            song: 二人台
-            song: 故事鱼汤
-            song: 开花的画
-            song: 销愁
-            song: 销愁
-            song: 发如雪飘雪
-            song: 苍是春天
-            song: 城市春天
-            song: 秋风起来
-            song: 亲子</emotion>装
-            song: 天上的星星不
-            song: 看天下劳苦人民都
-            song: 烟花树下的约定
-            singer: 张靓玫
-            song: 臭屁虫
-            song: 我一锅粥
-            song: 熊出没之探险日记
-            singer: 黄雨辰
-            singer: 华语陈
-            song: 寂寞的时候想起
-            singer: 狮子王
-            singer: 狮子团
-            song: 百年
-            singer: 飞儿乐团
-            song: 一把<song>杀猪刀
-            song: 把你的名字写在烟
-            song: 2018年第一场雪
-            song: 寂寞的人伤心
-            song: 我不是真正的快乐的
-            song: 雨后人去楼空
-            song: 哎呀
-            song: 雨后人去楼空
-            song: 广东与爱情故事
-            song: 雨后楼也空
-            singer: 何明
-            song: 因为战歌
-            song: ye<song>ye
-            song: 一晃都老了
-            song: 却一晃就老了
-            singer: 行者歌院
-            singer: 二零七八
-            singer: 二零七八
-            song: 离开你
-            song: 轻轻的我将离开你
-            song: 奇妙物语
-            song: 射雕英雄传的歌曲
-            song: 射雕英雄传的歌曲
-            song: 一夜老了
-            singer: 黄兵
-            singer: 郑泽刚
-            song: 宝贝别哭了宝贝
-            song: 发黄玫瑰
-            song: 我真的一无所有
-            song: 想你我想了那么久
-            song: 他无悔的小镇
-            song: 全部都是
-            song: 只要<song>有你陪在我身边
-            song: 白雪的久别的人
-            song: 海草屋
-            song: 韩朝</language>舞
-            song: 在上外呢
-            song: 在窗外
-            song: 虹桥苑
-            song: 洪教院
-            song: 哦在身后
-            song: 精子
-            song: 上周上了
-            song: 单周单
-            song: 单身真是在一起
-            song: 拥抱着你的过去
-            song: 及时行
-            singer: 星巴克
-            song: 萝卜拔萝卜
-            song: 把酒掺满
-            song: 天镇的高速
-            song: 天正的朋友
-            song: 隐形的翅膀让我飞
-            song: 小男孩
-            song: 曹操争霸
-            song: 场上的
-            song: 场上争霸
-            song: 成都啊成都
-            song: 拥抱你的
-            song: 你还是从前的你
-            song: 离开
-            song: 买了
-            song: 天有海迈
-            singer: c<singer>天佑
-            song: 我们不一
-            song: 我们都一
-            song: 独唱你
-            song: 不是你的
-            song: 不上你
-            song: 彩虹唱
-            song: 15的月亮
-            song: v.a
-            song: 秧秧降
-            song: 拥抱你你去
-            song: 缘份一道桥
-            singer: 小婧
-            song: 白龙
-            song: 红色高跟鞋后播放几度梦回大唐
-            song: 被过手
-            singer: my city乐才
-            song: 钢铁是怎样炼成
-            song: 钢铁是眼泪炼成
-            singer: 增生年
-            singer: 黄昭
-            song: 夜空中最亮的星星
-            song: 当你
-            song: 下课等你
-            song: 等你
-            singer: 周润发
-            song: 塞北的雪
-            singer: 孙娄
-            singer: sway
-            song: good一曲
-            song: 在这里
-            song: 我来巡山
-            singer: d z
-            song: 女儿红女儿情
-            singer: 庄群施
-            """
+            special_sequence = None
+            if '唱的歌曲' in slot_annotation:
+                special_sequence = '唱的歌曲'
+            elif '唱的' in slot_annotation:
+                special_sequence = '唱的'
+
+            if special_sequence is not None:
+                song_sequence = slot_annotation[slot_annotation.find(special_sequence) + len(special_sequence):]
+                if len(song_sequence) > 1:
+                    query_song_sequence = query[query.find(special_sequence) + len(special_sequence):]
+                    result.iloc[index, 3] = slot_annotation.replace(song_sequence,
+                                                                    '<song>' + query_song_sequence + '</song>')
+
             if '<singer>' in slot_annotation and '</singer>' in slot_annotation:
                 median_sequence = slot_annotation[
                                   slot_annotation.find('<singer>') + len('<singer>'): slot_annotation.find('</singer>')]

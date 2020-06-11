@@ -359,7 +359,7 @@
 84,到永康天一搪瓷制品有限公司,navigation.navigation,到<destination>永康天一搪瓷制品有限公司</destination>
 85,播放带我去旅行,music.play,播放<song>带我去旅行</song>
 85,校长唱的带你带我去,music.play,校长唱的<song>带你带我去</song>
-85,校长唱的带我去旅行带你去旅行,music.play,校长唱的<song>带我去旅行</song>带你去旅行
+85,校长唱的带我去旅行带你去旅行,music.play,校长唱的<song>带我去旅行带你去旅行</song>
 86,打电话给565,phone_call.make_a_phone_call,打电话给<phone_num>565</phone_num>
 86,打电话给565,phone_call.make_a_phone_call,打电话给<phone_num>565</phone_num>
 86,我想听,music.play,我想听
@@ -715,7 +715,7 @@
 168,我的快乐就是想你歌曲,music.play,<song>我的快乐就是想你</song>歌曲
 169,请播放说散就散,music.play,请播放<song>说散就散</song>
 169,请播放体面,music.play,请播放<song>体面</song>
-169,请播放于文文唱的体面,music.play,请播放<singer>于文文</singer>唱的体面
+169,请播放于文文唱的体面,music.play,请播放<singer>于文文</singer>唱的<song>体面</song>
 170,我们,music.play,<song>我们</song>
 170,播放追梦人,music.play,播放<song>追梦人</song>
 170,你好叮当,OTHERS,你好叮当
@@ -885,7 +885,7 @@
 208,我要如何唤醒你,OTHERS,我要如何唤醒你
 208,我如何通过语音来唤醒导航,OTHERS,我如何通过语音来唤醒导航
 208,播放爱在西元前,music.play,播放<song>爱在西元前</song>
-208,周杰伦演唱的爱在西元前,music.play,<singer>周杰伦</singer>演唱的爱在西元前
+208,周杰伦演唱的爱在西元前,music.play,<singer>周杰伦</singer>演唱的<song>爱在西元前</song>
 208,通过车载微信发消息给民报郭焱,OTHERS,通过车载微信发消息给民报郭焱
 209,别打电话,OTHERS,别打电话
 209,提达,OTHERS,提达
@@ -1240,7 +1240,7 @@
 283,你就这么相信吧拐走了以后那样子的地方不要去台湾要那么多大了,OTHERS,你就这么相信吧拐走了以后那样子的地方不要去台湾要那么多大了
 283,远走高飞金志文,music.play,<song>远走高飞</song>金志文
 283,货源甲周杰伦,OTHERS,货源甲周杰伦
-283,货源甲唱的周杰伦,music.play,货源甲唱的周杰伦
+283,货源甲唱的周杰伦,music.play,货源甲唱的<song>周杰伦</song>
 283,周杰伦霍元甲,music.play,<singer>周杰伦</singer>霍元甲
 284,放一个,music.play,放一个
 284,放一首天上的星星不,music.play,放一首<song>天上的星星不</song>
@@ -1257,7 +1257,7 @@
 287,放个音乐,music.play,放个音乐
 287,放点歌曲,music.play,放点歌曲
 287,放点劲爆歌曲,music.play,放点<emotion>劲爆</emotion>歌曲
-288,播放张钰琪唱的我是一只小小小鸟,music.play,播放<singer>张钰琪</singer>唱的我是一只小小小鸟
+288,播放张钰琪唱的我是一只小小小鸟,music.play,播放<singer>张钰琪</singer>唱的<song>我是一只小小小鸟</song>
 288,播放音乐,music.play,播放音乐
 288,播放张钰琪和汤晶晶唱的给所有知道我名字的人,music.play,播放<singer>张钰琪</singer>和<singer>汤晶晶</singer>唱的给所有知道我名字的人
 289,我要去沈阳杏林整形医院,navigation.navigation,我要去<destination>沈阳杏林整形医院</destination>
@@ -1589,9 +1589,9 @@
 356,换讲话,OTHERS,换讲话
 357,你是屁,OTHERS,你是屁
 357,你吃吧,OTHERS,你吃吧
-357,请帮我点一首谢霆锋唱的成者为王,music.play,请帮我点一首<singer>谢霆锋</singer>唱的成者为王
-357,请帮我点一首狮子王唱的再见的爱,music.play,请帮我点一首<singer>狮子王</singer>唱的再见的爱
-357,请帮我点一首狮子团合唱的的百年孤独,music.play,请帮我点一首<singer>狮子团</singer>合唱的的<song>百年</song>孤</song>独
+357,请帮我点一首谢霆锋唱的成者为王,music.play,请帮我点一首<singer>谢霆锋</singer>唱的<song>成者为王</song>
+357,请帮我点一首狮子王唱的再见的爱,music.play,请帮我点一首<singer>狮子王</singer>唱的<song>再见的爱</song>
+357,请帮我点一首狮子团合唱的的百年孤独,music.play,请帮我点一首<singer>狮子团</singer>合唱的<song>的百年孤独</song>
 358,打电话,phone_call.make_a_phone_call,打电话
 358,播放,music.play,播放
 358,播放再见只是陌生人,music.play,播放<song>再见只是陌生人</song>
@@ -2160,8 +2160,8 @@
 474,播放我的好兄弟,music.play,播放<song>我的好兄弟</song>
 474,关闭歌曲,music.pause,关闭歌曲
 475,小苹果,music.play,<song>小苹果</song>
-475,陈瑞唱的白狐,music.play,<song>陈瑞</song>唱的白狐
-475,祁隆唱的醉相思,music.play,<singer>祁隆</singer>唱的醉相思
+475,陈瑞唱的白狐,music.play,<song>陈瑞</song>唱的<song>白狐</song>
+475,祁隆唱的醉相思,music.play,<singer>祁隆</singer>唱的<song>醉相思</song>
 476,泉州正骨医院,navigation.navigation,<destination>泉州正骨医院</destination>
 476,双阳,OTHERS,双阳
 476,打电话啊好了,phone_call.make_a_phone_call,打电话啊好了
@@ -2475,7 +2475,7 @@
 541,陈声,OTHERS,陈声
 541,来一首拥抱你黎齐,music.play,来一首<song>拥抱你黎齐||拥抱你离去</song>
 541,放首成都,music.play,放首<song>成都</song>
-541,点一首刘恺名唱的想着你亲爱的,music.play,点一首<singer>刘恺名</singer>唱的想着你亲爱的
+541,点一首刘恺名唱的想着你亲爱的,music.play,点一首<singer>刘恺名</singer>唱的<song>想着你亲爱的</song>
 542,澳龙鞋城,navigation.navigation,<destination>澳龙鞋城</destination>
 542,广东爱情故事,music.play,<song>广东爱情故事</song>
 542,你打电话看,OTHERS,你打电话看
@@ -2603,7 +2603,7 @@
 567,拨打电话,phone_call.make_a_phone_call,拨打电话
 568,结束导航,navigation.cancel_navigation,结束导航
 568,给我播放一首一壶老酒,music.play,给我播放一首<song>一壶老酒</song>
-568,给我播放一首许巍自己唱的歌曲曾经的你,music.play,给我播放一首<singer>许巍</singer>自己唱的歌曲曾经的你
+568,给我播放一首许巍自己唱的歌曲曾经的你,music.play,给我播放一首<singer>许巍</singer>自己唱的歌曲<song>曾经的你</song>
 568,给我播放一首吴亦凡赵丽颖唱的想你,music.play,给我播放一首<singer>吴亦凡</singer><singer>赵丽颖</singer>唱的想你
 568,给我播放一首赵丽颖和吴亦凡唱的想你,music.play,给我播放一首<singer>赵丽颖</singer>和<singer>吴亦凡</singer>唱的想你
 568,请给我播放一首赵丽颖和吴亦凡和唱的降你不是像你记住,music.play,请给我播放一首<singer>赵丽颖</singer>和<singer>吴亦凡</singer>和唱的降你不是像你记住
@@ -3142,7 +3142,7 @@
 683,行我先忙好吧,OTHERS,行我先忙好吧
 683,郎府保利心语,navigation.navigation,<destination>郎府保利心语</destination>
 683,郎府保利心语,navigation.navigation,<destination>郎府保利心语</destination>
-684,我想听大哲唱的我不一样,music.play,我想听<singer>大哲</singer>唱的我不一样
+684,我想听大哲唱的我不一样,music.play,我想听<singer>大哲</singer>唱的<song>我不一样</song>
 684,大众的我们不一样,music.play,大众的<song>我们不一</song>样
 684,章亭,OTHERS,章亭
 684,我想听大众的我们都一样,music.play,我想听<singer>大众||大壮</singer>的<song>我们都一</song>样
@@ -3446,8 +3446,8 @@
 752,安国市车之家汽修,navigation.navigation,<destination>安国市车之家汽修</destination>
 752,呼叫523,phone_call.make_a_phone_call,呼叫<phone_num>523</phone_num>
 752,呼叫523,phone_call.make_a_phone_call,呼叫<phone_num>523</phone_num>
-753,放云菲菲唱的殇雪,music.play,放<singer>云菲菲</singer>唱的殇雪
-753,给我播放云菲菲唱的殇雪,music.play,给我播放<singer>云菲菲</singer>唱的殇雪
+753,放云菲菲唱的殇雪,music.play,放<singer>云菲菲</singer>唱的<song>殇雪</song>
+753,给我播放云菲菲唱的殇雪,music.play,给我播放<singer>云菲菲</singer>唱的<song>殇雪</song>
 753,不不,OTHERS,不不
 753,我播放一首,music.play,我播放一首
 754,播放爱江山更爱美人,music.play,播放<song>爱江山更爱美人</song>
