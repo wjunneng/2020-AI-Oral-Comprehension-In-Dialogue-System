@@ -843,11 +843,14 @@ class Rule(object):
                                 query_singer = query[query.find(singer[0]): query.find(singer[-1]) + 1]
                                 result.iloc[index, 3] = query.replace(query_singer,
                                                                       '<singer>' + query_singer + '||' + singer + '</singer>')
+                                break
                             else:
                                 result.iloc[index, 3] = query.replace(singer, '<singer>' + singer + '</singer>')
+                                break
 
                         elif '<singer>' + singer + '</singer>' not in slot_annotation and len(singer) > 2:
                             result.iloc[index, 3] = slot_annotation.replace(singer, '<singer>' + singer + '</singer>')
+                            break
 
                 if median_sequence not in singer_list:
                     if median_sequence == '张靓玫':
@@ -862,6 +865,12 @@ class Rule(object):
                 median_sequence = slot_annotation[
                                   slot_annotation.find('<song>') + len('<song>'): slot_annotation.find('</song>')]
 
+                best_similarity = Rule.caculate_similarity(token_list=song_list, token=median_sequence)
+                if best_similarity and best_similarity not in query and len(median_sequence) >= 3:
+                    result.iloc[index, 3] = slot_annotation.replace(median_sequence,
+                                                                    median_sequence + '||' + best_similarity)
+                    continue
+
                 for song in song_list:
                     if song.replace(' ', '') in query.replace(' ', ''):
                         if song not in slot_annotation:
@@ -874,7 +883,7 @@ class Rule(object):
                                 result.iloc[index, 3] = query.replace(song, '<song>' + song + '</song>')
                                 break
 
-                        elif '<song>' + song + '</song>' not in slot_annotation:
+                        elif '<song>' + song + '</song>' not in slot_annotation and len(song) > 2:
                             song_median_sequence = slot_annotation[
                                                    slot_annotation.find('<song>') + len('<song>'):slot_annotation.find(
                                                        '</song>')]
@@ -912,7 +921,7 @@ class Rule(object):
 
         result = sorted(result.items(), key=lambda a: a[1], reverse=True)
 
-        if result[0][1] > 0.6:
+        if token not in token_list and result[0][1] > 0.6 and len(result[0][0]) > 2:
             return result[0][0]
         else:
             return None
