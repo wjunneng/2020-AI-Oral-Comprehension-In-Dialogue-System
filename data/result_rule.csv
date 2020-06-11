@@ -504,7 +504,7 @@
 123,来一首电视连续剧的歌曲,music.play,来一首电视连续剧的歌曲
 123,播放,music.play,播放
 123,左邻右里,OTHERS,左邻右里
-123,左麟右李的歌曲,music.play,<singer>左麟</singer>右李的歌曲
+123,左麟右李的歌曲,music.play,<singer>左麟右李</singer>的歌曲
 124,打电话去买火柴抓狂你不干啥,phone_call.make_a_phone_call,打电话去买火柴抓狂你不干啥
 124,覃玫,phone_call.make_a_phone_call,<contact_name>覃玫</contact_name>
 124,去广州,navigation.navigation,去<destination>广州</destination>
@@ -1376,7 +1376,7 @@
 316,阿珂,OTHERS,阿珂
 316,叮当你好,OTHERS,叮当你好
 316,请给我放一首那个哦,music.play,请给我放一首那个哦
-316,张靓玫的27找个许佳慧的走后的思恋,music.play,<singer>张靓玫</singer>的27找个许佳慧的走后的思恋
+316,张靓玫的27找个许佳慧的走后的思恋,music.play,<singer>张靓玫||张靓颖</singer>的27找个许佳慧的走后的思恋
 317,你好叮当,OTHERS,你好叮当
 317,声音,OTHERS,声音
 317,暂停播放,OTHERS,暂停播放
@@ -3111,7 +3111,7 @@
 676,播放小苹果,music.play,播放<song>小苹果</song>
 677,天有海迈,music.play,<song>天有海迈</song>
 677,mc天佑,music.play,<singer>mc天佑</singer>
-677,m c天佑的歌曲,music.play,m<singer>c<singer>天佑</singer>的歌曲
+677,m c天佑的歌曲,music.play,<singer>m c天佑||mc天佑</singer>的歌曲
 677,喊麦,music.play,<theme>喊麦</theme>
 677,喊麦歌曲,music.play,<theme>喊麦</theme>歌曲
 677,拥抱明天,music.play,<song>拥抱明天</song>

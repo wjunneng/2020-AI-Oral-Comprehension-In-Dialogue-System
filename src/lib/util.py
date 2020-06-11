@@ -15,6 +15,7 @@ pd.set_option('display.max_columns', None)
 # 显示所有行
 pd.set_option('display.max_rows', None)
 
+import difflib
 import random
 import numpy as np
 import pandas as pd
@@ -390,10 +391,17 @@ class Slot(object):
                     error_pair.append(token + '\t' + median_slot)
                     continue
 
-                if token not in slot_dict:
-                    slot_dict[token] = [median_slot]
+                if token in ['singer', 'song']:
+                    if len(median_slot) > 1:
+                        if token not in slot_dict:
+                            slot_dict[token] = [median_slot]
+                        else:
+                            slot_dict[token].append(median_slot)
                 else:
-                    slot_dict[token].append(median_slot)
+                    if token not in slot_dict:
+                        slot_dict[token] = [median_slot]
+                    else:
+                        slot_dict[token].append(median_slot)
 
         for slot_item in slot_dict:
             slot_item_path = os.path.join(new_slot_dir, slot_item + '.txt')
@@ -946,12 +954,22 @@ class Rule(object):
                                   slot_annotation.find('<singer>') + len('<singer>'): slot_annotation.find('</singer>')]
 
                 if median_sequence not in singer_list:
+                    if median_sequence == '张靓玫':
+                        result.iloc[index, 3] = slot_annotation.replace('张靓玫', '张靓玫||张靓颖')
+
                     if median_sequence in error_pairs_dict:
                         result.iloc[index, 3] = slot_annotation.replace(median_sequence,
                                                                         median_sequence + '||' + error_pairs_dict[
                                                                             median_sequence])
-                    else:
-                        print('singer: {}'.format(median_sequence))
+                for singer in singer_list:
+                    if singer.replace(' ', '') in query.replace(' ', ''):
+                        if singer not in slot_annotation:
+                            if singer not in query:
+                                query_singer = query[query.find(singer[0]): query.find(singer[-1]) + 1]
+                                result.iloc[index, 3] = query.replace(query_singer,
+                                                                      '<singer>' + query_singer + '||' + singer + '</singer>')
+                            else:
+                                result.iloc[index, 3] = query.replace(singer, '<singer>' + singer + '</singer>')
 
             if '<song>' in slot_annotation and '</song>' in slot_annotation:
                 median_sequence = slot_annotation[
@@ -963,8 +981,28 @@ class Rule(object):
                                                                         median_sequence + '||' + error_pairs_dict[
                                                                             median_sequence])
                     else:
-                        print('song: {}'.format(median_sequence))
+                        pass
+                        # print('song: {}'.format(median_sequence))
         return result
+
+    @staticmethod
+    def caculate_similarity(token_list, token):
+        """
+        计算相似度
+        :param token_list:
+        :param token:
+        :return:
+        """
+        result = {}
+        for token_sample in token_list:
+            result[token_sample] = difflib.SequenceMatcher(None, token, token_sample).quick_ratio()
+
+        result = sorted(result.items(), key=lambda a: a[1], reverse=True)
+
+        if result[0][1] > 0.6:
+            return result[0][0]
+        else:
+            return None
 
 
 if __name__ == '__main__':
