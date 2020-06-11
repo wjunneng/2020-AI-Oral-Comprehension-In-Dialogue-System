@@ -2353,7 +2353,7 @@
 517,他无悔的小镇,music.play,<song>他无悔的小镇</song>
 517,我要打电话,phone_call.make_a_phone_call,我要打电话
 518,请播放一首,music.play,请播放一首
-518,播放一首歌给你听,music.play,播放一首歌给你</song>听
+518,播放一首歌给你听,music.play,播放一首歌给你听
 518,播放一首哭给你听,music.play,播放一首<song>哭给你听</song>
 518,我要听,music.play,我要听
 518,我要听全部都是,music.play,我要听<song>全部都是</song>
@@ -3471,7 +3471,7 @@
 757,am,OTHERS,am
 757,可以,OTHERS,可以
 758,听谭咏麟的歌曲,music.play,听<singer>谭咏麟</singer>的歌曲
-758,青海咏琳的歌曲,music.play,青海咏琳</singer>的歌曲
+758,青海咏琳的歌曲,music.play,青海咏琳的歌曲
 758,谭咏麟的歌曲,music.play,<singer>谭咏麟</singer>的歌曲
 759,打电话了,phone_call.make_a_phone_call,打电话了
 759,万年村,navigation.navigation,<destination>万年村</destination>
@@ -3902,7 +3902,7 @@
 853,大山,OTHERS,大山
 853,马兰,OTHERS,马兰
 853,爸爸妈妈,music.play,<song>爸爸妈妈</song>
-854,播放歌手带你去旅游,music.play,播放歌手带你去旅游</song>
+854,播放歌手带你去旅游,music.play,播放歌手带你去旅游
 854,播放带你去旅行,music.play,播放<song>带你去旅行</song>
 854,追光仔,OTHERS,追光仔
 854,放金光振,music.play,放<singer>金光振</singer>

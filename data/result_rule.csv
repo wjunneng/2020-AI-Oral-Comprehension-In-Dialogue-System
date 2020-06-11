@@ -2353,7 +2353,7 @@
 517,他无悔的小镇,music.play,<song>他无悔的小镇</song>
 517,我要打电话,phone_call.make_a_phone_call,我要打电话
 518,请播放一首,music.play,请播放一首
-518,播放一首歌给你听,music.play,播放一首歌给你</song>听
+518,播放一首歌给你听,music.play,播放一首歌给你听
 518,播放一首哭给你听,music.play,播放一首<song>哭给你听</song>
 518,我要听,music.play,我要听
 518,我要听全部都是,music.play,我要听<song>全部都是</song>
@@ -2396,7 +2396,7 @@
 522,来一首惊人,music.play,来一首<song>惊人</song>
 522,来一首精灵,music.play,来一首<song>精灵</song>
 523,播放,music.play,播放
-523,播放体验,music.play,播放<song>体验</song>
+523,播放体验,music.play,播放<song>体验||体面</song>
 523,播放体面,music.play,播放<song>体面</song>
 524,拨号广哥,phone_call.make_a_phone_call,拨号<contact_name>广哥</contact_name>
 524,导航结束,navigation.cancel_navigation,导航结束
@@ -2465,7 +2465,7 @@
 538,哦,OTHERS,哦
 538,你好啊,OTHERS,你好啊
 538,我去舵落口,navigation.navigation,我去<destination>舵落口</destination>
-539,放一首体验,music.play,放一首<song>体验</song>
+539,放一首体验,music.play,放一首<song>体验||体面</song>
 539,放一首体面,music.play,放一首<song>体面</song>
 539,放首社会摇,music.play,放首<song>社会摇</song>
 540,取消,OTHERS,取消
@@ -2473,7 +2473,7 @@
 540,我去河北省衡水市阜城县,navigation.navigation,我去<destination>河北省衡水市阜城县</destination>
 541,笑死我啊,OTHERS,笑死我啊
 541,陈声,OTHERS,陈声
-541,来一首拥抱你黎齐,music.play,来一首<song>拥抱你黎齐</song>
+541,来一首拥抱你黎齐,music.play,来一首<song>拥抱你黎齐||拥抱你离去</song>
 541,放首成都,music.play,放首<song>成都</song>
 541,点一首刘恺名唱的想着你亲爱的,music.play,点一首<singer>刘恺名</singer>唱的想着你亲爱的
 542,澳龙鞋城,navigation.navigation,<destination>澳龙鞋城</destination>
@@ -2921,7 +2921,7 @@
 637,我要去火车站,navigation.navigation,我要去<destination>火车站</destination>
 638,给我来一首说散就散,music.play,给我来一首<song>说散就散</song>
 638,给我来一首说散就散,music.play,给我来一首<song>说散就散</song>
-638,给我来一首体验,music.play,给我来一首<song>体验</song>
+638,给我来一首体验,music.play,给我来一首<song>体验||体面</song>
 639,限速50公里,OTHERS,限速50公里
 639,播刘德华,music.play,播<singer>刘德华</singer>
 639,关闭音乐,music.pause,关闭音乐
@@ -3145,7 +3145,7 @@
 684,我想听大哲唱的我不一样,music.play,我想听<singer>大哲</singer>唱的我不一样
 684,大众的我们不一样,music.play,大众的<song>我们不一</song>样
 684,章亭,OTHERS,章亭
-684,我想听大众的我们都一样,music.play,我想听<singer>大众</singer>的<song>我们都一</song>样
+684,我想听大众的我们都一样,music.play,我想听<singer>大众||大壮</singer>的<song>我们都一</song>样
 684,我想听大壮的我们不一样,music.play,我想听<singer>大壮</singer>的我们不一样
 685,昌黎,navigation.navigation,<destination>昌黎</destination>
 685,导航去火车站,navigation.navigation,导航去<destination>火车站</destination>
@@ -3471,7 +3471,7 @@
 757,am,OTHERS,am
 757,可以,OTHERS,可以
 758,听谭咏麟的歌曲,music.play,听<singer>谭咏麟</singer>的歌曲
-758,青海咏琳的歌曲,music.play,青海咏琳</singer>的歌曲
+758,青海咏琳的歌曲,music.play,青海咏琳的歌曲
 758,谭咏麟的歌曲,music.play,<singer>谭咏麟</singer>的歌曲
 759,打电话了,phone_call.make_a_phone_call,打电话了
 759,万年村,navigation.navigation,<destination>万年村</destination>
@@ -3902,7 +3902,7 @@
 853,大山,OTHERS,大山
 853,马兰,OTHERS,马兰
 853,爸爸妈妈,music.play,<song>爸爸妈妈</song>
-854,播放歌手带你去旅游,music.play,播放歌手带你去旅游</song>
+854,播放歌手带你去旅游,music.play,播放歌手带你去旅游
 854,播放带你去旅行,music.play,播放<song>带你去旅行</song>
 854,追光仔,OTHERS,追光仔
 854,放金光振,music.play,放<singer>金光振</singer>
