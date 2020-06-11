@@ -795,13 +795,15 @@ class Rule(object):
             slot_annotation = result.iloc[index, 3].strip()
 
             special_sequence = None
-            if '唱的歌曲' in slot_annotation:
-                special_sequence = '唱的歌曲'
+            if '的歌曲' in slot_annotation:
+                special_sequence = '的歌曲'
             elif '唱的' in slot_annotation:
                 special_sequence = '唱的'
 
             if special_sequence is not None:
                 song_sequence = slot_annotation[slot_annotation.find(special_sequence) + len(special_sequence):]
+                song_sequence = song_sequence.replace('</song>', '')
+
                 if len(song_sequence) > 1:
                     query_song_sequence = query[query.find(special_sequence) + len(special_sequence):]
                     result.iloc[index, 3] = slot_annotation.replace(song_sequence,
@@ -845,6 +847,11 @@ class Rule(object):
                     else:
                         pass
                         # print('song: {}'.format(median_sequence))
+
+            if 'trouble is afriend' in query:
+                result.iloc[index, 3] = slot_annotation.replace('trouble is afriend',
+                                                                '<song>trouble is afriend||trouble is a friend</song>')
+
         return result
 
     @staticmethod

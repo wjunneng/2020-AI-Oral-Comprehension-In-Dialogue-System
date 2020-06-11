@@ -358,8 +358,8 @@
 84,到永康东站,navigation.navigation,到<destination>永康东站</destination>
 84,到永康天一搪瓷制品有限公司,navigation.navigation,到<destination>永康天一搪瓷制品有限公司</destination>
 85,播放带我去旅行,music.play,播放<song>带我去旅行</song>
-85,校长唱的带你带我去,music.play,校长唱的<song>带你带我去</song>
-85,校长唱的带我去旅行带你去旅行,music.play,校长唱的<song>带我去旅行带你去旅行</song>
+85,校长唱的带你带我去,music.play,校长唱的<song>带你带我去</song></song>
+85,校长唱的带我去旅行带你去旅行,music.play,校长唱的<song>带我去旅行</song>带你去旅行
 86,打电话给565,phone_call.make_a_phone_call,打电话给<phone_num>565</phone_num>
 86,打电话给565,phone_call.make_a_phone_call,打电话给<phone_num>565</phone_num>
 86,我想听,music.play,我想听
@@ -1231,7 +1231,7 @@
 281,请帮我点一首感恩的心,music.play,请帮我点一首<song>感恩的心</song>
 281,想点播陈瑞的歌,music.play,想点播<song>陈瑞</song>的歌
 281,藕断丝连,music.play,<song>藕断丝连</song>
-281,请点播一下那个陈瑞的歌曲藕断丝连,music.play,请点播一下那个<song>陈瑞</song>的歌曲藕断丝连
+281,请点播一下那个陈瑞的歌曲藕断丝连,music.play,请点播一下那个<song>陈瑞</song>的歌曲<song>藕断丝连</song>
 282,歌曲云,music.play,歌曲云
 282,我想听,music.play,我想听
 282,我想听云,music.play,我想听云
@@ -1591,7 +1591,7 @@
 357,你吃吧,OTHERS,你吃吧
 357,请帮我点一首谢霆锋唱的成者为王,music.play,请帮我点一首<singer>谢霆锋</singer>唱的<song>成者为王</song>
 357,请帮我点一首狮子王唱的再见的爱,music.play,请帮我点一首<singer>狮子王</singer>唱的<song>再见的爱</song>
-357,请帮我点一首狮子团合唱的的百年孤独,music.play,请帮我点一首<singer>狮子团</singer>合唱的<song>的百年孤独</song>
+357,请帮我点一首狮子团合唱的的百年孤独,music.play,请帮我点一首<singer>狮子团</singer>合唱的的<song>百年</song>孤</song>独
 358,打电话,phone_call.make_a_phone_call,打电话
 358,播放,music.play,播放
 358,播放再见只是陌生人,music.play,播放<song>再见只是陌生人</song>
@@ -2002,7 +2002,7 @@
 444,布达拉,navigation.navigation,<destination>布达拉</destination>
 444,醉夜,OTHERS,醉夜
 444,丽水,navigation.navigation,<destination>丽水</destination>
-445,播放邓丽君的歌曲一个老板是谁吗加强人家,music.play,播放<singer>邓丽君</singer>的歌曲一个老板是谁吗加强人家
+445,播放邓丽君的歌曲一个老板是谁吗加强人家,music.play,播放<singer>邓丽君</singer>的歌曲<song>一个老板是谁吗加强人家</song>
 445,放一个ye ye,music.play,放一个<song>ye<song>ye</song>
 445,一个ye ye,OTHERS,一个ye ye
 445,放梁静茹的夜夜夜夜,music.play,放<singer>梁静茹</singer>的夜夜夜夜
@@ -3540,7 +3540,7 @@
 774,导航到福永裕华酒楼,navigation.navigation,导航到<destination>福永裕华酒楼</destination>
 774,打电话给孙丹丹,phone_call.make_a_phone_call,打电话给<contact_name>孙丹丹</contact_name>
 775,开始导航,navigation.start_navigation,开始导航
-775,拨韩鹏的歌曲何鹏,music.play,拨<singer>韩鹏</singer>的歌曲何鹏
+775,拨韩鹏的歌曲何鹏,music.play,拨<singer>韩鹏</singer>的歌曲<song>何鹏</song>
 775,系好安全带,OTHERS,系好安全带
 775,乾坤,OTHERS,乾坤
 775,廖芊芊的天亮前说晚安,music.play,<singer>廖芊芊</singer>的天亮前说晚安
@@ -4053,8 +4053,8 @@
 887,来一首伍佰的爱你一万年,music.play,来一首<singer>伍佰</singer>的爱你一万年
 887,帮我查一下大一到雅安的客车还有没有,OTHERS,帮我查一下大一到雅安的客车还有没有
 888,播放歌曲三月里的小雨,music.play,播放歌曲<song>三月里的小雨</song>
-888,播放卓依婷的歌曲三月里的小雨,music.play,播放<singer>卓依婷</singer>的歌曲三月里的小雨
-888,播放于文文的trouble is afriend,music.play,播放<singer>于文文</singer>的trouble is afriend
+888,播放卓依婷的歌曲三月里的小雨,music.play,播放<singer>卓依婷</singer>的歌曲<song>三月里的小雨</song>
+888,播放于文文的trouble is afriend,music.play,播放<singer>于文文</singer>的<song>trouble is afriend||trouble is a friend</song>
 889,在水一方,navigation.navigation,<destination>在水一方</destination>
 889,呵呵呵,OTHERS,呵呵呵
 889,在水一方,navigation.navigation,<destination>在水一方</destination>
