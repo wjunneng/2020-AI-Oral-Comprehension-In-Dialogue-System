@@ -675,8 +675,8 @@ class Rule(object):
                 contact_name_query_list.append(query)
                 contact_name_session_id_list.append(session_id)
 
-        print('contact_name_session_id_list_length:{}'.format(len(contact_name_session_id_list)))
-        print(contact_name_session_id_list)
+        # print('contact_name_session_id_list_length:{}'.format(len(contact_name_session_id_list)))
+        # print(contact_name_session_id_list)
         before_id = None
 
         phone_call = False
@@ -953,14 +953,6 @@ class Rule(object):
                 median_sequence = slot_annotation[
                                   slot_annotation.find('<singer>') + len('<singer>'): slot_annotation.find('</singer>')]
 
-                if median_sequence not in singer_list:
-                    if median_sequence == '张靓玫':
-                        result.iloc[index, 3] = slot_annotation.replace('张靓玫', '张靓玫||张靓颖')
-
-                    if median_sequence in error_pairs_dict:
-                        result.iloc[index, 3] = slot_annotation.replace(median_sequence,
-                                                                        median_sequence + '||' + error_pairs_dict[
-                                                                            median_sequence])
                 for singer in singer_list:
                     if singer.replace(' ', '') in query.replace(' ', ''):
                         if singer not in slot_annotation:
@@ -970,8 +962,18 @@ class Rule(object):
                                                                       '<singer>' + query_singer + '||' + singer + '</singer>')
                             else:
                                 result.iloc[index, 3] = query.replace(singer, '<singer>' + singer + '</singer>')
-                    if '<singer>' + singer + '</singer>' not in slot_annotation:
-                        result.iloc[index, 3] = slot_annotation.replace(singer, '<singer>' + singer + '</singer>')
+
+                        elif '<singer>' + singer + '</singer>' not in slot_annotation and len(singer) > 2:
+                            result.iloc[index, 3] = slot_annotation.replace(singer, '<singer>' + singer + '</singer>')
+
+                if median_sequence not in singer_list:
+                    if median_sequence == '张靓玫':
+                        result.iloc[index, 3] = slot_annotation.replace('张靓玫', '张靓玫||张靓颖')
+
+                    if median_sequence in error_pairs_dict:
+                        result.iloc[index, 3] = slot_annotation.replace(median_sequence,
+                                                                        median_sequence + '||' + error_pairs_dict[
+                                                                            median_sequence])
 
             if '<song>' in slot_annotation and '</song>' in slot_annotation:
                 median_sequence = slot_annotation[

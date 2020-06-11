@@ -1259,7 +1259,7 @@
 287,放点劲爆歌曲,music.play,放点<emotion>劲爆</emotion>歌曲
 288,播放张钰琪唱的我是一只小小小鸟,music.play,播放<singer>张钰琪</singer>唱的我是一只小小小鸟
 288,播放音乐,music.play,播放音乐
-288,播放张钰琪和汤晶晶唱的给所有知道我名字的人,music.play,播放<singer>张钰琪</singer>和汤晶晶唱的给所有知道我名字的人
+288,播放张钰琪和汤晶晶唱的给所有知道我名字的人,music.play,播放<singer>张钰琪</singer>和<singer>汤晶晶</singer>唱的给所有知道我名字的人
 289,我要去沈阳杏林整形医院,navigation.navigation,我要去<destination>沈阳杏林整形医院</destination>
 289,给521打电话,phone_call.make_a_phone_call,给<phone_num>521打电话</phone_num>
 289,放说散就散,music.play,放<song>说散就散</song>
@@ -1508,7 +1508,7 @@
 341,播放华语群星的魂斗罗,music.play,播放<singer>华语群星</singer>的魂斗罗
 341,播放大号魂斗罗,music.play,播放大号魂斗罗
 341,播放远走高飞,music.play,播放<song>远走高飞</song>
-342,来一首林琳来首林心如的趴啦趴嗱,music.play,来一首<singer>林琳</singer>来首林心如的趴啦趴嗱
+342,来一首林琳来首林心如的趴啦趴嗱,music.play,来一首<singer>林琳</singer>来首<singer>林心如</singer>的趴啦趴嗱
 342,来一首林心如的趴啦趴嗱,music.play,来一首<singer>林心如</singer>的趴啦趴嗱
 342,我要听林心如的趴啦趴嗱,music.play,我要听<singer>林心如</singer>的趴啦趴嗱
 342,爱野,OTHERS,爱野
@@ -2604,9 +2604,9 @@
 568,结束导航,navigation.cancel_navigation,结束导航
 568,给我播放一首一壶老酒,music.play,给我播放一首<song>一壶老酒</song>
 568,给我播放一首许巍自己唱的歌曲曾经的你,music.play,给我播放一首<singer>许巍</singer>自己唱的歌曲曾经的你
-568,给我播放一首吴亦凡赵丽颖唱的想你,music.play,给我播放一首<singer>吴亦凡</singer>赵丽颖唱的想你
-568,给我播放一首赵丽颖和吴亦凡唱的想你,music.play,给我播放一首<singer>赵丽颖</singer>和吴亦凡唱的想你
-568,请给我播放一首赵丽颖和吴亦凡和唱的降你不是像你记住,music.play,请给我播放一首<singer>赵丽颖</singer>和吴亦凡和唱的降你不是像你记住
+568,给我播放一首吴亦凡赵丽颖唱的想你,music.play,给我播放一首<singer>吴亦凡</singer><singer>赵丽颖</singer>唱的想你
+568,给我播放一首赵丽颖和吴亦凡唱的想你,music.play,给我播放一首<singer>赵丽颖</singer>和<singer>吴亦凡</singer>唱的想你
+568,请给我播放一首赵丽颖和吴亦凡和唱的降你不是像你记住,music.play,请给我播放一首<singer>赵丽颖</singer>和<singer>吴亦凡</singer>和唱的降你不是像你记住
 568,老大我们没说话取消,OTHERS,老大我们没说话取消
 568,取消,music.pause,取消
 569,音乐,music.play,音乐
