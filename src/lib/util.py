@@ -970,6 +970,8 @@ class Rule(object):
                                                                       '<singer>' + query_singer + '||' + singer + '</singer>')
                             else:
                                 result.iloc[index, 3] = query.replace(singer, '<singer>' + singer + '</singer>')
+                    if '<singer>' + singer + '</singer>' not in slot_annotation:
+                        result.iloc[index, 3] = slot_annotation.replace(singer, '<singer>' + singer + '</singer>')
 
             if '<song>' in slot_annotation and '</song>' in slot_annotation:
                 median_sequence = slot_annotation[
