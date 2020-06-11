@@ -839,14 +839,24 @@ class Rule(object):
                 median_sequence = slot_annotation[
                                   slot_annotation.find('<song>') + len('<song>'): slot_annotation.find('</song>')]
 
+                for song in song_list:
+                    if song.replace(' ', '') in query.replace(' ', ''):
+                        if song not in slot_annotation:
+                            if song not in query:
+                                query_song = query[query.find(song[0]): query.find(song[-1]) + 1]
+                                result.iloc[index, 3] = query.replace(query_song,
+                                                                      '<song>' + query_song + '||' + song + '</song>')
+                            else:
+                                result.iloc[index, 3] = query.replace(song, '<song>' + song + '</song>')
+
+                        elif '<song>' + song + '</song>' not in slot_annotation and len(song) > 2:
+                            result.iloc[index, 3] = slot_annotation.replace(song, '<song>' + song + '</song>')
+
                 if median_sequence not in song_list:
                     if median_sequence in error_pairs_dict:
                         result.iloc[index, 3] = slot_annotation.replace(median_sequence,
                                                                         median_sequence + '||' + error_pairs_dict[
                                                                             median_sequence])
-                    else:
-                        pass
-                        # print('song: {}'.format(median_sequence))
 
             if 'trouble is afriend' in query:
                 result.iloc[index, 3] = slot_annotation.replace('trouble is afriend',
