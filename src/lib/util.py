@@ -607,6 +607,21 @@ class Rule(object):
 
                 result.iloc[index, 3] = slot_annotation.replace('[UNK]', query[query.find(sequence) + len(sequence)])
 
+            if ' ' in query and slot_annotation.find('<') != -1 and slot_annotation.find('>') != -1:
+                space_indexs = list(set([query.find(' '), query.rfind(' ')]))
+
+                for space_index in space_indexs:
+                    match_sequence = query[space_index - 1] + query[space_index + 1]
+
+                    match_index = slot_annotation.find(match_sequence)
+                    if match_index != -1:
+                        slot_annotation = slot_annotation[
+                                          :match_index + len(match_sequence) - 1] + ' ' + slot_annotation[
+                                                                                          match_index + len(
+                                                                                              match_sequence) - 1:]
+
+                result.iloc[index, 3] = slot_annotation
+
         return result
 
 

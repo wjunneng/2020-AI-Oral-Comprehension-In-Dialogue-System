@@ -38,7 +38,7 @@
 9,好好好给我姐打电话,phone_call.make_a_phone_call,好好好给<contact_name>我姐</contact_name>打电话
 9,到双流机场t1航站楼停车场,navigation.navigation,到<destination>双流机场t1航站楼停车场</destination>
 9,附近小区,OTHERS,附近小区
-9,到t t停车场,navigation.navigation,到<destination>tt停车场</destination>
+9,到t t停车场,navigation.navigation,到<destination>t t停车场</destination>
 10,打电话,phone_call.make_a_phone_call,打电话
 10,格式,OTHERS,格式
 10,楼兰,navigation.navigation,<destination>楼兰</destination>
@@ -3034,7 +3034,7 @@
 660,音乐你还是从前的你吗,music.play,音乐<song>你还是从前的你</song>吗
 661,请播放周华健的歌,music.play,请播放<singer>周华健</singer>的歌
 661,播放张芯的歌,music.play,播放<singer>张芯</singer>的歌
-661,请播放justin bieber的歌,music.play,请播放<singer>justinbieber</singer>的歌
+661,请播放justin bieber的歌,music.play,请播放<singer>justin bieber</singer>的歌
 662,我要听音乐,music.play,我要听音乐
 662,我要听体面,music.play,我要听<song>体面</song>
 662,我要听说散就散,music.play,我要听<song>说散就散</song>
@@ -3070,7 +3070,7 @@
 669,把鱼儿,OTHERS,把鱼儿
 669,怎么走,OTHERS,怎么走
 670,播放叫你一声买了,music.play,播放叫你一声<song>买了</song>
-670,播放叫你一声my love,music.play,播放叫你一声<song>mylove</song>
+670,播放叫你一声my love,music.play,播放叫你一声<song>my love</song>
 670,播放现代爱情,music.play,播放<song>现代爱情</song>
 670,播放现代爱情故事,music.play,播放<song>现代爱情故事</song>
 671,导航广州欧雅特比亚迪服务店,navigation.navigation,导航<destination>广州欧雅特比亚迪服务店</destination>
@@ -3355,7 +3355,7 @@
 730,返回主界面,OTHERS,返回主界面
 731,我要去汉城服务区,navigation.navigation,我要去<destination>汉城服务区</destination>
 731,你那有红的家伙,OTHERS,你那有红的家伙
-731,来一曲u say,music.play,来一曲<song>usay</song>
+731,来一曲u say,music.play,来一曲<song>u say</song>
 731,不要,OTHERS,不要
 732,我要去海航大酒店,navigation.navigation,我要去<destination>海航大酒店</destination>
 732,我要去海航大酒店,navigation.navigation,我要去<destination>海航大酒店</destination>
@@ -3605,7 +3605,7 @@
 788,哦知道就好傻*,OTHERS,哦知道就好傻*
 788,我说你是个傻*好吧,OTHERS,我说你是个傻*好吧
 788,请播放几度梦回大唐,music.play,请播放<song>几度梦回大唐</song>
-788,播放my city乐才的几度梦回大唐,music.play,播放<singer>mycity乐才</singer>的几度梦回大唐
+788,播放my city乐才的几度梦回大唐,music.play,播放<singer>my city乐才</singer>的几度梦回大唐
 789,李好,OTHERS,李好
 789,不行啊,OTHERS,不行啊
 789,取消,OTHERS,取消
@@ -3621,7 +3621,7 @@
 791,枣阳市新市镇,navigation.navigation,<destination>枣阳市新市镇</destination>
 792,我想听张宇的歌,music.play,我想听<singer>张宇</singer>的歌
 792,我想听我们不一样,music.play,我想听<song>我们不一样</song>
-792,我想要听my city的歌,music.play,我想要听<singer>mycity</singer>的歌
+792,我想要听my city的歌,music.play,我想要听<singer>my city</singer>的歌
 793,打电话给555555,phone_call.make_a_phone_call,打电话给<phone_num>555555</phone_num>
 793,电话给151408,phone_call.make_a_phone_call,电话给<phone_num>151408</phone_num>
 793,给15100008338,phone_call.make_a_phone_call,给<phone_num>15100008338</phone_num>
@@ -4054,7 +4054,7 @@
 887,帮我查一下大一到雅安的客车还有没有,OTHERS,帮我查一下大一到雅安的客车还有没有
 888,播放歌曲三月里的小雨,music.play,播放歌曲<song>三月里的小雨</song>
 888,播放卓依婷的歌曲三月里的小雨,music.play,播放<singer>卓依婷</singer>的歌曲三月里的小雨
-888,播放于文文的trouble is afriend,music.play,播放<singer>于文文</singer>的troubleisafriend
+888,播放于文文的trouble is afriend,music.play,播放<singer>于文文</singer>的trouble is afriend
 889,在水一方,navigation.navigation,<destination>在水一方</destination>
 889,呵呵呵,OTHERS,呵呵呵
 889,在水一方,navigation.navigation,<destination>在水一方</destination>
@@ -4106,7 +4106,7 @@
 899,去贵阳,navigation.navigation,去<destination>贵阳</destination>
 899,到贵阳清镇东,navigation.navigation,到<destination>贵阳清镇东</destination>
 899,打电话来,phone_call.make_a_phone_call,打电话来
-900,播放d z音乐,music.play,播放<singer>dz</singer>音乐
+900,播放d z音乐,music.play,播放<singer>d z</singer>音乐
 900,播放dj音乐,music.play,播放<theme>dj音乐</theme>
 900,播放dj,music.play,播放<theme>dj</theme>
 901,我的快乐就是想你,music.play,<song>我的快乐就是想你</song>
