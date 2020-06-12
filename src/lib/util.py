@@ -454,6 +454,8 @@ class Rule(object):
 
         result = Rule.rule_8(result=result)
 
+        result = Rule.rule_9(result=result)
+
         result.to_csv('../../data/result_rule.csv', encoding='utf-8', header=None, index=None)
 
     @staticmethod
@@ -904,6 +906,53 @@ class Rule(object):
             if 'trouble is afriend' in query:
                 result.iloc[index, 3] = slot_annotation.replace('trouble is afriend',
                                                                 '<song>trouble is afriend||trouble is a friend</song>')
+
+        return result
+
+    @staticmethod
+    def rule_9(result: pd.DataFrame):
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            """
+            我要听唐朝的 我要听<song>唐朝</singer>的</song>
+            来一首k歌之王 来一首<theme>k歌</theme>之</song>王</song>
+            伤歌有吗 <emotion>伤歌</toplist>有吗</emotion>
+            放一首钢琴的名起来听一下 放一首<style>钢琴</instrument>的名起来听一下</style>
+            高阳打电话给高阳 <contact_name>高阳打电话给<contact_name>高阳</contact_name>
+            老歌 <theme>老歌</toplist></theme>
+            我要听音乐亲子装的歌曲 我要听音乐<song>亲子</emotion>装</song>的歌曲
+            请帮我点一首狮子团合唱的的百年孤独 请帮我点一首<singer>狮子团</singer>合唱的的<song>百年</song>孤</song>独
+            一把杀猪刀的歌给我 <song>一把<song>杀猪刀</song>的歌给我
+            阜新市文化宫阜新市工人文化宫 <destination>阜新市文化宫<destination>阜新市工人文化宫</destination>
+            放一个ye ye 放一个<song>ye<song>ye</song>
+            龙梅子歌首农民 <singer>龙梅子</singer>歌首<emotion>农民</style>
+            只要有你陪在我身边 <song>只要<song>有你陪在我身边</song>
+            放一首韩朝舞 放一首<song>韩朝</language>舞</song>
+            我想听216车载舞曲 我想听216<song>车载</song>舞</style>曲
+            m c天佑的歌曲 m<singer>c<singer>天佑</singer>的歌曲
+            我想听大众的我们都一样 我想听<singer>大众</singer>的<song>我们都一</song>样
+            导航回家回公司 导航回<custom_destination>家回<custom_destination>公司</custom_destination>
+            放旮旯的当你 放<singer>旮[UNK]</singer>的<song>当你</song>
+            电话给六四打电话给6454 电话给<contact_name>六四</contact_name>打电话给<phone_num>6454</phone_num>
+            dj小浩 <theme>dj小</singer>浩</singer></theme>
+            换一首猛歌 换一首<emotion>猛歌</toplist></emotion>         
+            """
+            # if slot_annotation.count('</') > 1 or slot_annotation.count('<') > 2 or slot_annotation.count('>') == 1:
+            #     print(query, slot_annotation)
+
+            if '的' in query and '<singer>' in slot_annotation and '</singer>' in slot_annotation:
+                tail_sequence = slot_annotation[slot_annotation.find('</singer>') + len('</singer>'):]
+                if '的专辑' not in tail_sequence and '的音乐' not in tail_sequence and '的新歌' not in tail_sequence and \
+                        '的歌' not in tail_sequence and '的歌曲' not in tail_sequence and '的' in tail_sequence:
+                    if 'song' in tail_sequence or 'singer' in tail_sequence or len(tail_sequence) == 1:
+                        continue
+
+                    result.iloc[index, 3] = slot_annotation[:-len(tail_sequence) + 1] + '<song>' + tail_sequence[
+                                                                                                   1:] + '</song>'
 
         return result
 
