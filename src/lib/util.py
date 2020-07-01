@@ -456,6 +456,9 @@ class Rule(object):
 
         result = Rule.rule_9(result=result)
 
+        # 有问题
+        # result = Rule.rule_5(result=result)
+
         result.to_csv('../../data/result_rule.csv', encoding='utf-8', header=None, index=None)
 
     @staticmethod
@@ -763,8 +766,12 @@ class Rule(object):
                     is_others = True
                     before_id = session_id
                     if str(query).isdigit():
-                        result.iloc[index, 2] = 'OTHERS'
-                        result.iloc[index, 3] = query
+                        if len(query) == 11:
+                            result.iloc[index, 2] = 'phone_call.make_a_phone_call'
+                            result.iloc[index, 3] = '<phone_num>' + str(slot_annotation) + '</phone_num>'
+                        else:
+                            result.iloc[index, 2] = 'OTHERS'
+                            result.iloc[index, 3] = query
 
                 if session_id == before_id:
                     if str(query).isdigit() is False and 'phone_call.make_a_phone_call' == intent:
@@ -778,6 +785,28 @@ class Rule(object):
         for session_id, id_data in result.groupby(by=['session_id']):
             if session_id in digit_list:
                 digit_df = pd.concat([digit_df, id_data], axis=0, ignore_index=True)
+
+        return result
+
+    @staticmethod
+    def rule_5(result: pd.DataFrame):
+        """
+        5、在无上文影响的情况下（比如 session 开始），单独的 singer 或 song 实体标注为 music.play 意图；若 singer 或 song 实体都存在，标注为 song 实体。
+        :return:
+        """
+        before_id = None
+        for index in range(result.shape[0]):
+            session_id = int(result.iloc[index, 0])
+            query = result.iloc[index, 1].strip()
+            intent = result.iloc[index, 2].strip()
+            slot_annotation = result.iloc[index, 3].strip()
+
+            if before_id is None or before_id != session_id:
+                before_id = session_id
+
+                if intent == 'music.play':
+                    if 'song' in slot_annotation and 'singer' in slot_annotation:
+                        result.iloc[index, 3] = slot_annotation.replace('singer', 'song')
 
         return result
 
