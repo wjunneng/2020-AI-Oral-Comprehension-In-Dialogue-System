@@ -1,13 +1,15 @@
 import torch
 import torch.nn as nn
-from transformers.modeling_bert import BERT_PRETRAINED_MODEL_ARCHIVE_MAP, BertPreTrainedModel, BertModel, BertConfig
+from transformers.modeling_bert import BertPreTrainedModel, BertModel, BertConfig
 from torchcrf import CRF
 from .module import IntentClassifier, SlotClassifier
 
 
 class JointBERT(BertPreTrainedModel):
+    """
+        联合建模
+    """
     config_class = BertConfig
-    pretrained_model_archive_map = BERT_PRETRAINED_MODEL_ARCHIVE_MAP
     base_model_prefix = "bert"
 
     def __init__(self, config, args, intent_label_lst, slot_label_lst):
@@ -15,21 +17,35 @@ class JointBERT(BertPreTrainedModel):
         self.args = args
         self.num_intent_labels = len(intent_label_lst)
         self.num_slot_labels = len(slot_label_lst)
-        self.bert = BertModel(config=config)  # Load pretrained bert
+        # Load pretrained bert
+        self.bert = BertModel(config=config)
 
+        # 意图识别模型
         self.intent_classifier = IntentClassifier(config.hidden_size, self.num_intent_labels, args.dropout_rate)
+        # 槽值填充模型
         self.slot_classifier = SlotClassifier(config.hidden_size, self.num_slot_labels, args.dropout_rate)
 
         if args.use_crf:
             self.crf = CRF(num_tags=self.num_slot_labels, batch_first=True)
 
     def forward(self, input_ids, attention_mask, token_type_ids, intent_label_ids, slot_labels_ids):
-        outputs = self.bert(input_ids, attention_mask=attention_mask,
-                            token_type_ids=token_type_ids)  # sequence_output, pooled_output, (hidden_states), (attentions)
+        """
+        前向传播
+        :param input_ids:
+        :param attention_mask:
+        :param token_type_ids:
+        :param intent_label_ids:
+        :param slot_labels_ids:
+        :return:
+        """
+        # sequence_output, pooled_output, (hidden_states), (attentions)
+        outputs = self.bert(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
         sequence_output = outputs[0]
         pooled_output = outputs[1]  # [CLS]
 
+        # 意图识别模型
         intent_logits = self.intent_classifier(pooled_output)
+        # 槽值填充模型
         slot_logits = self.slot_classifier(sequence_output)
 
         total_loss = 0

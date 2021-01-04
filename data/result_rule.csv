@@ -4272,7 +4272,7 @@
 933,我要去杞县,navigation.navigation,我要去<destination>杞县</destination>
 933,打电话吧应该没没多大问题,phone_call.make_a_phone_call,打电话吧应该没没多大问题
 934,点歌,music.play,点歌
-934,换一首猛歌,music.next,换一首<emotion>猛歌</toplist></emotion>
+934,换一首猛歌,music.next,换一首猛歌
 934,我打电话呀,phone_call.make_a_phone_call,我打电话呀
 934,我准备打电话呀,phone_call.make_a_phone_call,我准备打电话呀
 934,那我就打,OTHERS,那我就打

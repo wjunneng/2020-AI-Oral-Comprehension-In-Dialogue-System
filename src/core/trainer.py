@@ -13,6 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 class Trainer(object):
+    """
+    训练器
+    """
     def __init__(self, args, train_dataset=None, dev_dataset=None, test_dataset=None):
         self.args = args
         self.train_dataset = train_dataset
@@ -37,6 +40,10 @@ class Trainer(object):
         self.model.to(self.device)
 
     def train(self):
+        """
+        训练
+        :return:
+        """
         train_sampler = RandomSampler(self.train_dataset)
         train_dataloader = DataLoader(self.train_dataset, sampler=train_sampler, batch_size=self.args.train_batch_size)
 
@@ -119,6 +126,11 @@ class Trainer(object):
         return global_step, tr_loss / global_step
 
     def evaluate(self, mode):
+        """
+        验证
+        :param mode:
+        :return:
+        """
         if mode == 'test':
             dataset = self.test_dataset
         elif mode == 'dev':

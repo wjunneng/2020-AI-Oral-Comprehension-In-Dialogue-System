@@ -28,10 +28,20 @@ MODEL_PATH_MAP = {
 
 
 def get_intent_labels(args):
+    """
+    返回意图标记列表
+    :param args:
+    :return:
+    """
     return [label.strip() for label in open(os.path.join(args.data_dir, args.task, args.intent_label_file), 'r', encoding='utf-8')]
 
 
 def get_slot_labels(args):
+    """
+    返回槽值列表
+    :param args:
+    :return:
+    """
     return [label.strip() for label in open(os.path.join(args.data_dir, args.task, args.slot_label_file), 'r', encoding='utf-8')]
 
 

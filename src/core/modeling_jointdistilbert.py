@@ -1,13 +1,12 @@
 import torch
 import torch.nn as nn
-from transformers.modeling_distilbert import DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP, DistilBertPreTrainedModel, DistilBertModel, DistilBertConfig
+from transformers.modeling_distilbert import DistilBertPreTrainedModel, DistilBertModel, DistilBertConfig
 from torchcrf import CRF
 from .module import IntentClassifier, SlotClassifier
 
 
 class JointDistilBERT(DistilBertPreTrainedModel):
     config_class = DistilBertConfig
-    pretrained_model_archive_map = DISTILBERT_PRETRAINED_MODEL_ARCHIVE_MAP
     load_tf_weights = None
     base_model_prefix = "distilbert"
 

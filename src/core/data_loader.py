@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 
 class InputExample(object):
     """
+    序列分类：构造简单的example
     A single training/test example for simple sequence classification.
 
     Args:
@@ -42,7 +43,10 @@ class InputExample(object):
 
 
 class InputFeatures(object):
-    """A single set of features of data."""
+    """
+    序列分类对应的Features
+    A single set of features of data.
+    """
 
     def __init__(self, input_ids, attention_mask, token_type_ids, intent_label_id, slot_labels_ids):
         self.input_ids = input_ids
@@ -65,7 +69,10 @@ class InputFeatures(object):
 
 
 class JointProcessor(object):
-    """Processor for the JointBERT data set """
+    """
+    联合处理器
+    Processor for the JointBERT data set
+    """
 
     def __init__(self, args):
         self.args = args
@@ -131,6 +138,18 @@ def convert_examples_to_features(examples, max_seq_len, tokenizer,
                                  pad_token_segment_id=0,
                                  sequence_a_segment_id=0,
                                  mask_padding_with_zero=True):
+    """
+    将examples 转化为 features
+    :param examples:
+    :param max_seq_len:
+    :param tokenizer:
+    :param pad_token_label_id:
+    :param cls_token_segment_id:
+    :param pad_token_segment_id:
+    :param sequence_a_segment_id:
+    :param mask_padding_with_zero:
+    :return:
+    """
     # Setting based on the current model type
     cls_token = tokenizer.cls_token
     sep_token = tokenizer.sep_token
@@ -214,6 +233,14 @@ def convert_examples_to_features(examples, max_seq_len, tokenizer,
 
 
 def load_and_cache_examples(args, tokenizer, mode):
+    """
+    缓存数据为examples格式
+    :param args:
+    :param tokenizer:
+    :param mode:
+    :return:
+    """
+
     processor = processors[args.task](args)
 
     # Load data features from cache or dataset file

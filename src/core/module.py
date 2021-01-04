@@ -2,6 +2,9 @@ import torch.nn as nn
 
 
 class IntentClassifier(nn.Module):
+    """
+        意图模块
+    """
     def __init__(self, input_dim, num_intent_labels, dropout_rate=0.):
         super(IntentClassifier, self).__init__()
         self.dropout = nn.Dropout(dropout_rate)
@@ -13,6 +16,9 @@ class IntentClassifier(nn.Module):
 
 
 class SlotClassifier(nn.Module):
+    """
+        槽值模块
+    """
     def __init__(self, input_dim, num_slot_labels, dropout_rate=0.):
         super(SlotClassifier, self).__init__()
         self.dropout = nn.Dropout(dropout_rate)

@@ -1,0 +1,8 @@
+pytorch_crf==0.7.2
+pandas==1.0.5
+tqdm==4.32.1
+transformers==3.1.0
+numpy==1.17.2
+seqeval==1.2.2
+torch==1.5.1
+torchcrf==1.1.0

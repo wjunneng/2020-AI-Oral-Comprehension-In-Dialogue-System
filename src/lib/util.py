@@ -983,6 +983,9 @@ class Rule(object):
                     result.iloc[index, 3] = slot_annotation[:-len(tail_sequence) + 1] + '<song>' + tail_sequence[
                                                                                                    1:] + '</song>'
 
+            if intent in ['music.next', 'navigation.cancel_navigation', 'OTHERS', 'navigation.open', 'music.pause']:
+                result.iloc[index, 3] = query
+
         return result
 
     @staticmethod
